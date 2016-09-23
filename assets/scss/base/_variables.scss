@@ -3,7 +3,17 @@
 // ----------------------------------------------------------------------
 
 $default-stack: 'Source Sans Pro', sans-serif;
-$alternate-stack:    'DIN Next', sans-serif;
+$alternate-stack: 'DIN Next', sans-serif;
+
+// ----------------------------------------------------------------------
+// - Font Weights
+// ----------------------------------------------------------------------
+
+$font-ultralight: 200;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 600;
+$font-heavy: 700;
 
 
 // ----------------------------------------------------------------------
@@ -16,13 +26,46 @@ $desktop-width:   1230px;
 
 
 // ----------------------------------------------------------------------
-// - Sizing
+// - Sizing Ratios
 // ----------------------------------------------------------------------
 
+$size-base: 1em;
+
+$size-up-one: 1.414em;
+$size-up-two: 1.999em;
+$size-up-three: 2.827em;
+$size-up-four: 3.998em;
+
+$size-down-one: 0.707em;
+$size-down-two: 0.5em;
+$size-down-three: 0.354em;
+
+$size-label-larger: 0.85em;
 
 // ----------------------------------------------------------------------
 // - Color Palette
 // ----------------------------------------------------------------------
+
+$color-light-one: 		#FFFFFF !default;
+$color-light-two: 		#F8F8F8 !default;
+
+$color-medium-one: 		#8C939B !default;
+$color-medium-two: 		#676B71 !default;
+
+$color-dark-one: 		#383B3F !default;
+$color-dark-two: 		#292B2D !default;
+$color-dark-three: 		#000000 !default;
+
+$color-aqua: 			#00c0d8 !default;
+$color-mint: 			#2fe79f !default;
+$color-salmon: 			#F95A45 !default;
+$color-sunrise: 		#f7425a !default;
+
+$gradient-light: 		linear-gradient(to bottom, $color-light-two 0%, $color-light-one 100%);
+$gradient-medium: 		linear-gradient(to bottom, $color-medium-one 0%, $color-medium-two 100%);
+$gradient-dark: 		linear-gradient(to bottom, $color-dark-one 0%, $color-dark-two 100%);
+$gradient-cool: 		linear-gradient(to bottom, $color-aqua 0%, $color-mint 100%);
+$gradient-warm: 		linear-gradient(to bottom, $color-salmon 0%, $color-sunrise 100%);
 
 $color--blue-dark:      #00c0d8 !default;
 $color--blue-light:     #1cd7ee !default;
@@ -39,4 +82,25 @@ $gradient--blue-dark:   $color--blue-dark;
 $gradient--blue-light:  $color--blue-light;
 $gradient--green:       $color--green;
 
+$color-overlay-clear: 	rgba(255,255,255,0);
+$color-overlay-lighten: rgba(255,255,255,0.15);
+$color-overlay-lightest:rgba(255,255,255,0.25);
+$color-overlay-darken: 	rgba(0,0,0,0.05);
+$color-overlay-darkest: rgba(0,0,0,0.15);
+$color-overlay-noise: 	url(../images/noise.png);
+
 $background:            white !default;
+$color-accent:			black !default;
+
+// ----------------------------------------------------------------------
+// - Shadows
+// ----------------------------------------------------------------------
+
+$shadow-none: 			0px 0px 0px 0px rgba(0,0,0,0);
+$shadow-medium: 		0px 0px 8px 0px rgba(0,0,0,0.25);
+$shadow-high: 			0px 0px 19px 0px rgba(0,0,0,0.25);
+$shadow-low: 			0px 0px 5px 0px rgba(0,0,0,0.75);
+$shadow-dark-medium: 	0px 0px 8px 0px rgba(0,0,0,0.46);
+$shadow-dark-high: 		0px 0px 40px 0px rgba(0,0,0,0.46);
+$shadow-dark-low: 		0px 0px 5px 0px rgba(0,0,0,0.75);
+

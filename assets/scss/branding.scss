@@ -1,0 +1,422 @@
+// ----------------------------------------------------------------------
+// - Imports
+// ----------------------------------------------------------------------
+
+
+@import 'base/variables';
+@import 'endex/endex';
+@import 'base/base';
+@import 'base/helpers';
+
+// ----------------------------------------------------------------------
+// - Declare Fonts
+// ----------------------------------------------------------------------
+
+
+@font-face {
+    font-family:"DIN Next";
+    src:url("../fonts/din_next_ultralight.woff2") format("woff2");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family:"DIN Next";
+    src:url("../fonts/din_next_light.woff2") format("woff2");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family:"DIN Next";
+    src:url("../fonts/din_next_medium.woff2") format("woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family:"Source Sans Pro";
+    src:url("../fonts/source_sans_pro_light.woff2") format("woff2");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family:"Source Sans Pro";
+    src:url("../fonts/source_sans_pro_regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family:"Source Sans Pro";
+    src:url("../fonts/source_sans_pro_bold.woff2") format("woff2");
+    font-weight: 700;
+}
+
+
+// ----------------------------------------------------------------------
+// - Base Styles
+// ----------------------------------------------------------------------
+
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-size: $size-base;
+	-webkit-font-smoothing: antialiased;
+	font-family: $default-stack;
+	font-weight: 400;
+  	line-height: 1.45;
+}
+
+
+// ----------------------------------------------------------------------
+// - Typography
+// ----------------------------------------------------------------------
+
+p, .p {
+	margin-bottom: 1.3em;
+
+	&.details {
+		font-size: $size-down-one;
+	}
+}
+
+blockquote, .blockquote {
+	font-size: $size-up-one;
+	text-align: center;
+	margin: $size-up-two 0;
+	padding: 0 $size-up-two;
+
+	&::before {
+		content: '"';
+	}
+
+	&::after {
+		content: '"';
+	}
+
+	&.blockquote-left {
+		text-align: left;
+		border-left: 2px solid;
+	}
+
+	&.blockquote-right {
+		text-align: right;
+		border-right: 2px solid;
+	}
+}
+
+// ----------------------------------------------------------------------
+// - Modifier Wraper Styles
+// ----------------------------------------------------------------------
+
+
+.smaller {
+	font-size: $size-down-one;
+}
+
+.larger {
+	font-size: $size-up-one;
+}
+
+.app {
+
+}
+
+
+// ----------------------------------------------------------------------
+// - Headings
+// ----------------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	margin: $size-up-one 0 $size-down-two;
+  	font-weight: $font-light;
+  	line-height: 1.2;
+  	font-family: $alternate-stack;
+
+  	&.alt, .alt & {
+  		font-weight: $font-medium;
+  		letter-spacing: 0.055em;
+    	text-transform: uppercase;
+  	}
+
+  	&.app, .app & {
+  		font-family: $default-stack;
+  	}
+}
+
+h1, .h1 {
+  	margin-top: 0;
+  	font-size: $size-up-four;
+
+  	&.app, .app & {
+  		font-family: $alternate-stack;
+  		font-size: $size-up-two;
+  	}
+}
+
+h2, .h2 {
+	font-size: $size-up-three;
+
+	&.app, .app & {
+		font-weight: $font-regular;
+  		font-size: $size-up-one;
+  	}
+}
+
+h3, .h3 {
+	font-size: $size-up-two;
+
+	&.app, .app & {
+		font-family: $default-stack;
+		font-weight: $font-heavy;
+  		font-size: $size-base;
+  	}
+}
+
+h4, .h4 {
+	font-size: $size-up-one;
+
+}
+
+h5, h6, .h5, .h6 {
+	font-size: $size-base;
+	font-weight: $font-medium;
+}
+
+h4, h5, h6, .h4, .h5, .h6 {
+	&.app, .app & {
+		@extend .label;
+  	}
+}
+
+
+// ----------------------------------------------------------------------
+// - Labels
+// ----------------------------------------------------------------------
+
+
+.label {
+	font-family: $default-stack;
+	font-weight: $font-heavy;
+  	font-size: $size-down-one;
+  	letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: $size-down-one 0;
+
+    &.larger {
+    	font-size: $size-label-larger;
+    }
+}
+
+// ----------------------------------------------------------------------
+// - Buttons
+// ----------------------------------------------------------------------
+
+button, .button {
+	@extend .label;
+	padding-right: $size-up-two;
+	padding-left: $size-up-two;
+	border-radius: 2em;
+	box-shadow: $shadow-none;
+	transition: 0.5s ease box-shadow;
+	overflow: hidden;
+	position: relative;
+	background-color: transparent;
+	border: 2px solid $color-overlay-darkest;
+
+	&.larger {
+		font-size: $size-label-larger;
+	}
+
+	> * {
+		z-index: 1;
+	}
+
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: 0.5s ease background-color;
+		background-color: $color-overlay-clear;
+		z-index: 0;
+	}
+
+	&:hover {
+		box-shadow: $shadow-high;
+		&::before {
+			background-color: $color-overlay-lighten;
+		}
+
+		&.alt {
+			box-shadow: $shadow-high;
+		}
+	}
+
+	&:active {
+		box-shadow: $shadow-low;
+		&::before {
+			background-color: $color-overlay-darken;
+		}
+
+		&.alt {
+			box-shadow: $shadow-low;
+		}
+	}
+
+	&.alt {
+		border: none;
+		box-shadow: $shadow-medium;
+
+
+	}
+}
+
+// ----------------------------------------------------------------------
+// - Tabs
+// ----------------------------------------------------------------------
+
+.tabs {
+	width: 100%;
+	border-bottom: 2px solid $color-overlay-darkest;
+	text-align: center;
+	height: auto;
+
+	> a {
+		@extend .label;
+		padding: $size-up-one $size-up-two;
+		display: inline-block;
+		position: relative;
+		margin-bottom: -2px;
+		transition: 0.5s ease background-color, 0.25s ease border-color;
+		border-bottom: 2px solid $color-overlay-clear;
+
+		&:hover {
+			background-color: $color-overlay-lighten;
+			border-bottom: 2px solid $color-overlay-darkest;
+		}
+
+		&.selected {
+			border-bottom: 2px solid $color-accent;
+		}
+	}
+
+	&.larger {
+		font-size: 1em;
+		> a {
+			font-size: $size-label-larger;
+			margin-bottom: -1px;
+		}
+	}
+}
+
+// ----------------------------------------------------------------------
+// - Menus
+// ----------------------------------------------------------------------
+
+
+.menu {
+	@extend .tabs;
+	text-align: left;
+
+	> a {
+		display: block;
+		border-top: 2px solid $color-overlay-darkest;
+
+		&:hover {
+			border-color: $color-overlay-darkest;
+		}
+
+		&.selected {
+			border-color: $color-overlay-darkest;
+			background-color: $color-overlay-darken;
+		}
+	}
+}
+
+// ----------------------------------------------------------------------
+// - Colors
+// ----------------------------------------------------------------------
+
+
+.bg-light {
+
+}
+
+.bg-light-one {
+	background-color: $color-light-one;
+}
+
+.bg-light-two {
+	background-color: $color-light-two;
+}
+
+.bg-medium-one {
+	background-color: $color-medium-one;
+}
+
+.bg-medium-two {
+	background-color: $color-medium-two;
+}
+
+
+.bg-dark-one {
+	background-color: $color-dark-one;
+}
+
+.bg-dark-two {
+	background-color: $color-dark-two;
+}
+
+.bg-dark-three {
+	background-color: $color-dark-three;
+}
+
+.bg-aqua {
+	background-color: $color-aqua;
+}
+
+.bg-mint {
+	background-color: $color-mint;
+}
+
+.bg-salmon {
+	background-color: $color-salmon;
+}
+
+.bg-sunrise {
+	background-color: $color-sunrise;
+}
+
+.bg-gradient-light {
+	background-image: $gradient-light, $color-overlay-noise;
+}
+
+.bg-gradient-medium {
+	background-image: $gradient-medium;
+}
+
+.bg-gradient-dark {
+	background-image: $gradient-dark;
+}
+
+.bg-gradient-cool {
+	background-image: $gradient-cool;
+}
+
+.bg-gradient-warm {
+	background-image: $gradient-warm;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+.styleguide {
+
+	header {
+		margin-bottom: 3.954em;
+	}
+
+	main {
+		> article {
+			margin: 0 auto;
+			width: 75%;
+			min-width: 300px;
+
+			> h1, > h2, > h3, > h4, > h5, > h6 {
+				margin-bottom: 1.41em;
+			}
+
+			> section {
+				padding-bottom: 3.954em;
+				border-bottom: 1px solid rgba(0,0,0,0.5);
+				margin-bottom: 3.954em;
+
+				&::before {
+					content: attr(data-name);
+					display: block;
+					margin-bottom: 2.827em;
+					letter-spacing: 0.1em;
+    				text-transform: uppercase;
+    				font-weight: 700;
+    				font-size: 0.707em;
+				}
+			}
+		}
+	}
+
+	.styleguide-example {
+		.styleguide-example-header {
+			text-align: center;
+		}
+	}
+
+	.styleguide-swatch {
+		width: 22.5%;
+		display: inline-block;
+		margin: 0 1% 2.827em 1%;
+		box-sizing: border-box;
+		border: 1px solid;
+		position: relative;
+		height: auto;
+
+		&::before {
+			content: "";
+			display: block;
+			top: 0; bottom: 0; left: 0; right: 0;
+			padding-bottom: 100%;
+		}
+	}
+}

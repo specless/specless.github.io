@@ -1,0 +1,38 @@
+.styleguide header {
+  margin-bottom: 3.954em; }
+.styleguide main > article {
+  margin: 0 auto;
+  width: 75%;
+  min-width: 300px; }
+  .styleguide main > article > h1, .styleguide main > article > h2, .styleguide main > article > h3, .styleguide main > article > h4, .styleguide main > article > h5, .styleguide main > article > h6 {
+    margin-bottom: 1.41em; }
+  .styleguide main > article > section {
+    padding-bottom: 3.954em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 3.954em; }
+    .styleguide main > article > section::before {
+      content: attr(data-name);
+      display: block;
+      margin-bottom: 2.827em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.707em; }
+.styleguide .styleguide-example .styleguide-example-header {
+  text-align: center; }
+.styleguide .styleguide-swatch {
+  width: 22.5%;
+  display: inline-block;
+  margin: 0 1% 2.827em 1%;
+  box-sizing: border-box;
+  border: 1px solid;
+  position: relative;
+  height: auto; }
+  .styleguide .styleguide-swatch::before {
+    content: "";
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 100%; }
