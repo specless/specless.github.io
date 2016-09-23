@@ -1,0 +1,88 @@
+// ----------------------------------------------------------------------
+// - Features Menu
+// ----------------------------------------------------------------------
+
+.features-menu {
+	padding-top: 25px;
+	padding-bottom: 170px;
+	
+	@include mobile {
+	  padding-bottom: 90px;
+	}
+
+	ul { text-align: center; }
+
+	li {
+		margin: 0 15px 10px 15px;
+		display: inline-block;
+	}
+
+	a {
+		@include transition( all 0.20s ease-in-out );
+		color: rgba( white, 0.6 );
+		font-family: $alternate-stack;
+		font-size: 14px;
+		font-weight: 900;
+		text-transform: uppercase;
+		border-bottom: 1px solid transparent;
+		padding-bottom: 2px;
+		cursor: pointer;
+
+		&:hover,
+		&.is-active { color: white; }
+	}
+}
+
+
+// ----------------------------------------------------------------------
+// - Features List
+// ----------------------------------------------------------------------
+
+.features-list {
+	border-bottom: 2px solid $color--grey-light;
+	padding-bottom: 100px;
+}
+
+.features-group {
+
+	&.is-hidden { display: none; }
+
+	.group-column {
+
+		&.group-column__text {
+			@include desktop {
+				padding: 2% 7.5% 0 7.5%;
+			}
+
+			@include tablet {
+				padding: 0 2%;
+			}
+
+			@include mobile {
+				padding: 8% 0 20% 0;
+				text-align: left;
+			}
+		}
+
+		@include mobile {
+			text-align: center;
+		}
+	}
+
+	&.is-first:before,
+	&:first-child:before {
+		display: none;
+	}
+
+	&::before {
+		margin: 100px auto;
+		width: 70%;
+		height: 2px;
+		display: block;
+		background-color: $color--grey-light;
+
+		@include mobile {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+// ----------------------------------------------------------------------------
+// Hidden Element
+// ----------------------------------------------------------------------------
+// Visually hides an element but is still displays for screen readers and
+// assistive devices.
+//
+// @example scss
+//    hidden-element()
+// ----------------------------------------------------------------------------
+@mixin hidden-element {
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect( 0, 0, 0, 0 );
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+}

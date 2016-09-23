@@ -1,0 +1,116 @@
+// ----------------------------------------------------------------------
+// - Mockups
+// ----------------------------------------------------------------------
+
+.publishers__mockups {
+	max-width: 750px;
+	height: 580px;
+	position: relative;
+}
+
+.mockup {
+	position: absolute;
+	top: 0;
+
+	.mockup__iframe { z-index: 1; }
+	.mockup__iframe-wrap { z-index: 2; }
+	.mockup__iframe-block { z-index: 4; }
+	.mockup__iframe-inner { z-index: 3; }
+
+	.mockup__iframe-block,
+	.mockup__iframe-inner {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.iframe {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+}
+
+.mockup--iphone {
+	width: 190px;
+	top: 13%;
+	z-index: 2;
+
+	.mockup--container {
+		-webkit-perspective: 2000px;
+		perspective: 2000px;
+	}
+
+	.mockup__iframe {
+		-webkit-transform: rotateY( 33deg );
+		transform: rotateY( 33deg );
+		min-width: 204px;
+		width: auto;
+		position: absolute;
+		top: 47px;
+		left: -3px;
+	}
+
+	.mockup__iframe-wrap {
+		padding-bottom: 152.5%;
+		height: 0;
+		overflow: hidden;
+		position: relative;
+		background-color: white;
+	}
+}
+
+.mockup--browser {
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+	left: 90px;
+	z-index: 1;
+
+	.mockup--container {
+		-webkit-transform: rotateY( -10deg );
+		transform: rotateY( -10deg );
+		border-radius: 8px 8px 0 0;
+		background-color: white;
+	}
+
+	.mockup__iframe {
+		width: 100%;
+		min-width: 785px;
+	}
+
+	.mockup__iframe-wrap {
+		padding-bottom: 55%;
+		height: 0;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.browser-bar {
+		border-radius: 8px 8px 0 0;
+		padding: 8px 0 0 9px;
+		width: 100%;
+		height: 24px;
+		background-color: #e5e5e5;
+	}
+
+	.browser-button {
+		margin-right: 5px;
+		border-radius: 50%;
+		width: 8px;
+		height: 8px;
+		display: block;
+		float: left;
+
+		&.browser-button--red {
+			background-color: #f8524a;
+		}
+		&.browser-button--yellow {
+			background-color: #ebd623;
+		}
+		&.browser-button--green {
+			background-color: #4dcd5f;
+		}
+	}
+}

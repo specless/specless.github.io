@@ -1,0 +1,110 @@
+// ----------------------------------------------------------------------
+// - Rich Media
+// ----------------------------------------------------------------------
+
+.rich-media {
+	padding-top: 10em;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.rich-media-headline {
+	text-align: center;
+}
+
+.rich-media-imagery {
+	-webkit-perspective: 200px;
+	perspective: 200px;
+	-webkit-perspective-origin: 50% 100%;
+	perspective-origin: 50% 100%;
+	height: 900px;
+	position: relative;
+	background-image: url(../images/ipad-perspective.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: auto 700px;
+
+	.creative,
+	.specs {
+		margin-left: 9px;
+		box-sizing: border-box;
+		width: 553px;
+		height: 303px;
+		position: absolute;
+		top: 302px;
+		left: 50%;
+	}
+
+	.creative {
+		-webkit-transform: translate( -50%, -350px ) rotateX( 10.6deg );
+		transform: translate( -50%, -350px ) rotateX( 10.6deg ) ;
+		border: none;
+
+		.icon {
+			-webkit-transform: translate( -50%, -50% );
+			-ms-transform: translate( -50%, -50% );
+			transform: translate( -50%, -50% );
+			width: 25%;
+			height: 75%;
+			display: inline-block;
+			overflow: hidden;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			&.colored {
+				border: none;
+				background-image: url(../images/file-icon@2x.png);
+				background-size: 100% 100%;
+			}
+		}
+
+		.creative-content {
+			-webkit-transform: translate( -50%, -50% );
+			-ms-transform: translate( -50%, -50% );
+			transform: translate( -50%, -50% );
+			width: 560px;
+			height: 303px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			.ad {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				opacity: 0;
+				background-image: url(../images/creative-avengers.jpg);
+				background-size: 100% 100%;
+
+				video {
+					width: 100%;
+					height: 100%;
+					display: none;
+				}
+			}
+		}
+	}
+
+	.specs {
+		border: 2px solid white;
+		width: 555px;
+		-webkit-transform: translate( -50%, -150px ) rotateX( 10.6deg );
+		transform: translate( -50%, -150px ) rotateX( 10.6deg );
+
+		.details {
+			-webkit-transform: translate( -50%, -50% );
+			-ms-transform: translate( -50%, -50% );
+			transform: translate( -50%, -50% );
+			color: white;
+			text-align: center;
+			width: 100%;
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+	}
+}

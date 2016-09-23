@@ -1,0 +1,18 @@
+// ----------------------------------------------------------------------------
+// Clearfix
+// ----------------------------------------------------------------------------
+// Applies the micro clearfix method to a parent container for children
+// elements that are floated.
+//
+// @example scss
+//    clearfix()
+// ----------------------------------------------------------------------------
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after { clear: both; }
+}

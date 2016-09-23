@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="787px" height="884px" viewBox="0 0 787 884" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Glare</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="97.6460476%" y1="0.910110174%" x2="67.148997%" y2="78.1173328%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.543318563">
+        <path d="M786.357518,990 L-141,990 L213.019139,0.333062088 L356.532518,4.02455846e-16 L759.001417,0 C774.464608,0 787,12.5438681 787,27.9900924 L787,984.009908 C787,986.065913 786.778312,988.070143 786.357518,990 Z" id="Glare" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+// ----------------------------------------------------------------------------
+// Filters
+// ----------------------------------------------------------------------------
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/filter
+//
+// @example scss
+//    filter( [ method ] )
+// ----------------------------------------------------------------------------
+
+// Default Prefix List
+$prefix-list: webkit;
+
+@mixin filter( $method: none, $prefixes: $prefix-list ) {
+	@include prefix( filter, $method, $prefixes );
+}

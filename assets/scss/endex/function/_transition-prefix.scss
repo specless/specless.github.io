@@ -1,0 +1,37 @@
+// ----------------------------------------------------------------------------
+// Transition Prefix
+// ----------------------------------------------------------------------------
+// Handles adding prefixes and property prefixes to the transition property.
+//
+// @param array $properties Transition properties
+// @param array|string $prefix Transition vendor prefix
+// @return mixed $prefixed Prefixed transition properties
+// ----------------------------------------------------------------------------
+
+// Prefixed properties
+$vendor-prefixed-properties: transform;
+
+@function transition-prefix( $properties, $prefix ) {
+	$prefixed: ();
+
+	@if type-of( $properties ) == list {
+		@each $transition in $properties {
+			$property: nth( $transition, 1 );
+
+			@each $prefixr in $prefix {
+				@if index( $vendor-prefixed-properties, $property ) {
+					$property: -#{$prefix}-#{$property}
+				}
+			}
+
+			$property-values: nth( $transition, 2 );
+			$prefixed: append( $prefixed, ( $property $property-values ), comma );
+		}
+	} @else {
+		@if index( $vendor-prefixed-properties, $properties ) {
+			$prefixed: $properties;
+		}
+	}
+
+	@return $prefixed;
+}

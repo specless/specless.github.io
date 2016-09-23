@@ -1,0 +1,135 @@
+// ----------------------------------------------------------------------
+// - Body
+// ----------------------------------------------------------------------
+body {
+	background-color: white;
+	overflow-x: hidden;
+}
+
+
+// ----------------------------------------------------------------------
+// - Structure
+// ----------------------------------------------------------------------
+
+.page {
+	@include mobile {
+		height: 100%;
+
+		&.page--no-scroll { overflow: hidden; }
+	}
+}
+
+.section-wrap {
+	&__light {
+		color: white;
+	}
+}
+
+.container {
+	@include clearfix;
+	margin: 0 auto;
+	padding: 0 30px;
+	position: relative;
+
+	@include desktop {
+		padding: 0;
+		max-width: $container-width;
+	}
+}
+
+.group,
+.row {
+	@include clearfix;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+
+// ----------------------------------------------------------------------
+// - Group Columns
+// ----------------------------------------------------------------------
+.group-column {
+	position: relative;
+
+	@include tablet-min {
+		width: 49%;
+
+		&.group-column__left {
+			float: left;
+		}
+
+		&.group-column__right {
+			margin-left: 2%;
+			float: right;
+		}
+	}
+
+	.group-column__title {
+		margin-bottom: 12px
+	}
+
+	p {
+		color: $color--grey-mid;
+		margin: 0 0 1em 0;
+	}
+
+	ul { margin: 0; }
+
+	li {
+		color: $color--grey-mid;
+		font-size: 19px;
+		line-height: 1.8;
+
+		&::before {
+			content: "";
+			margin-right: 13px;
+			border-radius: 50%;
+			width: 8px;
+			height: 8px;
+			display: inline-block;
+			position: relative;
+			top: -2px;
+			background-color: $color--blue-dark;
+		}
+	}
+}
+
+
+// ----------------------------------------------------------------------
+// - Section Backgrounds
+// ----------------------------------------------------------------------
+
+.bg--grey { 
+	background-color: $color--grey-dark;
+	background-image: url(../images/noise.png);
+}
+
+.gradient--grey-blue-grey {
+	@include noisey-background-gradient( linear-gradient, $gradient--grey-dark 0%, $gradient--blue-dark 47%, $gradient--grey-dark 100% );
+}
+
+.gradient--grey {
+	@include noisey-background-gradient( linear-gradient, $gradient--grey-dark 0%, $gradient--grey-light 43%, $gradient--grey-dark 64%, $gradient--grey-dark 100% );
+}
+
+.gradient--grey-blue {
+	@include noisey-background-gradient( linear-gradient, $gradient--grey-dark 0%, $gradient--blue-dark 54%, $gradient--blue-light 79%, $gradient--blue-dark 100% );
+}
+
+.gradient--blue-green {
+	@include noisey-background-gradient( linear-gradient, $gradient--blue-dark 40%, $gradient--green 100% );
+}
+
+.gradient--green-grey {
+	@include noisey-background-gradient( linear-gradient, $gradient--green 15%, $gradient--grey-dark 100% );
+}
+
+.gradient--blue-white {
+	@include noisey-background-gradient( linear-gradient, #283035 0%,  #219aaa 65%, white 100% );
+}

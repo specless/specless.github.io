@@ -1,0 +1,29 @@
+// ----------------------------------------------------------------------------
+// Font Face
+// ----------------------------------------------------------------------------
+// Generate bullet-proof @font-face syntax for a defined font.
+//
+// @example scss
+//     font-face( $family, $file, $style, $weight )
+// ----------------------------------------------------------------------------
+
+// Defaults
+$fonts-directory: '../fonts/';
+
+@mixin font-face( $family, $file, $style: normal, $weight: normal, $directory: $fonts-directory ) {
+
+	// Set the file path
+	$file-path: $directory + $file;
+
+	@font-face {
+		font-family: '#{$family}';
+		src: url( $file-path + '.eot' );
+		src: url( $file-path + '.eot?#iefix' ) format( 'embedded-opentype' ),
+			 url( $file-path + '.woff' ) format( 'woff' ),
+			 url( $file-path + '.ttf' ) format( 'truetype' ),
+			 url( $file-path + '.svg#' + $family + '' ) format( 'svg' );
+		font-style: $style;
+		font-weight: $weight;
+		text-rendering: optimizeLegibility;
+	}
+}

@@ -1,0 +1,430 @@
+// ----------------------------------------------------------------------
+// - Hero
+// ----------------------------------------------------------------------
+
+.page-hero {
+	text-align: center;
+	height: 100vh;
+	padding-top: 170px;
+
+	h1 {
+		font-weight: 300;
+		line-height: 1;
+		margin-bottom: 16px;
+		font-family: $alternate-stack;
+	}
+
+	h3 {
+		margin: 0;
+		//font-family: $alternate-stack;
+		//font-weight: bold;
+	}
+}
+
+.hero {
+	height: 150vh;
+	position: relative;
+}
+
+// ----------------------------------------------------------------------
+// - Mockup Animation
+// ----------------------------------------------------------------------
+
+// .mockup-animation {
+// 	margin: 0 auto;
+// 	padding-top: 93px;
+// 	padding-bottom: 200px;
+// 	max-width: 1255px;
+// 	position: relative;
+
+// 	.hero-mockup {
+
+// 		img { display: block; }
+
+// 		&.laptop {
+// 			position: relative;
+// 			z-index: 1;
+// 		}
+
+// 		&.tablet,
+// 		&.phone {
+// 			max-width: 100%;
+// 			position: absolute;
+// 			left: 0;
+// 		}
+
+// 		&.tablet {
+// 			bottom: 150px;
+// 			z-index: 2;
+// 		}
+
+// 		&.phone {
+// 			bottom: 110px;
+// 			z-index: 3;
+// 		}
+// 	}
+// }
+
+
+// ----------------------------------------------------------------------
+// - Publishers Section
+// ----------------------------------------------------------------------
+
+.publishers-section {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	position: relative;
+	overflow: hidden;
+
+	.container {
+		@include desktop {
+			padding-bottom: 78px;
+		}
+	}
+
+	.publishers-panel {
+		@include desktop {
+			width: 55%;
+			float: right;
+		}
+
+		@include tablet {
+			width: 100%;
+			padding-top: 55px;
+		}
+
+		@include mobile {
+			width: 100%;
+			padding-top: 55px;
+		}
+	}
+}
+
+
+// ----------------------------------------------------------------------
+// - Advertisers Section
+// ----------------------------------------------------------------------
+
+.advertisers-section {
+	padding-top: 150px;
+	overflow: hidden;
+	position: relative;
+
+	.container {
+		padding-bottom: 60px;
+	}
+}
+
+.advertisers-panel {
+	position: relative;
+
+	@include desktop {
+		width: 75%;
+		float: left;
+		left: -150px;
+
+		.browser {
+
+			&.browser-2 {
+				bottom: 50px;
+				left: -53px;
+			}
+
+			&.browser-3 {
+				bottom: 100px;
+				left: -106px;
+			}
+		}
+	}
+
+	@include tablet-max {
+		margin: 0 auto;
+		padding-top: 200px;
+		width: 100%;
+
+		.browser {
+
+			&.browser-2,
+			&.browser-3 {
+				position: absolute;
+			}
+
+			&.browser-2 {
+				@include transform( scale( 0.9 ) );
+				bottom: 100px;
+			}
+
+			&.browser-3 {
+				@include transform( scale( 0.8 ) );
+				bottom: 200px;
+			}
+		}
+	}
+
+	.browser {
+
+		&.browser-1 {
+			position: relative;
+			z-index: 3;
+		}
+
+		&.browser-2,
+		&.browser-3 { position: absolute; }
+
+		&.browser-2 { z-index: 2; }
+		&.browser-3 { z-index: 1; }
+	}
+}
+
+
+// ----------------------------------------------------------------------
+// - Rich Media Section
+// ----------------------------------------------------------------------
+
+.rich-media-section {
+	padding-bottom: 76px;
+
+	.heading { margin-bottom: 9px; }
+	.sub-heading { color: rgba( white, 0.8 ); }
+
+	.column-group {
+		padding-top: 60px;
+	}
+
+	.column {
+		@include tablet-min {
+			margin-right: 8%;
+			width: 28%;
+		}
+
+		@include mobile {
+		  margin-bottom: 20px;
+		}
+
+		&:last-child { margin: 0; }
+
+		h3 {
+			margin-bottom: 14px;
+
+			@include mobile {
+				font-weight: 500;
+			}
+		}
+	}
+
+	.column-symbol {
+		height: 89px;
+
+		@include mobile {
+			zoom: 1.4;
+			height: 70px
+		}
+	}
+}
+
+
+// ----------------------------------------------------------------------
+// - Everything Section
+// ----------------------------------------------------------------------
+
+.everything-section {
+	padding-top: 76px;
+	padding-bottom: 50px;
+
+	h2 {
+		margin-bottom: 9px;
+	}
+
+	.sub-heading { color: rgba( white, 0.8 ); }
+
+	.column-group {
+		padding-top: 60px;
+	}
+
+	.column {
+		padding: 5% 4% 160px 4%;
+		background-color: white;
+
+		@include tablet-min {
+			margin-right: 3.5%;
+			width: 31%;
+		}
+
+		@include tablet {
+			padding-bottom: 9% 4% 110px 4%;
+		}
+
+		@include mobile {
+			margin-bottom: 7%;
+			padding: 9% 9% 110px 9%;
+		}
+
+		&:last-child { margin: 0; }
+
+		h3 {
+			color: $color--grey-dark;
+			font-size: 25px;
+			margin-bottom: 14px;
+		}
+
+		p { color: $color--grey-mid; }
+
+		.button-group {
+			position: absolute;
+			bottom: 86px;
+			left: 12%;
+
+			@include mobile {
+				text-align: left;
+				padding-left: 9%;
+				bottom: 50px;
+				left: 0;
+			}
+		}
+	}
+}
+
+
+// ----------------------------------------------------------------------
+// - Web Interface Panel
+// ----------------------------------------------------------------------
+
+.web-interface-panel {
+	padding-top: 50px;
+	padding-bottom: 45px;
+	position: relative;
+	overflow: hidden;
+
+	.interface-panel {
+		margin: 0 auto;
+		display: block;
+		position: relative;
+		box-shadow: 0 0 30px 0 rgba( black, 0.2 );
+
+		@include responsive( 650px ) {
+			&__center {
+				.button {
+					width: 275px;
+					left: 50%;
+				}
+			}
+
+			&__left,
+			&__right {
+				@include transform( translateY( -50% ) );
+				position: absolute;
+				top: 50%;
+			}
+
+			&__left {
+
+				.button {
+					width: 200px;
+					left: 40%;
+				}
+			}
+
+			&__right {
+
+				.button {
+					width: 185px;
+					left: 60%;
+				}
+			}
+		}
+
+		@include responsive( 1260px ) {
+			&__center { max-width: 60%; }
+
+			&__left,
+			&__right { width: 45%; }
+
+			&__left { left: -10%; }
+			&__right { right: -10%; }
+		}
+
+		@include responsive( min-width 960px max-width 1259px ) {
+			&__center { max-width: 50%; }
+
+			&__left,
+			&__right { width: 35%; }
+
+			&__left { left: 0; }
+			&__right { right: 0; }
+		}
+
+		@include responsive( min-width 650px max-width 959px ) {
+			&__center { max-width: 47%; }
+
+			&__left,
+			&__right { width: 35%; }
+
+			&__left { left: 0%; }
+			&__right { right: 0; }
+		}
+
+		@include mobile {
+			margin-bottom: 10%;
+
+			&__right { margin-bottom: 0; }
+		}
+
+		&__center { z-index: 3; }
+
+		&__left,
+		&__right { z-index: 1; }
+
+		img { width: 100%; }
+
+		.button {
+			@include transform( translateX( -50% ) );
+			position: absolute;
+			bottom: 50px;
+
+			@include mobile {
+				min-width: 205px;
+				left: 50%;
+			}
+		}
+	}
+}
+
+.web-interface-section {
+	margin: 0 auto;
+	padding-top: 45px;
+	max-width: 590px;
+
+	.heading { margin-bottom: 17px; }
+
+	.sub-heading {
+		color: rgba( white, 0.8 );
+		margin-bottom: 45px;
+	}
+
+	h4 { margin-bottom: 26px; }
+}
+
+
+// ----------------------------------------------------------------------
+// - Team Section
+// ----------------------------------------------------------------------
+
+.team-section {
+	padding-top: 200px;
+
+	.sub-heading { color: rgba( white, 0.8 ); }
+
+	@include mobile {
+		h2 {
+			font-size: 2.1em;
+			line-height: 1.2em;
+			margin-top: 10px;
+
+			span.break { display: inline; }
+		}
+
+		h5 {
+			font-size: 20px;
+		}
+	}
+}

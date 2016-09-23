@@ -1,0 +1,71 @@
+// ============================================================================
+// Transforms
+// ============================================================================
+
+
+// Transforms prefix list
+$transform-prefix-list: webkit ms;
+
+// ----------------------------------------------------------------------------
+// Backface visibility
+// ----------------------------------------------------------------------------
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility
+//
+// @example scss mixin
+//     backface-visibility( [ visibility ] )
+// ----------------------------------------------------------------------------
+@mixin backface-visibility( $visibility: hidden, $prefixes: $transform-prefix-list ) {
+	@include prefix( backface-visibility, $visibility, $prefixes );
+}
+
+
+// ----------------------------------------------------------------------------
+// Transform
+// ----------------------------------------------------------------------------
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+//
+// @example scss mixin
+//     transform( [ transform ] )
+// ----------------------------------------------------------------------------
+@mixin transform( $transforms, $prefixes: $transform-prefix-list ) {
+	@include prefix( transform, $transforms, $prefixes );
+}
+
+
+// ----------------------------------------------------------------------------
+// Transform Origin
+// ----------------------------------------------------------------------------
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
+//
+// @example scss mixin
+//     transform-origin( [ axis ] )
+// ----------------------------------------------------------------------------
+@mixin transform-origin( $axis: 50%, $prefixes: $transform-prefix-list ) {
+	@include prefix( transform-origin, $axis, $prefixes );
+}
+
+
+// ----------------------------------------------------------------------------
+// Perspective
+// ----------------------------------------------------------------------------
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/perspective
+//
+// @example scss mixin
+//     perspective( [ perspective ] )
+// ----------------------------------------------------------------------------
+@mixin perspective( $perspective, $prefixes: $transform-prefix-list ) {
+	@include prefix( perspective, $perspective, $prefixes );
+}
+
+
+// ----------------------------------------------------------------------------
+// Perspective Origin
+// ----------------------------------------------------------------------------
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/perspective-origin
+//
+// @example scss mixin
+//     perspective-origin( [ origin ] )
+// ----------------------------------------------------------------------------
+@mixin perspective-origin( $origin: 50%, $prefixes: $transform-prefix-list ) {
+	@include prefix( perspective-origin, $origin, $prefixes );
+}

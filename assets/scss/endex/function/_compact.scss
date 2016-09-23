@@ -1,0 +1,31 @@
+// ----------------------------------------------------------------------------
+// Compact Function
+// ----------------------------------------------------------------------------
+// Returns a new copy of self with all null elements removed.
+//
+// @return array $full Compiled array
+// ----------------------------------------------------------------------------
+@function compact(
+	$var,
+	$var-1: false,
+	$var-2: false,
+	$var-3: false,
+	$var-4: false,
+	$var-5: false,
+	$var-6: false,
+	$var-7: false,
+	$var-8: false,
+	$var-9: false,
+	$var-10: false
+) {
+	$full: $var;
+	$vars: $var-1, $var-2, $var-3, $var-4, $var-5, $var-6, $var-7, $var-8, $var-9, $var-10;
+
+	@each $var in $vars {
+		@if $var {
+			$full: $full, $var;
+		}
+	}
+
+	@return $full;
+}

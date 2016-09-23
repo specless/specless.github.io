@@ -1,0 +1,43 @@
+// ============================================================================
+// Forms
+// ============================================================================
+
+
+// ----------------------------------------------------------------------------
+// Placeholder
+// ----------------------------------------------------------------------------
+// Handles input placeholder color, :focus opacity and can apply an optional
+// transition effect on focus.
+//
+// @example scss mixin
+//     placeholder( [ color [, opacity ] [, transition ] )
+// ----------------------------------------------------------------------------
+
+// Placeholder prefix list
+$placeholder-prefix-list: ':-webkit-input', ':-moz', '-moz', '-ms-input';
+
+// Default :focus opacity
+$placeholder-opacity: 0.15;
+
+@mixin placeholder( $color, $opacity: $placeholder-opacity, $transition: false ) {
+	@each $prefix in $placeholder-prefix-list {
+		&:#{$prefix}-placeholder {
+			color: $color;
+
+			// Add the transition effect, if defined
+			@if $transition {
+				@if $prefix == ':-webkit-input' {
+					-webkit-transition: $transition;
+				}
+
+				transition: $transition;
+			}
+		}
+
+		// Set focus color based on the defined color and opacity
+		&:focus:#{$prefix}-placeholder {
+			color: mix( $color, #fff, $opacity * 100 );
+			color: rgba( $color, $opacity );
+		}
+	}
+}

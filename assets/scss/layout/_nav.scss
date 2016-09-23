@@ -1,0 +1,66 @@
+// ----------------------------------------------------------------------
+// - Nav
+// ----------------------------------------------------------------------
+
+.menu {
+
+	@include tablet-min {
+		font-family: $alternate-stack;
+		float: right;
+
+		ul { padding-top: 10px; }
+
+		li {
+			margin-right: 32px;
+			float: left;
+			position: relative;
+
+			&:last-child { margin-left: 20px; }
+
+			&.support { display: none; }
+		}
+
+		a {
+			color: white;
+			font-size: 14px;
+			font-weight: 900;
+			text-transform: uppercase;
+		}
+
+		.button-link {
+			margin-right: 0;
+			top: -9px;
+
+			a {
+				@include button;
+				line-height: 34px;
+				border: 2px solid white;
+				border-radius: 5px;
+				padding: 0;
+				width: 96px;
+				height: 37px;
+				display: block;
+			}
+		}
+
+		.nav-link__support { display: none; }
+	}
+
+	ul {
+		margin: 0;
+	}
+
+	a {
+		-webkit-font-smoothing: antialiased;
+
+		&.notransition {
+			-webkit-transition: none !important;
+			-moz-transition: none !important;
+			-o-transition: none !important;
+			-ms-transition: none !important;
+			transition: none !important;
+		}
+	}
+
+	.social-nav { display: none; }
+}

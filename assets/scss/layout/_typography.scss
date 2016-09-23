@@ -1,0 +1,150 @@
+// ----------------------------------------------------------------------
+// - Fonts
+// ----------------------------------------------------------------------
+
+@font-face {
+    font-family:"DIN Next";
+    src:url("../fonts/din_next_ultralight.woff2") format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family:"DIN Next";
+    src:url("../fonts/din_next_medium.woff2") format("woff2");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family:"Source Sans Pro";
+    src:url("../fonts/source_sans_pro_regular.woff2") format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family:"Source Sans Pro";
+    src:url("../fonts/source_sans_pro_bold.woff2") format("woff2");
+    font-weight: bold;
+}
+
+// ----------------------------------------------------------------------
+// - Typography
+// ----------------------------------------------------------------------
+
+@font-face {
+    font-family:"DIN Next";
+    src:url("../fonts/din_next_ultralight.woff2") format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family:"DIN Next";
+    src:url("../fonts/din_next_medium.woff2") format("woff2");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family:"Source Sans Pro";
+    src:url("../fonts/source_sans_pro_regular.woff2") format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family:"Source Sans Pro";
+    src:url("../fonts/source_sans_pro_bold.woff2") format("woff2");
+    font-weight: bold;
+}
+
+body {
+	font: 300 16px $default-stack;
+}
+
+a {
+	@include transition( color 0.25s ease-in-out );
+
+	&:hover {}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1 {
+	font-size: 4em;
+
+	@include mobile {
+		font-size: 2.6em;
+		font-weight: 400;
+	}
+
+	&.hero-title {
+		display: inline-block;
+
+		&::after {
+			content: "";
+			margin: 62px auto 0 auto;
+			width: 50%;
+			height: 2px;
+			display: block;
+			background-color: #10616c;
+		}
+	}
+}
+
+h2 {
+	font-size: 2.25em;
+
+	@include mobile {
+		font-size: 2.7em;
+		line-height: 1.1em;
+	}
+}
+
+h3 {
+	font-size: 1.6em;
+
+	@include mobile {
+		font-size: 1.5em;
+		line-height: 1.35em;
+	}
+}
+
+h4 {
+	font-size: 1.25em;
+}
+
+h5 {
+	font-size: 17px;
+
+	&.section-title {
+		color: $color--green;
+		text-transform: uppercase;
+		margin-bottom: 5px;
+	}
+}
+
+
+p {
+	font-size: 19px;
+	line-height: 1.5;
+	margin: 0 0 30px 0;
+	color: rgba( white, 0.8 );
+}
+
+.text-center {
+	text-align: center;
+}
+
+.break {
+	display: block;
+
+	@include mobile {
+		display: inline-block;
+	}
+}

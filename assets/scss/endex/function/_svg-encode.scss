@@ -1,0 +1,11 @@
+// ----------------------------------------------------------------------------
+// SVG Encode
+// ----------------------------------------------------------------------------
+// Function to output the encoded background URL.
+//
+// @param string $string String to encode
+// @return string Encoded background URL
+// ----------------------------------------------------------------------------
+@function svg-encode( $string ) {
+	@return 'data:image/svg+xml;charset=utf-8,' + url-encode( unquote( $string ) );
+}

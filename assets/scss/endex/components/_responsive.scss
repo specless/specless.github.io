@@ -1,0 +1,108 @@
+// ============================================================================
+// Responsive Breakpoints
+// ============================================================================
+
+
+// ----------------------------------------------------------------------------
+// Pre-defined Breakpoints
+// ----------------------------------------------------------------------------
+// @example scss
+//     [ break-point ]
+// ----------------------------------------------------------------------------
+
+@mixin mobile {
+	@include responsive( mobile ) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@include responsive( tablet ) {
+		@content;
+	}
+}
+
+@mixin tablet-min {
+	@include responsive( tablet-min ) {
+		@content;
+	}
+}
+
+@mixin tablet-max {
+	@include responsive( tablet-max ) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@include responsive( desktop ) {
+		@content;
+	}
+}
+
+
+// ----------------------------------------------------------------------------
+// Responsive
+// ----------------------------------------------------------------------------
+// Uses pre-defined breakpoints or can be used with any defined breakpoint or
+// orientation parameters.
+//
+// @example scss
+//     responsive( [ size/min int [, max int  ] ] )
+// ----------------------------------------------------------------------------
+
+// Defaults
+$default-operator: min-width;
+
+@mixin responsive( $query: $operator $value ) {
+
+	// Determine if the variable is a string or integer
+	$type: type-of( $query );
+
+	// Structure the query for screen
+	$media-query: 'screen and ';
+
+	// If the query is a integer, use the default operator
+	@if $type == number {
+		$media-query: $media-query + '( #{$default-operator}: #{nth( $query, 1 )} )';
+	}
+
+	// If the query is a pre-defined variable
+	@else if $type == string {
+		@if $query == mobile {
+			$media-query: $media-query + '( max-width: #{$mobile-width} )';
+		} @else if $query == tablet {
+			$media-query: $media-query + '( min-width: #{$mobile-width + 1} ) and ( max-width: #{$desktop-width} )';
+		} @else if $query == tablet-min {
+			$media-query: $media-query + '( min-width: #{$mobile-width + 1} )';
+		} @else if $query == tablet-max {
+			$media-query: $media-query + '( max-width: #{$desktop-width} )';
+		} @else if $query == desktop {
+			$media-query: $media-query + '( min-width: #{$desktop-width + 1} )';
+		} @else {
+			@warn 'Responsive mixin supports: mobile, tablet, tablet-min, tablet-max, desktop';
+		}
+	}
+
+	// If the query has breakpoint or orientation parameters
+	@else {
+		$length: length( $query );
+
+		$index: 1;
+
+		@while $index <= $length {
+			$media-query: $media-query + '( #{nth( $query, $index )}: #{nth( $query, $index + 1 )} )';
+
+			@if ( $index + 1 ) != $length {
+				$media-query: $media-query + ' and ';
+			}
+
+			$index: $index + 2;
+		}
+	}
+
+	// Output the media query
+	@media #{$media-query} {
+		@content;
+	}
+}

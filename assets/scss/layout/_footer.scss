@@ -1,0 +1,210 @@
+// ----------------------------------------------------------------------
+// - Footer
+// ----------------------------------------------------------------------
+
+footer {
+	padding-top: 92px;
+
+	nav {
+		width: 25%;
+		float: left;
+
+		@include responsive( min-width 461px max-width 768px ) {
+			width: 50%;
+		}
+
+		@include responsive( max-width 460px ) {
+			margin-bottom: 50px;
+			width: 100%;
+			float: none;
+
+			&.footer-social { margin: 0; }
+		}
+
+		ul { margin: 0; }
+		li { margin-bottom: 6px; }
+	}
+
+	h3 {
+		font-size: 24px;
+		margin-bottom: 17px;
+	}
+
+	a {
+		color: $color--blue-dark;
+		font-size: 18px;
+		font-weight: 500;
+
+		&.phone {
+			color: $color--grey-mid;
+			font-weight: normal;
+			
+			@include mobile {
+			  display: block;
+			  margin-top: 6px;
+			}
+
+			&::before {
+				content: "\2022";
+				margin: 0 9px 0 6px;
+				
+				@include mobile {
+  			  display: none;
+  			}
+			}
+		}
+	}
+}
+
+
+// ----------------------------------------------------------------------
+// - Footer Wrap
+// ----------------------------------------------------------------------
+
+.footer-wrap {
+	padding-bottom: 60px;
+}
+
+
+// ----------------------------------------------------------------------
+// - Footer Connect
+// ----------------------------------------------------------------------
+
+.footer-connect {
+	width: 50%;
+	float: left;
+
+	@include mobile {
+		@include clearfix;
+		padding-top: 60px;
+		width: 100%;
+		clear: left;
+	}
+
+	.map-group {
+		padding-top: 41px;
+
+		.map-block {
+
+			@include tablet-min {
+				width: 46%;
+				float: left;
+
+				&:last-child { margin-left: 8%; }
+			}
+
+			@include mobile {
+				margin-bottom: 30px;
+
+				&:last-child { margin: 0; }
+			}
+		}
+
+		.map-block__title {
+			font-size: 18px;
+			margin-bottom: 15px;
+		}
+	}
+
+	.map-inner,
+	.map-link,
+	.map-container {
+		width: 100%;
+		height: 250px;
+	}
+
+	.map-inner {
+		position: relative;
+	}
+
+	.map-link {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		cursor: pointer;
+	}
+
+	.map-container {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+}
+
+
+// ----------------------------------------------------------------------
+// - Footer Base
+// ----------------------------------------------------------------------
+
+.footer-base {
+	color: $color--grey-mid;
+	text-align: center;
+	border-top: 1px solid $color--grey-light;
+	padding: 40px 0 100px;
+	position: relative;
+
+	.made-with {
+		font-family: $alternate-stack;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 8px;
+	}
+
+	.copyright {
+		font-size: 18px;
+
+		@include mobile {
+			margin-bottom: 30px;
+		}
+	}
+
+	.made-with__muscle {
+		margin: 0 8px 0 12px;
+		width: 33px;
+		height: 33px;
+		display: inline-block;
+		position: relative;
+		top: 6px;
+		background-image: url(../images/icon-footer-muscle.png);
+		background-size: 33px 33px;
+	}
+}
+
+.footer-logo {
+	display: block;
+
+	.shape { fill: $color--grey-mid; }
+
+	&__techstars {
+		width: 89px;
+		height: 58px;
+	}
+
+	&__iab {
+		width: 96px;
+		height: 48px;
+	}
+
+	@include tablet-min {
+		position: absolute;
+
+		&__techstars {
+			top: 48px;
+			left: 0;
+		}
+
+		&__iab {
+			top: 53px;
+			right: 0;
+		}
+	}
+
+	@include mobile {
+		margin: 0 20px;
+		display: inline-block;
+	}
+}

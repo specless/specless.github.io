@@ -1,0 +1,297 @@
+// ============================================================================
+// Base
+// ============================================================================
+//
+// A hybrid mix of meyer-resets and normalize to help reduce browser
+// inconsistencies and render all elements in-line with modern standards.
+//
+// ----------------------------------------------------------------------------
+
+
+// ----------------------------------------------------------------------------
+// - Definitions
+// ----------------------------------------------------------------------------
+/**
+ * 1. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 1 */
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+/**
+ * Prevents modern browsers from displaying 'audio' without controls.
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+	height: 0;
+	display: none;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+	vertical-align: baseline;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+
+// ----------------------------------------------------------------------------
+// - Links
+// ----------------------------------------------------------------------------
+a {
+	text-decoration: none;
+	background-color: transparent;
+
+	/**
+	 * Remove the outline on focused links when they are also active or hovered
+	 * in all browsers.
+	 */
+	&:hover,
+	&:active {
+		outline-width: 0;
+	}
+}
+
+
+// ----------------------------------------------------------------------------
+// - Typography
+// ----------------------------------------------------------------------------
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+strong,
+b {
+	font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+strong,
+b {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+mark {
+	color: #000;
+	background-color: #ff0;
+}
+
+ol,
+ul {
+	padding: 0;
+}
+
+ol,
+ul,
+li {
+	list-style: none;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title],
+acronym[title] {
+	text-decoration: underline; /* 1 */
+	text-decoration: underline dotted; /* 1 */
+	border-bottom: none; /* 2 */
+}
+
+code,
+pre,
+kbd,
+samp {
+	font-family: monospace, monospace;
+}
+
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	overflow: auto;
+}
+
+
+// ----------------------------------------------------------------------------
+// - Embedded Content
+// ----------------------------------------------------------------------------
+
+img {
+	border: 0;
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	-ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+
+// ----------------------------------------------------------------------------
+// - Forms
+// ----------------------------------------------------------------------------
+
+input,
+textarea,
+select,
+optgroup,
+button {
+	color: inherit;
+	font: inherit;
+	font-size: 100%;
+	margin: 0;
+	display: inline-block;
+	outline: 0;
+}
+
+input,
+select,
+button {
+	vertical-align: middle;
+}
+
+input,
+textarea,
+select {
+	-webkit-appearance: none;
+}
+
+input,
+button {
+	/**
+	 * Remove the inner border and padding in Firefox.
+	 */
+	&::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
+
+	/**
+	 * Restore the focus styles unset by the previous rule.
+	 */
+	&:-moz-focusring {
+		outline: 1px dotted ButtonText;
+	}
+
+	&[disabled] {
+		cursor: default;
+	}
+}
+
+input {
+	line-height: normal;
+
+	&[type="search"] {
+		-webkit-appearance: textfield;
+		box-sizing: content-box;
+
+		&::-webkit-search-decoration,
+		&::-webkit-search-cancel-button {
+			-webkit-appearance: none;
+		}
+	}
+
+	&[type="checkbox"],
+	&[type="radio"] {
+		padding: 0;
+	}
+}
+
+button {
+	border: 0;
+	overflow: visible;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in Internet Explorer.
+ */
+textarea {
+	overflow: auto; /* 1 */
+	vertical-align: top;
+	resize: vertical;
+}
+
+legend {
+	padding: 0;
+	border: 0;
+}
+
+
+// ----------------------------------------------------------------------------
+// - Tables
+// ----------------------------------------------------------------------------
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th,
+td {
+	padding: 0;
+}

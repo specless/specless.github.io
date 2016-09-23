@@ -1,0 +1,127 @@
+// ----------------------------------------------------------------------
+// - Contact
+// ----------------------------------------------------------------------
+
+.form-container {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 456px;
+
+	@include mobile {
+		padding: 0 30px;
+	}
+
+	img { margin-bottom: 29px; }
+
+	h2 {
+		color: white;
+		text-align: center;
+		margin-bottom: 26px;
+	}
+
+	.disclaimer {
+		color: $color--grey-mid;
+		font-size: 11px;
+		text-align: center;
+	}
+}
+
+.input {
+	@include placeholder( $color--grey-mid );
+	@include transition( border 0.15s ease-in-out );
+	color: white;
+	font-size: 18px;
+	border: 2px solid $color--grey-mid;
+	border-radius: 5px;
+	width: 100%;
+	background-color: transparent;
+
+	&:focus {
+		color: white;
+		border-color: white;
+	}
+}
+
+input.input {
+	padding: 0 11px 2px 11px;
+	height: 41px;
+}
+
+textarea.input {
+	padding: 7px 11px;
+	height: 131px;
+}
+
+.field-group {
+
+	.field {
+		margin-right: 5%;
+		width: 47.5%;
+		float: left;
+
+		&:last-child { margin-right: 0; }
+	}
+}
+
+.field {
+	margin-bottom: 30px;
+}
+
+.field__select {
+	height: 41px;
+
+	span,
+	.selector,
+	select {
+		margin: 0;
+		outline: none;
+		width: 100%;
+		height: 41px;
+		display: block;
+	}
+
+	span {
+		@include transition( border 0.15s ease-in-out );
+		color: $color--grey-mid;
+		font-size: 18px;
+		line-height: 37px;
+		text-align: left;
+		white-space: nowrap;
+		padding: 0 55px 2px 11px;
+		border: 2px solid $color--grey-mid;
+		border-radius: 5px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		background-color: transparent;
+
+		&:after {
+			content: "";
+			width: 12px;
+			height: 7px;
+			display: block;
+			position: absolute;
+			top: 15px;
+			right: 13px;
+			background-image: url(../images/icon-select-arrow.svg);
+		}
+	}
+
+	.selector {
+		padding: 0;
+		vertical-align: middle;
+		position: relative;
+		background-color: transparent;
+	}
+
+	select {
+		font-size: 18px;
+		padding: 0;
+		border: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		opacity: 0.001;
+		filter: alpha( opacity=0.1 );
+	}
+}

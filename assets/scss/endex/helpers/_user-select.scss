@@ -1,0 +1,17 @@
+// ----------------------------------------------------------------------------
+// User Select
+// ----------------------------------------------------------------------------
+// Controls the user selection operation of text within an element.
+//
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/user-select
+//
+// @example scss
+//     user-select( [ property ] )
+// ----------------------------------------------------------------------------
+
+// Default Prefix List
+$prefix-list: webkit moz ms;
+
+@mixin user-select( $value: none, $prefixes: $prefix-list ) {
+	@include prefix( user-select, $value, $prefixes );
+}

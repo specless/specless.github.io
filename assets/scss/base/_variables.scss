@@ -1,0 +1,42 @@
+// ----------------------------------------------------------------------
+// - Font Stacks
+// ----------------------------------------------------------------------
+
+$default-stack: 'Source Sans Pro', sans-serif;
+$alternate-stack:    'DIN Next', sans-serif;
+
+
+// ----------------------------------------------------------------------
+// - Grid Setting
+// ----------------------------------------------------------------------
+
+$container-width: 1210px;
+$mobile-width:    767px;
+$desktop-width:   1230px;
+
+
+// ----------------------------------------------------------------------
+// - Sizing
+// ----------------------------------------------------------------------
+
+
+// ----------------------------------------------------------------------
+// - Color Palette
+// ----------------------------------------------------------------------
+
+$color--blue-dark:      #00c0d8 !default;
+$color--blue-light:     #1cd7ee !default;
+$color--grey-dark:      #292d31 !default;
+$color--grey-mid:       #7c8691 !default;
+$color--grey-alt:       #8b95a1 !default;
+$color--grey-light:     #e5e7e9 !default;
+$color--green:          #2fe79f !default;
+$color--red:            #f7425a !default;
+
+$gradient--grey-dark:   $color--grey-dark;
+$gradient--grey-light:  #43484c !default;
+$gradient--blue-dark:   $color--blue-dark;
+$gradient--blue-light:  $color--blue-light;
+$gradient--green:       $color--green;
+
+$background:            white !default;

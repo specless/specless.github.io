@@ -1,0 +1,84 @@
+// ============================================================================
+// Transitions
+// ============================================================================
+
+
+// Transition prefix list
+$transition-prefix-list: webkit moz o;
+
+// ----------------------------------------------------------------------------
+// Transition
+// ----------------------------------------------------------------------------
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+//
+// @example scss mixin
+//     transition( [ transition-property transition-duration transition-timing-function transition-delay ] )
+// ----------------------------------------------------------------------------
+@mixin transition( $values... ) {
+	$transition-value: ();
+
+	// Loop through the defined values
+	@each $declaration in $values {
+		$property-options: ();
+		$property: nth( $declaration, 1 );
+
+		@for $i from 2 through length( $declaration ) {
+			$property-options: append( $property-options, nth( $declaration, $i ) );
+		}
+
+		$transition-property: ( $property, $property-options );
+		$transition-value: append( $transition-value, $transition-property, comma );
+	}
+
+	@each $prefix in $transition-prefix-list {
+		-#{$prefix}-transition: transition-prefix( $transition-value, $prefix );
+	}
+
+	transition: $values;
+}
+
+
+// ----------------------------------------------------------------------------
+// Transition Property
+// ----------------------------------------------------------------------------
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property
+//
+// @example scss
+//     transition-property( [ property ] )
+// ----------------------------------------------------------------------------
+@mixin transition-property( $property... ) {}
+
+
+// ----------------------------------------------------------------------------
+// Transition duration
+// ----------------------------------------------------------------------------
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration
+//
+// @example scss
+//     transition-duration( [ duration ] )
+// ----------------------------------------------------------------------------
+@mixin transition-duration( $value... ) {}
+
+
+// ----------------------------------------------------------------------------
+// Transition Timing
+// ----------------------------------------------------------------------------
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function
+//
+// @example scss
+//     transition-duration( [ duration ] )
+// ----------------------------------------------------------------------------
+@mixin transition-timing-function() {}
+
+
+// ----------------------------------------------------------------------------
+// Transition Delay
+// ----------------------------------------------------------------------------
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay
+//
+// @example scss
+//     transition-delay( [ delay ] )
+// ----------------------------------------------------------------------------
+@mixin transition-delay( $delay ) {
+	@include prefix( transition-delay, $delay, $transition-prefix-list );
+}

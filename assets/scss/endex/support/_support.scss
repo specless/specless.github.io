@@ -1,0 +1,26 @@
+// ============================================================================
+// Support
+// ============================================================================
+
+
+// ----------------------------------------------------------------------------
+// Prefix
+// ----------------------------------------------------------------------------
+// Applies defined vendor prefixes to a CSS property.
+//
+// @example scss mixin
+//     prefix( [ property, value [, prefix-list ] ] )
+// ----------------------------------------------------------------------------
+
+// Default Prefix List
+$default-prefix-list: webkit moz o;
+
+@mixin prefix( $property, $value, $prefix-list: $default-prefix-list ) {
+
+	// Loop through the prefix list
+	@each $prefix in $prefix-list {
+		-#{$prefix}-#{$property}: #{$value};
+	}
+
+	#{$property}: #{$value};
+}
