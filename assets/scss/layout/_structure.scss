@@ -19,12 +19,6 @@ body {
 	}
 }
 
-.section-wrap {
-	&__light {
-		color: white;
-	}
-}
-
 .container {
 	@include clearfix;
 	margin: 0 auto;
@@ -74,30 +68,30 @@ body {
 		margin-bottom: 12px
 	}
 
-	p {
-		color: $color--grey-mid;
-		margin: 0 0 1em 0;
-	}
+	// p {
+	// 	color: $color--grey-mid;
+	// 	margin: 0 0 1em 0;
+	// }
 
-	ul { margin: 0; }
+	// ul { margin: 0; }
 
-	li {
-		color: $color--grey-mid;
-		font-size: 19px;
-		line-height: 1.8;
+	// li {
+	// 	color: $color--grey-mid;
+	// 	font-size: 19px;
+	// 	line-height: 1.8;
 
-		&::before {
-			content: "";
-			margin-right: 13px;
-			border-radius: 50%;
-			width: 8px;
-			height: 8px;
-			display: inline-block;
-			position: relative;
-			top: -2px;
-			background-color: $color--blue-dark;
-		}
-	}
+	// 	&::before {
+	// 		content: "";
+	// 		margin-right: 13px;
+	// 		border-radius: 50%;
+	// 		width: 8px;
+	// 		height: 8px;
+	// 		display: inline-block;
+	// 		position: relative;
+	// 		top: -2px;
+	// 		background-color: $color--blue-dark;
+	// 	}
+	// }
 }
 
 
@@ -105,31 +99,31 @@ body {
 // - Section Backgrounds
 // ----------------------------------------------------------------------
 
-.bg--grey { 
-	background-color: $color--grey-dark;
-	background-image: url(../images/noise.png);
-}
+// .bg--grey { 
+// 	background-color: $color--grey-dark;
+// 	background-image: url(../images/noise.png);
+// }
 
-.gradient--grey-blue-grey {
-	@include noisey-background-gradient( linear-gradient, $gradient--grey-dark 0%, $gradient--blue-dark 47%, $gradient--grey-dark 100% );
-}
+// .gradient--grey-blue-grey {
+// 	@include noisey-background-gradient( linear-gradient, $gradient--grey-dark 0%, $gradient--blue-dark 47%, $gradient--grey-dark 100% );
+// }
 
-.gradient--grey {
-	@include noisey-background-gradient( linear-gradient, $gradient--grey-dark 0%, $gradient--grey-light 43%, $gradient--grey-dark 64%, $gradient--grey-dark 100% );
-}
+// .gradient--grey {
+// 	@include noisey-background-gradient( linear-gradient, $gradient--grey-dark 0%, $gradient--grey-light 43%, $gradient--grey-dark 64%, $gradient--grey-dark 100% );
+// }
 
-.gradient--grey-blue {
-	@include noisey-background-gradient( linear-gradient, $gradient--grey-dark 0%, $gradient--blue-dark 54%, $gradient--blue-light 79%, $gradient--blue-dark 100% );
-}
+// .gradient--grey-blue {
+// 	@include noisey-background-gradient( linear-gradient, $gradient--grey-dark 0%, $gradient--blue-dark 54%, $gradient--blue-light 79%, $gradient--blue-dark 100% );
+// }
 
-.gradient--blue-green {
-	@include noisey-background-gradient( linear-gradient, $gradient--blue-dark 40%, $gradient--green 100% );
-}
+// .gradient--blue-green {
+// 	@include noisey-background-gradient( linear-gradient, $gradient--blue-dark 40%, $gradient--green 100% );
+// }
 
-.gradient--green-grey {
-	@include noisey-background-gradient( linear-gradient, $gradient--green 15%, $gradient--grey-dark 100% );
-}
+// .gradient--green-grey {
+// 	@include noisey-background-gradient( linear-gradient, $gradient--green 15%, $gradient--grey-dark 100% );
+// }
 
-.gradient--blue-white {
-	@include noisey-background-gradient( linear-gradient, #283035 0%,  #219aaa 65%, white 100% );
-}
+// .gradient--blue-white {
+// 	@include noisey-background-gradient( linear-gradient, #283035 0%,  #219aaa 65%, white 100% );
+// }

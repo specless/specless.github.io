@@ -611,23 +611,23 @@
 			width: 100%;
 		}
 
-		h3 {
-			font-size: 24px;
-			margin-bottom: 8px;
-		}
+		// h3 {
+		// 	font-size: 24px;
+		// 	margin-bottom: 8px;
+		// }
 
-		.title {
-			font-weight: bold;
-			text-transform: uppercase;
-			display: block;
-			margin-bottom: 16px;
-		}
+		// // .title {
+		// // 	font-weight: bold;
+		// // 	text-transform: uppercase;
+		// // 	display: block;
+		// // 	margin-bottom: 16px;
+		// // }
 
-		p {
-			color: $color--grey-alt;
-			font-size: 16px;
-			line-height: 1.8;
-		}
+		// p {
+		// 	// color: $color--grey-alt;
+		// 	font-size: 16px;
+		// 	line-height: 1.8;
+		// }
 	}
 
 	.picture {
@@ -638,7 +638,7 @@
 
 	.figcaption {
 		@include transition( color 0.15s ease-in-out );
-		color: $color--grey-light;
+		// color: $color--grey-light;
 		font-size: 19px;
 		padding-top: 15px;
 		display: -webkit-box;
@@ -650,11 +650,11 @@
 		}
 
 		.publishers-swiper & {
-			color: $color--grey-light;
+			// color: $color--grey-light;
 		}
 
 		.advertisers-swiper & {
-			color: white;
+			// color: white;
 		}
 	}
 }

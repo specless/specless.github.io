@@ -195,17 +195,10 @@ jQuery( function( $ ) {
 						y: '-150%',
 						opacity: 0
 					}, 0)
-					.fromTo(self.$header, 5, {
+					.to(self.$header, 5, {
 						css: {
-							paddingTop: '40px',
-							paddingBottom: '30px',
-							backgroundColor: 'rbga(0,0,0,0)'
-							}
-						}, 
-					{
-						css: {
-							paddingTop: '24px',
-							paddingBottom: '15px',
+							paddingTop: '18px',
+							paddingBottom: '18px',
 							backgroundColor: 'rbga(0,0,0,0.75)'
 						}
 					}, 0)

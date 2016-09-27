@@ -36,3 +36,9 @@
     left: 0;
     right: 0;
     padding-bottom: 100%; }
+  .styleguide .styleguide-swatch .styleguide-swatch-overlay {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0; }

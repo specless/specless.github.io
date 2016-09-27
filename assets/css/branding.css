@@ -334,15 +334,24 @@ h5, h6, .h5, .h6 {
   font-size: 1em;
   font-weight: 600; }
 
-.label, h4.app, .app h4, h5.app, .app h5, h6.app, .app h6, .h4.app, .app .h4, .h5.app, .app .h5, .h6.app, .app .h6, button, .button, .tabs > a, .menu > a {
+a {
+  color: #00c0d8; }
+
+.label, h4.app, .app h4, h5.app, .app h5, h6.app, .app h6, .h4.app, .app .h4, .h5.app, .app .h5, .h6.app, .app .h6, button, .button, .menu > .menu-item {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
   font-size: 0.707em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.707em 0; }
-  .label.larger, h4.larger.app, .app h4.larger, h5.larger.app, .app h5.larger, h6.larger.app, .app h6.larger, .larger.h4.app, .app .larger.h4, .larger.h5.app, .app .larger.h5, .larger.h6.app, .app .larger.h6, button.larger, .larger.button, .tabs > a.larger, .menu > a.larger {
+  .label.larger, h4.larger.app, .app h4.larger, h5.larger.app, .app h5.larger, h6.larger.app, .app h6.larger, .larger.h4.app, .app .larger.h4, .larger.h5.app, .app .larger.h5, .larger.h6.app, .app .larger.h6, button.larger, .larger.button, .menu > .larger.menu-item {
     font-size: 0.85em; }
+  .bg-light-one .label, .bg-light-two .label, .bg-light .label, .bg-gradient-light .label, .bg-light-one h4.app, .bg-light-two h4.app, .bg-light h4.app, .bg-gradient-light h4.app, .bg-light-one .app h4, .app .bg-light-one h4, .bg-light-two .app h4, .app .bg-light-two h4, .bg-light .app h4, .app .bg-light h4, .bg-gradient-light .app h4, .app .bg-gradient-light h4, .bg-light-one h5.app, .bg-light-two h5.app, .bg-light h5.app, .bg-gradient-light h5.app, .bg-light-one .app h5, .app .bg-light-one h5, .bg-light-two .app h5, .app .bg-light-two h5, .bg-light .app h5, .app .bg-light h5, .bg-gradient-light .app h5, .app .bg-gradient-light h5, .bg-light-one h6.app, .bg-light-two h6.app, .bg-light h6.app, .bg-gradient-light h6.app, .bg-light-one .app h6, .app .bg-light-one h6, .bg-light-two .app h6, .app .bg-light-two h6, .bg-light .app h6, .app .bg-light h6, .bg-gradient-light .app h6, .app .bg-gradient-light h6, .bg-light-one .h4.app, .bg-light-two .h4.app, .bg-light .h4.app, .bg-gradient-light .h4.app, .bg-light-one .app .h4, .app .bg-light-one .h4, .bg-light-two .app .h4, .app .bg-light-two .h4, .bg-light .app .h4, .app .bg-light .h4, .bg-gradient-light .app .h4, .app .bg-gradient-light .h4, .bg-light-one .h5.app, .bg-light-two .h5.app, .bg-light .h5.app, .bg-gradient-light .h5.app, .bg-light-one .app .h5, .app .bg-light-one .h5, .bg-light-two .app .h5, .app .bg-light-two .h5, .bg-light .app .h5, .app .bg-light .h5, .bg-gradient-light .app .h5, .app .bg-gradient-light .h5, .bg-light-one .h6.app, .bg-light-two .h6.app, .bg-light .h6.app, .bg-gradient-light .h6.app, .bg-light-one .app .h6, .app .bg-light-one .h6, .bg-light-two .app .h6, .app .bg-light-two .h6, .bg-light .app .h6, .app .bg-light .h6, .bg-gradient-light .app .h6, .app .bg-gradient-light .h6, .bg-light-one button, .bg-light-two button, .bg-light button, .bg-gradient-light button, .bg-light-one .button, .bg-light-two .button, .bg-light .button, .bg-gradient-light .button, .bg-light-one .menu > .menu-item, .bg-light-two .menu > .menu-item, .bg-light .menu > .menu-item, .bg-gradient-light .menu > .menu-item {
+    color: #676B71; }
+  .bg-medium-one .label, .bg-medium-two .label, .bg-medium .label, .bg-dark-one .label, .bg-aqua .label, .bg-mint .label, .bg-salmon .label, .bg-sunrise .label, .bg-gradient-medium .label, .bg-gradient-cool .label, .bg-gradient-warm .label, .bg-medium-one h4.app, .bg-medium-two h4.app, .bg-medium h4.app, .bg-dark-one h4.app, .bg-aqua h4.app, .bg-mint h4.app, .bg-salmon h4.app, .bg-sunrise h4.app, .bg-gradient-medium h4.app, .bg-gradient-cool h4.app, .bg-gradient-warm h4.app, .bg-medium-one .app h4, .app .bg-medium-one h4, .bg-medium-two .app h4, .app .bg-medium-two h4, .bg-medium .app h4, .app .bg-medium h4, .bg-dark-one .app h4, .app .bg-dark-one h4, .bg-aqua .app h4, .app .bg-aqua h4, .bg-mint .app h4, .app .bg-mint h4, .bg-salmon .app h4, .app .bg-salmon h4, .bg-sunrise .app h4, .app .bg-sunrise h4, .bg-gradient-medium .app h4, .app .bg-gradient-medium h4, .bg-gradient-cool .app h4, .app .bg-gradient-cool h4, .bg-gradient-warm .app h4, .app .bg-gradient-warm h4, .bg-medium-one h5.app, .bg-medium-two h5.app, .bg-medium h5.app, .bg-dark-one h5.app, .bg-aqua h5.app, .bg-mint h5.app, .bg-salmon h5.app, .bg-sunrise h5.app, .bg-gradient-medium h5.app, .bg-gradient-cool h5.app, .bg-gradient-warm h5.app, .bg-medium-one .app h5, .app .bg-medium-one h5, .bg-medium-two .app h5, .app .bg-medium-two h5, .bg-medium .app h5, .app .bg-medium h5, .bg-dark-one .app h5, .app .bg-dark-one h5, .bg-aqua .app h5, .app .bg-aqua h5, .bg-mint .app h5, .app .bg-mint h5, .bg-salmon .app h5, .app .bg-salmon h5, .bg-sunrise .app h5, .app .bg-sunrise h5, .bg-gradient-medium .app h5, .app .bg-gradient-medium h5, .bg-gradient-cool .app h5, .app .bg-gradient-cool h5, .bg-gradient-warm .app h5, .app .bg-gradient-warm h5, .bg-medium-one h6.app, .bg-medium-two h6.app, .bg-medium h6.app, .bg-dark-one h6.app, .bg-aqua h6.app, .bg-mint h6.app, .bg-salmon h6.app, .bg-sunrise h6.app, .bg-gradient-medium h6.app, .bg-gradient-cool h6.app, .bg-gradient-warm h6.app, .bg-medium-one .app h6, .app .bg-medium-one h6, .bg-medium-two .app h6, .app .bg-medium-two h6, .bg-medium .app h6, .app .bg-medium h6, .bg-dark-one .app h6, .app .bg-dark-one h6, .bg-aqua .app h6, .app .bg-aqua h6, .bg-mint .app h6, .app .bg-mint h6, .bg-salmon .app h6, .app .bg-salmon h6, .bg-sunrise .app h6, .app .bg-sunrise h6, .bg-gradient-medium .app h6, .app .bg-gradient-medium h6, .bg-gradient-cool .app h6, .app .bg-gradient-cool h6, .bg-gradient-warm .app h6, .app .bg-gradient-warm h6, .bg-medium-one .h4.app, .bg-medium-two .h4.app, .bg-medium .h4.app, .bg-dark-one .h4.app, .bg-aqua .h4.app, .bg-mint .h4.app, .bg-salmon .h4.app, .bg-sunrise .h4.app, .bg-gradient-medium .h4.app, .bg-gradient-cool .h4.app, .bg-gradient-warm .h4.app, .bg-medium-one .app .h4, .app .bg-medium-one .h4, .bg-medium-two .app .h4, .app .bg-medium-two .h4, .bg-medium .app .h4, .app .bg-medium .h4, .bg-dark-one .app .h4, .app .bg-dark-one .h4, .bg-aqua .app .h4, .app .bg-aqua .h4, .bg-mint .app .h4, .app .bg-mint .h4, .bg-salmon .app .h4, .app .bg-salmon .h4, .bg-sunrise .app .h4, .app .bg-sunrise .h4, .bg-gradient-medium .app .h4, .app .bg-gradient-medium .h4, .bg-gradient-cool .app .h4, .app .bg-gradient-cool .h4, .bg-gradient-warm .app .h4, .app .bg-gradient-warm .h4, .bg-medium-one .h5.app, .bg-medium-two .h5.app, .bg-medium .h5.app, .bg-dark-one .h5.app, .bg-aqua .h5.app, .bg-mint .h5.app, .bg-salmon .h5.app, .bg-sunrise .h5.app, .bg-gradient-medium .h5.app, .bg-gradient-cool .h5.app, .bg-gradient-warm .h5.app, .bg-medium-one .app .h5, .app .bg-medium-one .h5, .bg-medium-two .app .h5, .app .bg-medium-two .h5, .bg-medium .app .h5, .app .bg-medium .h5, .bg-dark-one .app .h5, .app .bg-dark-one .h5, .bg-aqua .app .h5, .app .bg-aqua .h5, .bg-mint .app .h5, .app .bg-mint .h5, .bg-salmon .app .h5, .app .bg-salmon .h5, .bg-sunrise .app .h5, .app .bg-sunrise .h5, .bg-gradient-medium .app .h5, .app .bg-gradient-medium .h5, .bg-gradient-cool .app .h5, .app .bg-gradient-cool .h5, .bg-gradient-warm .app .h5, .app .bg-gradient-warm .h5, .bg-medium-one .h6.app, .bg-medium-two .h6.app, .bg-medium .h6.app, .bg-dark-one .h6.app, .bg-aqua .h6.app, .bg-mint .h6.app, .bg-salmon .h6.app, .bg-sunrise .h6.app, .bg-gradient-medium .h6.app, .bg-gradient-cool .h6.app, .bg-gradient-warm .h6.app, .bg-medium-one .app .h6, .app .bg-medium-one .h6, .bg-medium-two .app .h6, .app .bg-medium-two .h6, .bg-medium .app .h6, .app .bg-medium .h6, .bg-dark-one .app .h6, .app .bg-dark-one .h6, .bg-aqua .app .h6, .app .bg-aqua .h6, .bg-mint .app .h6, .app .bg-mint .h6, .bg-salmon .app .h6, .app .bg-salmon .h6, .bg-sunrise .app .h6, .app .bg-sunrise .h6, .bg-gradient-medium .app .h6, .app .bg-gradient-medium .h6, .bg-gradient-cool .app .h6, .app .bg-gradient-cool .h6, .bg-gradient-warm .app .h6, .app .bg-gradient-warm .h6, .bg-medium-one button, .bg-medium-two button, .bg-medium button, .bg-dark-one button, .bg-aqua button, .bg-mint button, .bg-salmon button, .bg-sunrise button, .bg-gradient-medium button, .bg-gradient-cool button, .bg-gradient-warm button, .bg-medium-one .button, .bg-medium-two .button, .bg-medium .button, .bg-dark-one .button, .bg-aqua .button, .bg-mint .button, .bg-salmon .button, .bg-sunrise .button, .bg-gradient-medium .button, .bg-gradient-cool .button, .bg-gradient-warm .button, .bg-medium-one .menu > .menu-item, .bg-medium-two .menu > .menu-item, .bg-medium .menu > .menu-item, .bg-dark-one .menu > .menu-item, .bg-aqua .menu > .menu-item, .bg-mint .menu > .menu-item, .bg-salmon .menu > .menu-item, .bg-sunrise .menu > .menu-item, .bg-gradient-medium .menu > .menu-item, .bg-gradient-cool .menu > .menu-item, .bg-gradient-warm .menu > .menu-item {
+    color: #FFFFFF; }
+  .bg-dark-two .label, .bg-dark .label, .bg-dark-three .label, .bg-gradient-dark .label, .bg-dark-two h4.app, .bg-dark h4.app, .bg-dark-three h4.app, .bg-gradient-dark h4.app, .bg-dark-two .app h4, .app .bg-dark-two h4, .bg-dark .app h4, .app .bg-dark h4, .bg-dark-three .app h4, .app .bg-dark-three h4, .bg-gradient-dark .app h4, .app .bg-gradient-dark h4, .bg-dark-two h5.app, .bg-dark h5.app, .bg-dark-three h5.app, .bg-gradient-dark h5.app, .bg-dark-two .app h5, .app .bg-dark-two h5, .bg-dark .app h5, .app .bg-dark h5, .bg-dark-three .app h5, .app .bg-dark-three h5, .bg-gradient-dark .app h5, .app .bg-gradient-dark h5, .bg-dark-two h6.app, .bg-dark h6.app, .bg-dark-three h6.app, .bg-gradient-dark h6.app, .bg-dark-two .app h6, .app .bg-dark-two h6, .bg-dark .app h6, .app .bg-dark h6, .bg-dark-three .app h6, .app .bg-dark-three h6, .bg-gradient-dark .app h6, .app .bg-gradient-dark h6, .bg-dark-two .h4.app, .bg-dark .h4.app, .bg-dark-three .h4.app, .bg-gradient-dark .h4.app, .bg-dark-two .app .h4, .app .bg-dark-two .h4, .bg-dark .app .h4, .app .bg-dark .h4, .bg-dark-three .app .h4, .app .bg-dark-three .h4, .bg-gradient-dark .app .h4, .app .bg-gradient-dark .h4, .bg-dark-two .h5.app, .bg-dark .h5.app, .bg-dark-three .h5.app, .bg-gradient-dark .h5.app, .bg-dark-two .app .h5, .app .bg-dark-two .h5, .bg-dark .app .h5, .app .bg-dark .h5, .bg-dark-three .app .h5, .app .bg-dark-three .h5, .bg-gradient-dark .app .h5, .app .bg-gradient-dark .h5, .bg-dark-two .h6.app, .bg-dark .h6.app, .bg-dark-three .h6.app, .bg-gradient-dark .h6.app, .bg-dark-two .app .h6, .app .bg-dark-two .h6, .bg-dark .app .h6, .app .bg-dark .h6, .bg-dark-three .app .h6, .app .bg-dark-three .h6, .bg-gradient-dark .app .h6, .app .bg-gradient-dark .h6, .bg-dark-two button, .bg-dark button, .bg-dark-three button, .bg-gradient-dark button, .bg-dark-two .button, .bg-dark .button, .bg-dark-three .button, .bg-gradient-dark .button, .bg-dark-two .menu > .menu-item, .bg-dark .menu > .menu-item, .bg-dark-three .menu > .menu-item, .bg-gradient-dark .menu > .menu-item {
+    color: #8C939B; }
 
 button, .button {
   padding-right: 1.999em;
@@ -350,10 +359,11 @@ button, .button {
   border-radius: 2em;
   box-shadow: 0px 0px 0px 0px transparent;
   transition: 0.5s ease box-shadow;
-  overflow: hidden;
   position: relative;
   background-color: transparent;
-  border: 2px solid rgba(0, 0, 0, 0.15); }
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  color: black; }
   button.larger, .button.larger {
     font-size: 0.85em; }
   button > *, .button > * {
@@ -361,83 +371,238 @@ button, .button {
   button::before, .button::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    border-radius: 2em;
     transition: 0.5s ease background-color;
     background-color: rgba(255, 255, 255, 0);
     z-index: 0; }
   button:hover, .button:hover {
-    box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.25); }
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25); }
     button:hover::before, .button:hover::before {
-      background-color: rgba(255, 255, 255, 0.15); }
-    button:hover.alt, .button:hover.alt {
-      box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.25); }
+      background-color: rgba(255, 255, 255, 0.13); }
   button:active, .button:active {
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
     button:active::before, .button:active::before {
       background-color: rgba(0, 0, 0, 0.05); }
-    button:active.alt, .button:active.alt {
-      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
   button.alt, .button.alt {
-    border: none;
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25); }
-
-.tabs, .menu {
-  width: 100%;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
-  text-align: center;
-  height: auto; }
-  .tabs > a, .menu > a {
-    padding: 1.414em 1.999em;
-    display: inline-block;
-    position: relative;
-    margin-bottom: -2px;
-    transition: 0.5s ease background-color, 0.25s ease border-color;
-    border-bottom: 2px solid rgba(255, 255, 255, 0); }
-    .tabs > a:hover, .menu > a:hover {
-      background-color: rgba(255, 255, 255, 0.15);
-      border-bottom: 2px solid rgba(0, 0, 0, 0.15); }
-    .tabs > a.selected, .menu > a.selected {
-      border-bottom: 2px solid black; }
-  .tabs.larger, .larger.menu {
-    font-size: 1em; }
-    .tabs.larger > a, .larger.menu > a {
-      font-size: 0.85em;
-      margin-bottom: -1px; }
+    border-color: rgba(255, 255, 255, 0);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); }
+    button.alt:hover, .button.alt:hover {
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25); }
+    button.alt:active, .button.alt:active {
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
+  .bg-dark-two button, .bg-dark button, .bg-dark-three button, .bg-gradient-dark button, .bg-medium-one button, .bg-medium-two button, .bg-medium button, .bg-dark-one button, .bg-aqua button, .bg-mint button, .bg-salmon button, .bg-sunrise button, .bg-gradient-medium button, .bg-gradient-cool button, .bg-gradient-warm button, .bg-dark-two .button, .bg-dark .button, .bg-dark-three .button, .bg-gradient-dark .button, .bg-medium-one .button, .bg-medium-two .button, .bg-medium .button, .bg-dark-one .button, .bg-aqua .button, .bg-mint .button, .bg-salmon .button, .bg-sunrise .button, .bg-gradient-medium .button, .bg-gradient-cool .button, .bg-gradient-warm .button {
+    color: #FFFFFF; }
+    .bg-dark-two button:hover, .bg-dark button:hover, .bg-dark-three button:hover, .bg-gradient-dark button:hover, .bg-medium-one button:hover, .bg-medium-two button:hover, .bg-medium button:hover, .bg-dark-one button:hover, .bg-aqua button:hover, .bg-mint button:hover, .bg-salmon button:hover, .bg-sunrise button:hover, .bg-gradient-medium button:hover, .bg-gradient-cool button:hover, .bg-gradient-warm button:hover, .bg-dark-two .button:hover, .bg-dark .button:hover, .bg-dark-three .button:hover, .bg-gradient-dark .button:hover, .bg-medium-one .button:hover, .bg-medium-two .button:hover, .bg-medium .button:hover, .bg-dark-one .button:hover, .bg-aqua .button:hover, .bg-mint .button:hover, .bg-salmon .button:hover, .bg-sunrise .button:hover, .bg-gradient-medium .button:hover, .bg-gradient-cool .button:hover, .bg-gradient-warm .button:hover {
+      box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.46); }
+    .bg-dark-two button:active, .bg-dark button:active, .bg-dark-three button:active, .bg-gradient-dark button:active, .bg-medium-one button:active, .bg-medium-two button:active, .bg-medium button:active, .bg-dark-one button:active, .bg-aqua button:active, .bg-mint button:active, .bg-salmon button:active, .bg-sunrise button:active, .bg-gradient-medium button:active, .bg-gradient-cool button:active, .bg-gradient-warm button:active, .bg-dark-two .button:active, .bg-dark .button:active, .bg-dark-three .button:active, .bg-gradient-dark .button:active, .bg-medium-one .button:active, .bg-medium-two .button:active, .bg-medium .button:active, .bg-dark-one .button:active, .bg-aqua .button:active, .bg-mint .button:active, .bg-salmon .button:active, .bg-sunrise .button:active, .bg-gradient-medium .button:active, .bg-gradient-cool .button:active, .bg-gradient-warm .button:active {
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75); }
+    .bg-dark-two button.alt, .bg-dark button.alt, .bg-dark-three button.alt, .bg-gradient-dark button.alt, .bg-medium-one button.alt, .bg-medium-two button.alt, .bg-medium button.alt, .bg-dark-one button.alt, .bg-aqua button.alt, .bg-mint button.alt, .bg-salmon button.alt, .bg-sunrise button.alt, .bg-gradient-medium button.alt, .bg-gradient-cool button.alt, .bg-gradient-warm button.alt, .bg-dark-two .button.alt, .bg-dark .button.alt, .bg-dark-three .button.alt, .bg-gradient-dark .button.alt, .bg-medium-one .button.alt, .bg-medium-two .button.alt, .bg-medium .button.alt, .bg-dark-one .button.alt, .bg-aqua .button.alt, .bg-mint .button.alt, .bg-salmon .button.alt, .bg-sunrise .button.alt, .bg-gradient-medium .button.alt, .bg-gradient-cool .button.alt, .bg-gradient-warm .button.alt {
+      border-color: rgba(255, 255, 255, 0);
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.46); }
+      .bg-dark-two button.alt:hover, .bg-dark button.alt:hover, .bg-dark-three button.alt:hover, .bg-gradient-dark button.alt:hover, .bg-medium-one button.alt:hover, .bg-medium-two button.alt:hover, .bg-medium button.alt:hover, .bg-dark-one button.alt:hover, .bg-aqua button.alt:hover, .bg-mint button.alt:hover, .bg-salmon button.alt:hover, .bg-sunrise button.alt:hover, .bg-gradient-medium button.alt:hover, .bg-gradient-cool button.alt:hover, .bg-gradient-warm button.alt:hover, .bg-dark-two .button.alt:hover, .bg-dark .button.alt:hover, .bg-dark-three .button.alt:hover, .bg-gradient-dark .button.alt:hover, .bg-medium-one .button.alt:hover, .bg-medium-two .button.alt:hover, .bg-medium .button.alt:hover, .bg-dark-one .button.alt:hover, .bg-aqua .button.alt:hover, .bg-mint .button.alt:hover, .bg-salmon .button.alt:hover, .bg-sunrise .button.alt:hover, .bg-gradient-medium .button.alt:hover, .bg-gradient-cool .button.alt:hover, .bg-gradient-warm .button.alt:hover {
+        box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.46); }
+      .bg-dark-two button.alt:active, .bg-dark button.alt:active, .bg-dark-three button.alt:active, .bg-gradient-dark button.alt:active, .bg-medium-one button.alt:active, .bg-medium-two button.alt:active, .bg-medium button.alt:active, .bg-dark-one button.alt:active, .bg-aqua button.alt:active, .bg-mint button.alt:active, .bg-salmon button.alt:active, .bg-sunrise button.alt:active, .bg-gradient-medium button.alt:active, .bg-gradient-cool button.alt:active, .bg-gradient-warm button.alt:active, .bg-dark-two .button.alt:active, .bg-dark .button.alt:active, .bg-dark-three .button.alt:active, .bg-gradient-dark .button.alt:active, .bg-medium-one .button.alt:active, .bg-medium-two .button.alt:active, .bg-medium .button.alt:active, .bg-dark-one .button.alt:active, .bg-aqua .button.alt:active, .bg-mint .button.alt:active, .bg-salmon .button.alt:active, .bg-sunrise .button.alt:active, .bg-gradient-medium .button.alt:active, .bg-gradient-cool .button.alt:active, .bg-gradient-warm .button.alt:active {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75); }
+  .bg-dark-two button, .bg-dark button, .bg-dark-three button, .bg-gradient-dark button, .bg-dark-two .button, .bg-dark .button, .bg-dark-three .button, .bg-gradient-dark .button {
+    border-color: #8C939B; }
+  .bg-medium-one button, .bg-medium-two button, .bg-medium button, .bg-dark-one button, .bg-aqua button, .bg-mint button, .bg-salmon button, .bg-sunrise button, .bg-gradient-medium button, .bg-gradient-cool button, .bg-gradient-warm button, .bg-medium-one .button, .bg-medium-two .button, .bg-medium .button, .bg-dark-one .button, .bg-aqua .button, .bg-mint .button, .bg-salmon .button, .bg-sunrise .button, .bg-gradient-medium .button, .bg-gradient-cool .button, .bg-gradient-warm .button {
+    border-color: rgba(255, 255, 255, 0.25); }
+  .bg-dark-two button.button-cool, .bg-dark button.button-cool, .bg-dark-three button.button-cool, .bg-gradient-dark button.button-cool, .bg-dark-two .button.button-cool, .bg-dark .button.button-cool, .bg-dark-three .button.button-cool, .bg-gradient-dark .button.button-cool {
+    border-color: rgba(255, 255, 255, 0);
+    color: #FFFFFF;
+    padding: calc(0.707em - 2px) calc(1.999em - 2px); }
+    .bg-dark-two button.button-cool::after, .bg-dark button.button-cool::after, .bg-dark-three button.button-cool::after, .bg-gradient-dark button.button-cool::after, .bg-dark-two .button.button-cool::after, .bg-dark .button.button-cool::after, .bg-dark-three .button.button-cool::after, .bg-gradient-dark .button.button-cool::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      bottom: -4px;
+      right: -4px;
+      border-radius: 2em;
+      background-image: linear-gradient(to bottom, #00c0d8 0%, #2fe79f 100%);
+      z-index: -1; }
+    .bg-dark-two button.button-cool.alt, .bg-dark button.button-cool.alt, .bg-dark-three button.button-cool.alt, .bg-gradient-dark button.button-cool.alt, .bg-dark-two .button.button-cool.alt, .bg-dark .button.button-cool.alt, .bg-dark-three .button.button-cool.alt, .bg-gradient-dark .button.button-cool.alt {
+      padding: calc(0.707em + 2px) calc(1.999em + 2px);
+      border: none;
+      background-color: transparent;
+      background-image: linear-gradient(to bottom, #00c0d8 0%, #2fe79f 100%); }
+      .bg-dark-two button.button-cool.alt::after, .bg-dark button.button-cool.alt::after, .bg-dark-three button.button-cool.alt::after, .bg-gradient-dark button.button-cool.alt::after, .bg-dark-two .button.button-cool.alt::after, .bg-dark .button.button-cool.alt::after, .bg-dark-three .button.button-cool.alt::after, .bg-gradient-dark .button.button-cool.alt::after {
+        display: none; }
+  .bg-light-one button.button-cool, .bg-light-two button.button-cool, .bg-light button.button-cool, .bg-gradient-light button.button-cool, .bg-light-one .button.button-cool, .bg-light-two .button.button-cool, .bg-light .button.button-cool, .bg-gradient-light .button.button-cool {
+    border-color: #00c0d8;
+    color: #00c0d8; }
+    .bg-light-one button.button-cool.alt, .bg-light-two button.button-cool.alt, .bg-light button.button-cool.alt, .bg-gradient-light button.button-cool.alt, .bg-light-one .button.button-cool.alt, .bg-light-two .button.button-cool.alt, .bg-light .button.button-cool.alt, .bg-gradient-light .button.button-cool.alt {
+      color: #FFFFFF;
+      background-color: #00c0d8; }
+  .bg-dark-two button.button-warm, .bg-dark button.button-warm, .bg-dark-three button.button-warm, .bg-gradient-dark button.button-warm, .bg-dark-two .button.button-warm, .bg-dark .button.button-warm, .bg-dark-three .button.button-warm, .bg-gradient-dark .button.button-warm {
+    border-color: rgba(255, 255, 255, 0);
+    color: #FFFFFF;
+    padding: calc(0.707em - 2px) calc(1.999em - 2px); }
+    .bg-dark-two button.button-warm::after, .bg-dark button.button-warm::after, .bg-dark-three button.button-warm::after, .bg-gradient-dark button.button-warm::after, .bg-dark-two .button.button-warm::after, .bg-dark .button.button-warm::after, .bg-dark-three .button.button-warm::after, .bg-gradient-dark .button.button-warm::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      bottom: -4px;
+      right: -4px;
+      border-radius: 2em;
+      background-image: linear-gradient(to bottom, #F95A45 0%, #f7425a 100%);
+      z-index: -1; }
+    .bg-dark-two button.button-warm.alt, .bg-dark button.button-warm.alt, .bg-dark-three button.button-warm.alt, .bg-gradient-dark button.button-warm.alt, .bg-dark-two .button.button-warm.alt, .bg-dark .button.button-warm.alt, .bg-dark-three .button.button-warm.alt, .bg-gradient-dark .button.button-warm.alt {
+      padding: calc(0.707em + 2px) calc(1.999em + 2px);
+      border: none;
+      background-color: transparent;
+      background-image: linear-gradient(to bottom, #F95A45 0%, #f7425a 100%); }
+      .bg-dark-two button.button-warm.alt::after, .bg-dark button.button-warm.alt::after, .bg-dark-three button.button-warm.alt::after, .bg-gradient-dark button.button-warm.alt::after, .bg-dark-two .button.button-warm.alt::after, .bg-dark .button.button-warm.alt::after, .bg-dark-three .button.button-warm.alt::after, .bg-gradient-dark .button.button-warm.alt::after {
+        display: none; }
+  .bg-light-one button.button-warm, .bg-light-two button.button-warm, .bg-light button.button-warm, .bg-gradient-light button.button-warm, .bg-light-one .button.button-warm, .bg-light-two .button.button-warm, .bg-light .button.button-warm, .bg-gradient-light .button.button-warm {
+    border-color: #f7425a;
+    color: #f7425a; }
+    .bg-light-one button.button-warm.alt, .bg-light-two button.button-warm.alt, .bg-light button.button-warm.alt, .bg-gradient-light button.button-warm.alt, .bg-light-one .button.button-warm.alt, .bg-light-two .button.button-warm.alt, .bg-light .button.button-warm.alt, .bg-gradient-light .button.button-warm.alt {
+      color: #FFFFFF;
+      background-color: #f7425a; }
 
 .menu {
-  text-align: left; }
-  .menu > a {
+  display: block;
+  border-color: rgba(0, 0, 0, 0.15);
+  text-align: left;
+  height: auto;
+  border-width: 0; }
+  .menu > .menu-item {
+    padding: 1.414em 1.999em;
     display: block;
-    border-top: 2px solid rgba(0, 0, 0, 0.15); }
-    .menu > a:hover {
-      border-color: rgba(0, 0, 0, 0.15); }
-    .menu > a.selected {
-      border-color: rgba(0, 0, 0, 0.15);
-      background-color: rgba(0, 0, 0, 0.05); }
+    position: relative;
+    border-width: 0;
+    transition: 0.5s ease color, 0.25s ease border-color;
+    border-color: rgba(255, 255, 255, 0); }
+    .menu > .menu-item::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      transition: 0.25s ease opacity;
+      opacity: 0; }
+    .menu > .menu-item:hover {
+      border-bottom-color: rgba(0, 0, 0, 0.15); }
+      .menu > .menu-item:hover::before {
+        background-color: rgba(255, 255, 255, 0.13);
+        opacity: 1; }
+    .menu > .menu-item.selected, .menu > .menu-item.selected:hover {
+      border-bottom-color: rgba(0, 0, 0, 0.15); }
+      .menu > .menu-item.selected::before, .menu > .menu-item.selected:hover::before {
+        background-color: rgba(0, 0, 0, 0.05);
+        border-left: 2px solid rgba(0, 0, 0, 0.15);
+        opacity: 2; }
+  .menu.larger {
+    font-size: 1em; }
+    .menu.larger > .menu-item, .menu.larger button, .menu.larger .button, .menu.larger .label, .menu.larger h4.app, .menu.larger .app h4, .app .menu.larger h4, .menu.larger h5.app, .menu.larger .app h5, .app .menu.larger h5, .menu.larger h6.app, .menu.larger .app h6, .app .menu.larger h6, .menu.larger .h4.app, .menu.larger .app .h4, .app .menu.larger .h4, .menu.larger .h5.app, .menu.larger .app .h5, .app .menu.larger .h5, .menu.larger .h6.app, .menu.larger .app .h6, .app .menu.larger .h6, .menu.larger button, .menu.larger .button, .menu.larger .menu > .menu-item {
+      font-size: 0.85em; }
+  .bg-light-one .menu > .menu-item.selected, .bg-light-two .menu > .menu-item.selected, .bg-light .menu > .menu-item.selected, .bg-gradient-light .menu > .menu-item.selected, .bg-light-one .menu > .menu-item.selected:hover, .bg-light-two .menu > .menu-item.selected:hover, .bg-light .menu > .menu-item.selected:hover, .bg-gradient-light .menu > .menu-item.selected:hover, .menu.bg-medium-one > .menu-item.selected, .menu.bg-medium-two > .menu-item.selected, .menu.bg-medium > .menu-item.selected, .menu.bg-dark-one > .menu-item.selected, .menu.bg-aqua > .menu-item.selected, .menu.bg-mint > .menu-item.selected, .menu.bg-salmon > .menu-item.selected, .menu.bg-sunrise > .menu-item.selected, .menu.bg-gradient-medium > .menu-item.selected, .menu.bg-gradient-cool > .menu-item.selected, .menu.bg-gradient-warm > .menu-item.selected, .menu.bg-medium-one > .menu-item.selected:hover, .menu.bg-medium-two > .menu-item.selected:hover, .menu.bg-medium > .menu-item.selected:hover, .menu.bg-dark-one > .menu-item.selected:hover, .menu.bg-aqua > .menu-item.selected:hover, .menu.bg-mint > .menu-item.selected:hover, .menu.bg-salmon > .menu-item.selected:hover, .menu.bg-sunrise > .menu-item.selected:hover, .menu.bg-gradient-medium > .menu-item.selected:hover, .menu.bg-gradient-cool > .menu-item.selected:hover, .menu.bg-gradient-warm > .menu-item.selected:hover {
+    color: #292B2D;
+    border-bottom-color: #00c0d8; }
+    .bg-light-one .menu > .menu-item.selected::before, .bg-light-two .menu > .menu-item.selected::before, .bg-light .menu > .menu-item.selected::before, .bg-gradient-light .menu > .menu-item.selected::before, .bg-light-one .menu > .menu-item.selected:hover::before, .bg-light-two .menu > .menu-item.selected:hover::before, .bg-light .menu > .menu-item.selected:hover::before, .bg-gradient-light .menu > .menu-item.selected:hover::before, .menu.bg-medium-one > .menu-item.selected::before, .menu.bg-medium-two > .menu-item.selected::before, .menu.bg-medium > .menu-item.selected::before, .menu.bg-dark-one > .menu-item.selected::before, .menu.bg-aqua > .menu-item.selected::before, .menu.bg-mint > .menu-item.selected::before, .menu.bg-salmon > .menu-item.selected::before, .menu.bg-sunrise > .menu-item.selected::before, .menu.bg-gradient-medium > .menu-item.selected::before, .menu.bg-gradient-cool > .menu-item.selected::before, .menu.bg-gradient-warm > .menu-item.selected::before, .menu.bg-medium-one > .menu-item.selected:hover::before, .menu.bg-medium-two > .menu-item.selected:hover::before, .menu.bg-medium > .menu-item.selected:hover::before, .menu.bg-dark-one > .menu-item.selected:hover::before, .menu.bg-aqua > .menu-item.selected:hover::before, .menu.bg-mint > .menu-item.selected:hover::before, .menu.bg-salmon > .menu-item.selected:hover::before, .menu.bg-sunrise > .menu-item.selected:hover::before, .menu.bg-gradient-medium > .menu-item.selected:hover::before, .menu.bg-gradient-cool > .menu-item.selected:hover::before, .menu.bg-gradient-warm > .menu-item.selected:hover::before {
+      border-color: #00c0d8; }
+  .bg-light-one .menu > .menu-item:hover, .bg-light-two .menu > .menu-item:hover, .bg-light .menu > .menu-item:hover, .bg-gradient-light .menu > .menu-item:hover, .menu.bg-medium-one > .menu-item:hover, .menu.bg-medium-two > .menu-item:hover, .menu.bg-medium > .menu-item:hover, .menu.bg-dark-one > .menu-item:hover, .menu.bg-aqua > .menu-item:hover, .menu.bg-mint > .menu-item:hover, .menu.bg-salmon > .menu-item:hover, .menu.bg-sunrise > .menu-item:hover, .menu.bg-gradient-medium > .menu-item:hover, .menu.bg-gradient-cool > .menu-item:hover, .menu.bg-gradient-warm > .menu-item:hover {
+    color: #292B2D; }
+    .bg-light-one .menu > .menu-item:hover::before, .bg-light-two .menu > .menu-item:hover::before, .bg-light .menu > .menu-item:hover::before, .bg-gradient-light .menu > .menu-item:hover::before, .menu.bg-medium-one > .menu-item:hover::before, .menu.bg-medium-two > .menu-item:hover::before, .menu.bg-medium > .menu-item:hover::before, .menu.bg-dark-one > .menu-item:hover::before, .menu.bg-aqua > .menu-item:hover::before, .menu.bg-mint > .menu-item:hover::before, .menu.bg-salmon > .menu-item:hover::before, .menu.bg-sunrise > .menu-item:hover::before, .menu.bg-gradient-medium > .menu-item:hover::before, .menu.bg-gradient-cool > .menu-item:hover::before, .menu.bg-gradient-warm > .menu-item:hover::before {
+      background-color: rgba(255, 255, 255, 0.25); }
+  .bg-medium-one .menu, .bg-medium-two .menu, .bg-medium .menu, .bg-dark-one .menu, .bg-aqua .menu, .bg-mint .menu, .bg-salmon .menu, .bg-sunrise .menu, .bg-gradient-medium .menu, .bg-gradient-cool .menu, .bg-gradient-warm .menu, .menu.bg-medium-one, .menu.bg-medium-two, .menu.bg-medium, .menu.bg-dark-one, .menu.bg-aqua, .menu.bg-mint, .menu.bg-salmon, .menu.bg-sunrise, .menu.bg-gradient-medium, .menu.bg-gradient-cool, .menu.bg-gradient-warm {
+    border-color: rgba(255, 255, 255, 0.25); }
+    .bg-medium-one .menu > .menu-item, .bg-medium-two .menu > .menu-item, .bg-medium .menu > .menu-item, .bg-dark-one .menu > .menu-item, .bg-aqua .menu > .menu-item, .bg-mint .menu > .menu-item, .bg-salmon .menu > .menu-item, .bg-sunrise .menu > .menu-item, .bg-gradient-medium .menu > .menu-item, .bg-gradient-cool .menu > .menu-item, .bg-gradient-warm .menu > .menu-item, .menu.bg-medium-one > .menu-item, .menu.bg-medium-two > .menu-item, .menu.bg-medium > .menu-item, .menu.bg-dark-one > .menu-item, .menu.bg-aqua > .menu-item, .menu.bg-mint > .menu-item, .menu.bg-salmon > .menu-item, .menu.bg-sunrise > .menu-item, .menu.bg-gradient-medium > .menu-item, .menu.bg-gradient-cool > .menu-item, .menu.bg-gradient-warm > .menu-item {
+      border-top-color: rgba(255, 255, 255, 0.25);
+      color: rgba(255, 255, 255, 0.7); }
+      .bg-medium-one .menu > .menu-item.selected, .bg-medium-two .menu > .menu-item.selected, .bg-medium .menu > .menu-item.selected, .bg-dark-one .menu > .menu-item.selected, .bg-aqua .menu > .menu-item.selected, .bg-mint .menu > .menu-item.selected, .bg-salmon .menu > .menu-item.selected, .bg-sunrise .menu > .menu-item.selected, .bg-gradient-medium .menu > .menu-item.selected, .bg-gradient-cool .menu > .menu-item.selected, .bg-gradient-warm .menu > .menu-item.selected, .bg-medium-one .menu > .menu-item.selected:hover, .bg-medium-two .menu > .menu-item.selected:hover, .bg-medium .menu > .menu-item.selected:hover, .bg-dark-one .menu > .menu-item.selected:hover, .bg-aqua .menu > .menu-item.selected:hover, .bg-mint .menu > .menu-item.selected:hover, .bg-salmon .menu > .menu-item.selected:hover, .bg-sunrise .menu > .menu-item.selected:hover, .bg-gradient-medium .menu > .menu-item.selected:hover, .bg-gradient-cool .menu > .menu-item.selected:hover, .bg-gradient-warm .menu > .menu-item.selected:hover, .menu.bg-medium-one > .menu-item.selected, .menu.bg-medium-two > .menu-item.selected, .menu.bg-medium > .menu-item.selected, .menu.bg-dark-one > .menu-item.selected, .menu.bg-aqua > .menu-item.selected, .menu.bg-mint > .menu-item.selected, .menu.bg-salmon > .menu-item.selected, .menu.bg-sunrise > .menu-item.selected, .menu.bg-gradient-medium > .menu-item.selected, .menu.bg-gradient-cool > .menu-item.selected, .menu.bg-gradient-warm > .menu-item.selected, .menu.bg-medium-one > .menu-item.selected:hover, .menu.bg-medium-two > .menu-item.selected:hover, .menu.bg-medium > .menu-item.selected:hover, .menu.bg-dark-one > .menu-item.selected:hover, .menu.bg-aqua > .menu-item.selected:hover, .menu.bg-mint > .menu-item.selected:hover, .menu.bg-salmon > .menu-item.selected:hover, .menu.bg-sunrise > .menu-item.selected:hover, .menu.bg-gradient-medium > .menu-item.selected:hover, .menu.bg-gradient-cool > .menu-item.selected:hover, .menu.bg-gradient-warm > .menu-item.selected:hover {
+        color: #FFFFFF;
+        border-bottom-color: #FFFFFF; }
+        .bg-medium-one .menu > .menu-item.selected::before, .bg-medium-two .menu > .menu-item.selected::before, .bg-medium .menu > .menu-item.selected::before, .bg-dark-one .menu > .menu-item.selected::before, .bg-aqua .menu > .menu-item.selected::before, .bg-mint .menu > .menu-item.selected::before, .bg-salmon .menu > .menu-item.selected::before, .bg-sunrise .menu > .menu-item.selected::before, .bg-gradient-medium .menu > .menu-item.selected::before, .bg-gradient-cool .menu > .menu-item.selected::before, .bg-gradient-warm .menu > .menu-item.selected::before, .bg-medium-one .menu > .menu-item.selected:hover::before, .bg-medium-two .menu > .menu-item.selected:hover::before, .bg-medium .menu > .menu-item.selected:hover::before, .bg-dark-one .menu > .menu-item.selected:hover::before, .bg-aqua .menu > .menu-item.selected:hover::before, .bg-mint .menu > .menu-item.selected:hover::before, .bg-salmon .menu > .menu-item.selected:hover::before, .bg-sunrise .menu > .menu-item.selected:hover::before, .bg-gradient-medium .menu > .menu-item.selected:hover::before, .bg-gradient-cool .menu > .menu-item.selected:hover::before, .bg-gradient-warm .menu > .menu-item.selected:hover::before, .menu.bg-medium-one > .menu-item.selected::before, .menu.bg-medium-two > .menu-item.selected::before, .menu.bg-medium > .menu-item.selected::before, .menu.bg-dark-one > .menu-item.selected::before, .menu.bg-aqua > .menu-item.selected::before, .menu.bg-mint > .menu-item.selected::before, .menu.bg-salmon > .menu-item.selected::before, .menu.bg-sunrise > .menu-item.selected::before, .menu.bg-gradient-medium > .menu-item.selected::before, .menu.bg-gradient-cool > .menu-item.selected::before, .menu.bg-gradient-warm > .menu-item.selected::before, .menu.bg-medium-one > .menu-item.selected:hover::before, .menu.bg-medium-two > .menu-item.selected:hover::before, .menu.bg-medium > .menu-item.selected:hover::before, .menu.bg-dark-one > .menu-item.selected:hover::before, .menu.bg-aqua > .menu-item.selected:hover::before, .menu.bg-mint > .menu-item.selected:hover::before, .menu.bg-salmon > .menu-item.selected:hover::before, .menu.bg-sunrise > .menu-item.selected:hover::before, .menu.bg-gradient-medium > .menu-item.selected:hover::before, .menu.bg-gradient-cool > .menu-item.selected:hover::before, .menu.bg-gradient-warm > .menu-item.selected:hover::before {
+          border-color: rgba(255, 255, 255, 0.25); }
+      .bg-medium-one .menu > .menu-item:hover, .bg-medium-two .menu > .menu-item:hover, .bg-medium .menu > .menu-item:hover, .bg-dark-one .menu > .menu-item:hover, .bg-aqua .menu > .menu-item:hover, .bg-mint .menu > .menu-item:hover, .bg-salmon .menu > .menu-item:hover, .bg-sunrise .menu > .menu-item:hover, .bg-gradient-medium .menu > .menu-item:hover, .bg-gradient-cool .menu > .menu-item:hover, .bg-gradient-warm .menu > .menu-item:hover, .menu.bg-medium-one > .menu-item:hover, .menu.bg-medium-two > .menu-item:hover, .menu.bg-medium > .menu-item:hover, .menu.bg-dark-one > .menu-item:hover, .menu.bg-aqua > .menu-item:hover, .menu.bg-mint > .menu-item:hover, .menu.bg-salmon > .menu-item:hover, .menu.bg-sunrise > .menu-item:hover, .menu.bg-gradient-medium > .menu-item:hover, .menu.bg-gradient-cool > .menu-item:hover, .menu.bg-gradient-warm > .menu-item:hover {
+        color: #FFFFFF;
+        border-bottom-color: rgba(255, 255, 255, 0.25); }
+        .bg-medium-one .menu > .menu-item:hover::before, .bg-medium-two .menu > .menu-item:hover::before, .bg-medium .menu > .menu-item:hover::before, .bg-dark-one .menu > .menu-item:hover::before, .bg-aqua .menu > .menu-item:hover::before, .bg-mint .menu > .menu-item:hover::before, .bg-salmon .menu > .menu-item:hover::before, .bg-sunrise .menu > .menu-item:hover::before, .bg-gradient-medium .menu > .menu-item:hover::before, .bg-gradient-cool .menu > .menu-item:hover::before, .bg-gradient-warm .menu > .menu-item:hover::before, .menu.bg-medium-one > .menu-item:hover::before, .menu.bg-medium-two > .menu-item:hover::before, .menu.bg-medium > .menu-item:hover::before, .menu.bg-dark-one > .menu-item:hover::before, .menu.bg-aqua > .menu-item:hover::before, .menu.bg-mint > .menu-item:hover::before, .menu.bg-salmon > .menu-item:hover::before, .menu.bg-sunrise > .menu-item:hover::before, .menu.bg-gradient-medium > .menu-item:hover::before, .menu.bg-gradient-cool > .menu-item:hover::before, .menu.bg-gradient-warm > .menu-item:hover::before {
+          opacity: 0.75; }
+  .bg-dark-two .menu, .bg-dark .menu, .bg-dark-three .menu, .bg-gradient-dark .menu, .menu.bg-dark-two, .menu.bg-dark, .menu.bg-dark-three, .menu.bg-gradient-dark {
+    border-color: rgba(255, 255, 255, 0.13); }
+    .bg-dark-two .menu > .menu-item, .bg-dark .menu > .menu-item, .bg-dark-three .menu > .menu-item, .bg-gradient-dark .menu > .menu-item, .menu.bg-dark-two > .menu-item, .menu.bg-dark > .menu-item, .menu.bg-dark-three > .menu-item, .menu.bg-gradient-dark > .menu-item {
+      border-top-color: rgba(255, 255, 255, 0.13); }
+      .bg-dark-two .menu > .menu-item.selected, .bg-dark .menu > .menu-item.selected, .bg-dark-three .menu > .menu-item.selected, .bg-gradient-dark .menu > .menu-item.selected, .bg-dark-two .menu > .menu-item.selected:hover, .bg-dark .menu > .menu-item.selected:hover, .bg-dark-three .menu > .menu-item.selected:hover, .bg-gradient-dark .menu > .menu-item.selected:hover, .menu.bg-dark-two > .menu-item.selected, .menu.bg-dark > .menu-item.selected, .menu.bg-dark-three > .menu-item.selected, .menu.bg-gradient-dark > .menu-item.selected, .menu.bg-dark-two > .menu-item.selected:hover, .menu.bg-dark > .menu-item.selected:hover, .menu.bg-dark-three > .menu-item.selected:hover, .menu.bg-gradient-dark > .menu-item.selected:hover {
+        color: #FFFFFF;
+        border-bottom-color: #00c0d8; }
+        .bg-dark-two .menu > .menu-item.selected::before, .bg-dark .menu > .menu-item.selected::before, .bg-dark-three .menu > .menu-item.selected::before, .bg-gradient-dark .menu > .menu-item.selected::before, .bg-dark-two .menu > .menu-item.selected:hover::before, .bg-dark .menu > .menu-item.selected:hover::before, .bg-dark-three .menu > .menu-item.selected:hover::before, .bg-gradient-dark .menu > .menu-item.selected:hover::before, .menu.bg-dark-two > .menu-item.selected::before, .menu.bg-dark > .menu-item.selected::before, .menu.bg-dark-three > .menu-item.selected::before, .menu.bg-gradient-dark > .menu-item.selected::before, .menu.bg-dark-two > .menu-item.selected:hover::before, .menu.bg-dark > .menu-item.selected:hover::before, .menu.bg-dark-three > .menu-item.selected:hover::before, .menu.bg-gradient-dark > .menu-item.selected:hover::before {
+          border-color: #00c0d8;
+          opacity: 1; }
+      .bg-dark-two .menu > .menu-item:hover, .bg-dark .menu > .menu-item:hover, .bg-dark-three .menu > .menu-item:hover, .bg-gradient-dark .menu > .menu-item:hover, .menu.bg-dark-two > .menu-item:hover, .menu.bg-dark > .menu-item:hover, .menu.bg-dark-three > .menu-item:hover, .menu.bg-gradient-dark > .menu-item:hover {
+        color: #FFFFFF;
+        border-bottom-color: rgba(255, 255, 255, 0.25); }
+        .bg-dark-two .menu > .menu-item:hover::before, .bg-dark .menu > .menu-item:hover::before, .bg-dark-three .menu > .menu-item:hover::before, .bg-gradient-dark .menu > .menu-item:hover::before, .menu.bg-dark-two > .menu-item:hover::before, .menu.bg-dark > .menu-item:hover::before, .menu.bg-dark-three > .menu-item:hover::before, .menu.bg-gradient-dark > .menu-item:hover::before {
+          opacity: 0.25; }
+  .menu.menu-tabbed {
+    text-align: center;
+    border-bottom-width: 2px;
+    border-bottom-style: solid; }
+    .menu.menu-tabbed > .menu-item {
+      display: inline-block;
+      border-top: none;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      margin-bottom: -2px;
+      background-color: transparent !important; }
+      .menu.menu-tabbed > .menu-item::before {
+        display: none; }
+    .menu.menu-tabbed > .button {
+      margin-left: 0.707em;
+      margin-right: 0.707em; }
+    .menu.menu-tabbed.menu-align-left {
+      text-align: left; }
+    .menu.menu-tabbed.menu-align-right {
+      text-align: right; }
+    .menu.menu-tabbed.larger > .menu-item, .menu.menu-tabbed.larger button, .menu.menu-tabbed.larger .button, .menu.menu-tabbed.larger .label, .menu.menu-tabbed.larger h4.app, .menu.menu-tabbed.larger .app h4, .app .menu.menu-tabbed.larger h4, .menu.menu-tabbed.larger h5.app, .menu.menu-tabbed.larger .app h5, .app .menu.menu-tabbed.larger h5, .menu.menu-tabbed.larger h6.app, .menu.menu-tabbed.larger .app h6, .app .menu.menu-tabbed.larger h6, .menu.menu-tabbed.larger .h4.app, .menu.menu-tabbed.larger .app .h4, .app .menu.menu-tabbed.larger .h4, .menu.menu-tabbed.larger .h5.app, .menu.menu-tabbed.larger .app .h5, .app .menu.menu-tabbed.larger .h5, .menu.menu-tabbed.larger .h6.app, .menu.menu-tabbed.larger .app .h6, .app .menu.menu-tabbed.larger .h6, .menu.menu-tabbed.larger button, .menu.menu-tabbed.larger .button, .menu.menu-tabbed.larger .menu > .menu-item {
+      margin-bottom: -1px; }
+
+.bg-light-one, .bg-light-two, .bg-light, .bg-gradient-light {
+  color: #676B71; }
+
+.bg-medium-one, .bg-medium-two, .bg-medium, .bg-dark-one, .bg-aqua, .bg-mint, .bg-salmon, .bg-sunrise, .bg-gradient-medium, .bg-gradient-cool, .bg-gradient-warm {
+  color: #FFFFFF; }
+
+.bg-dark-two, .bg-dark, .bg-dark-three, .bg-gradient-dark {
+  color: #8C939B; }
+
+.bg-noise {
+  background-image: url(../images/noise.png); }
 
 .bg-light-one {
   background-color: #FFFFFF; }
 
-.bg-light-two {
+.bg-light-two, .bg-light {
   background-color: #F8F8F8; }
 
 .bg-medium-one {
   background-color: #8C939B; }
 
-.bg-medium-two {
+.bg-medium-two, .bg-medium {
   background-color: #676B71; }
 
 .bg-dark-one {
   background-color: #383B3F; }
 
-.bg-dark-two {
+.bg-dark-two, .bg-dark {
   background-color: #292B2D; }
+  .bg-dark-two button, .bg-dark button, .bg-dark-two .button, .bg-dark .button {
+    background-color: #292B2D; }
 
 .bg-dark-three {
   background-color: #000000; }
+  .bg-dark-three button, .bg-dark-three .button {
+    background-color: #000000; }
 
 .bg-aqua {
   background-color: #00c0d8; }
@@ -452,16 +617,28 @@ button, .button {
   background-color: #f7425a; }
 
 .bg-gradient-light {
-  background-image: linear-gradient(to bottom, #F8F8F8 0%, #FFFFFF 100%), url(../images/noise.png); }
+  background-image: linear-gradient(to bottom, #F8F8F8 0%, #FFFFFF 100%); }
+  .bg-gradient-light.bg-noise {
+    background-image: url(../images/noise.png), linear-gradient(to bottom, #F8F8F8 0%, #FFFFFF 100%); }
 
 .bg-gradient-medium {
   background-image: linear-gradient(to bottom, #8C939B 0%, #676B71 100%); }
+  .bg-gradient-medium.bg-noise {
+    background-image: url(../images/noise.png), linear-gradient(to bottom, #8C939B 0%, #676B71 100%); }
 
 .bg-gradient-dark {
   background-image: linear-gradient(to bottom, #383B3F 0%, #292B2D 100%); }
+  .bg-gradient-dark.bg-noise {
+    background-image: url(../images/noise.png), linear-gradient(to bottom, #383B3F 0%, #292B2D 100%); }
+  .bg-gradient-dark button, .bg-gradient-dark .button {
+    background-color: #292B2D; }
 
 .bg-gradient-cool {
   background-image: linear-gradient(to bottom, #00c0d8 0%, #2fe79f 100%); }
+  .bg-gradient-cool.bg-noise {
+    background-image: url(../images/noise.png), linear-gradient(to bottom, #00c0d8 0%, #2fe79f 100%); }
 
 .bg-gradient-warm {
   background-image: linear-gradient(to bottom, #F95A45 0%, #f7425a 100%); }
+  .bg-gradient-warm.bg-noise {
+    background-image: url(../images/noise.png), linear-gradient(to bottom, #F95A45 0%, #f7425a 100%); }

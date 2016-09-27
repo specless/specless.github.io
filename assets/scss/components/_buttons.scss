@@ -2,62 +2,62 @@
 // - Buttons
 // ----------------------------------------------------------------------
 
-@mixin button {
-	font-family: $alternate-stack;
-	font-size: 13px;
-	font-weight: 800;
-	line-height: 45px;
-	text-align: center;
-	text-transform: uppercase;
-	-webkit-font-smoothing: antialiased;
-	border-radius: 23px;
-	padding: 0 24px;
-	height: 45px;
-	display: inline-block;
-	cursor: pointer;
-}
+// @mixin button {
+// 	font-family: $alternate-stack;
+// 	font-size: 13px;
+// 	font-weight: 800;
+// 	line-height: 45px;
+// 	text-align: center;
+// 	text-transform: uppercase;
+// 	-webkit-font-smoothing: antialiased;
+// 	border-radius: 23px;
+// 	padding: 0 24px;
+// 	height: 45px;
+// 	display: inline-block;
+// 	cursor: pointer;
+// }
 
-.button {
-	@include button;
-}
+// .button {
+// 	@include button;
+// }
 
-.button--red {
-	color: white;
-	background-color: $color--red;
-}
+// .button--red {
+// 	color: white;
+// 	background-color: $color--red;
+// }
 
-.button--blue {
-	color: white;
-	background-color: $color--blue-dark;
-}
+// .button--blue {
+// 	color: white;
+// 	background-color: $color--blue-dark;
+// }
 
-.button--border {
-	line-height: 34px;
-	border: 2px solid white;
-	border-radius: 5px;
-	padding: 0 19px;
-	height: 37px;
-}
+// .button--border {
+// 	line-height: 34px;
+// 	border: 2px solid white;
+// 	border-radius: 5px;
+// 	padding: 0 19px;
+// 	height: 37px;
+// }
 
-.button--demo {
-	&::after {
-		content: "";
-		margin-left: 10px;
-		width: 17px;
-		height: 11px;
-		display: inline-block;
-		position: relative;
-		top: 1px;
-		background-image: url(../images/icon-button-arrow.svg);
-	}
-}
+// .button--demo {
+// 	&::after {
+// 		content: "";
+// 		margin-left: 10px;
+// 		width: 17px;
+// 		height: 11px;
+// 		display: inline-block;
+// 		position: relative;
+// 		top: 1px;
+// 		background-image: url(../images/icon-button-arrow.svg);
+// 	}
+// }
 
 // ----------------------------------------------------------------------
 // - Specific Selectors
 // ----------------------------------------------------------------------
 
-a.button {}
+// a.button {}
 
-button.button {}
+// button.button {}
 
-input.button {}
+// input.button {}

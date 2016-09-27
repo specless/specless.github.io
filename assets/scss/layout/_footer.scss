@@ -21,39 +21,39 @@ footer {
 			&.footer-social { margin: 0; }
 		}
 
-		ul { margin: 0; }
-		li { margin-bottom: 6px; }
+		// ul { margin: 0; }
+		// li { margin-bottom: 6px; }
 	}
 
-	h3 {
-		font-size: 24px;
-		margin-bottom: 17px;
-	}
+	// h3 {
+	// 	font-size: 24px;
+	// 	margin-bottom: 17px;
+	// }
 
-	a {
-		color: $color--blue-dark;
-		font-size: 18px;
-		font-weight: 500;
+	// a {
+	// 	color: $color--blue-dark;
+	// 	font-size: 18px;
+	// 	font-weight: 500;
 
-		&.phone {
-			color: $color--grey-mid;
-			font-weight: normal;
+	// 	&.phone {
+	// 		color: $color--grey-mid;
+	// 		font-weight: normal;
 			
-			@include mobile {
-			  display: block;
-			  margin-top: 6px;
-			}
+	// 		@include mobile {
+	// 		  display: block;
+	// 		  margin-top: 6px;
+	// 		}
 
-			&::before {
-				content: "\2022";
-				margin: 0 9px 0 6px;
+	// 		&::before {
+	// 			content: "\2022";
+	// 			margin: 0 9px 0 6px;
 				
-				@include mobile {
-  			  display: none;
-  			}
-			}
-		}
-	}
+	// 			@include mobile {
+ //  			  display: none;
+ //  			}
+	// 		}
+	// 	}
+	// }
 }
 
 
@@ -141,9 +141,7 @@ footer {
 // ----------------------------------------------------------------------
 
 .footer-base {
-	color: $color--grey-mid;
 	text-align: center;
-	border-top: 1px solid $color--grey-light;
 	padding: 40px 0 100px;
 	position: relative;
 

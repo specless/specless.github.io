@@ -189,6 +189,14 @@ h4, h5, h6, .h4, .h5, .h6 {
   	}
 }
 
+// ----------------------------------------------------------------------
+// - Links
+// ----------------------------------------------------------------------
+
+a {
+	color: $color-aqua;
+}
+
 
 // ----------------------------------------------------------------------
 // - Labels
@@ -206,6 +214,18 @@ h4, h5, h6, .h4, .h5, .h6 {
     &.larger {
     	font-size: $size-label-larger;
     }
+
+    %light-backgrounds & {
+    	color: $text-dark;
+    }
+
+    %medium-backgrounds & {
+    	color: $text-light;
+    }
+
+    %dark-backgrounds & {
+    	color: $text-medium;
+    }
 }
 
 // ----------------------------------------------------------------------
@@ -213,16 +233,18 @@ h4, h5, h6, .h4, .h5, .h6 {
 // ----------------------------------------------------------------------
 
 button, .button {
+	$border-thickness: 2px;
 	@extend .label;
 	padding-right: $size-up-two;
 	padding-left: $size-up-two;
 	border-radius: 2em;
 	box-shadow: $shadow-none;
 	transition: 0.5s ease box-shadow;
-	overflow: hidden;
 	position: relative;
 	background-color: transparent;
-	border: 2px solid $color-overlay-darkest;
+	box-sizing: border-box;
+	border: $border-thickness solid $color-overlay-darkest;
+	color: black;
 
 	&.larger {
 		font-size: $size-label-larger;
@@ -236,10 +258,11 @@ button, .button {
 	&::before {
 		content: "";
 		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+		top: - $border-thickness;
+		left: - $border-thickness;
+		bottom: - $border-thickness;
+		right: - $border-thickness;
+		border-radius: 2em;
 		transition: 0.5s ease background-color;
 		background-color: $color-overlay-clear;
 		z-index: 0;
@@ -247,168 +270,501 @@ button, .button {
 
 	&:hover {
 		box-shadow: $shadow-high;
+		
 		&::before {
 			background-color: $color-overlay-lighten;
-		}
-
-		&.alt {
-			box-shadow: $shadow-high;
 		}
 	}
 
 	&:active {
 		box-shadow: $shadow-low;
+		
 		&::before {
 			background-color: $color-overlay-darken;
-		}
-
-		&.alt {
-			box-shadow: $shadow-low;
 		}
 	}
 
 	&.alt {
-		border: none;
+		border-color: $color-overlay-clear;
 		box-shadow: $shadow-medium;
 
+		&:hover {
+			box-shadow: $shadow-high;
+		}
 
+		&:active {
+			box-shadow: $shadow-low;
+		}
+	}
+
+	%dark-backgrounds &, %medium-backgrounds & {
+		color: $text-light;
+
+		&:hover {
+			box-shadow: $shadow-dark-high;
+		}
+
+		&:active {
+			box-shadow: $shadow-dark-low;
+		}
+
+		&.alt {
+			border-color: $color-overlay-clear;
+			box-shadow: $shadow-dark-medium;
+
+			&:hover {
+				box-shadow: $shadow-dark-high;
+			}
+
+			&:active {
+				box-shadow: $shadow-dark-low;
+			}
+		}
+	}
+
+	%dark-backgrounds & {
+		border-color: $color-medium-one;
+	}
+
+	%medium-backgrounds & {
+		border-color: $color-overlay-lightest;
+	}
+
+	&.button-cool {
+		
+		%dark-backgrounds & {
+			border-color: $color-overlay-clear;
+			color: $text-light;
+			padding: calc(#{$size-down-one} - 2px) calc(#{$size-up-two} - 2px);
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: - $border-thickness * 2;
+				left: - $border-thickness * 2;
+				bottom: - $border-thickness * 2;
+				right: - $border-thickness * 2;
+				border-radius: 2em;
+				background-image: $gradient-cool;
+				z-index: -1;
+			}
+
+			&.alt {
+				padding: calc(#{$size-down-one} + 2px) calc(#{$size-up-two} + 2px);
+				border: none;
+				background-color: transparent;
+				background-image: $gradient-cool;
+
+				&::after {
+					display: none;
+				}
+			}
+		}
+
+		%light-backgrounds & {
+			border-color: $color-aqua;
+			color: $color-aqua;
+
+			&.alt {
+				color: $text-light;
+				background-color: $color-aqua;
+			}
+		}
+	}
+
+	&.button-warm {
+
+		%dark-backgrounds & {
+			border-color: $color-overlay-clear;
+			color: $text-light;
+			padding: calc(#{$size-down-one} - 2px) calc(#{$size-up-two} - 2px);
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: - $border-thickness * 2;
+				left: - $border-thickness * 2;
+				bottom: - $border-thickness * 2;
+				right: - $border-thickness * 2;
+				border-radius: 2em;
+				background-image: $gradient-warm;
+				z-index: -1;
+			}
+
+			&.alt {
+				padding: calc(#{$size-down-one} + 2px) calc(#{$size-up-two} + 2px);
+				border: none;
+				background-color: transparent;
+				background-image: $gradient-warm;
+
+				&::after {
+					display: none;
+				}
+			}
+		}
+
+		%light-backgrounds & {
+			border-color: $color-sunrise;
+			color: $color-sunrise;
+			
+			&.alt {
+				color: $text-light;
+				background-color: $color-sunrise;
+			}	
+		}
 	}
 }
 
 // ----------------------------------------------------------------------
-// - Tabs
+// - Menu
 // ----------------------------------------------------------------------
-
-.tabs {
-	width: 100%;
-	border-bottom: 2px solid $color-overlay-darkest;
-	text-align: center;
+.menu {
+	display: block;
+	border-color: $color-overlay-darkest;
+	text-align: left;
 	height: auto;
+	border-width: 0;
 
-	> a {
+	> .menu-item {
 		@extend .label;
 		padding: $size-up-one $size-up-two;
-		display: inline-block;
+		display: block;
 		position: relative;
-		margin-bottom: -2px;
-		transition: 0.5s ease background-color, 0.25s ease border-color;
-		border-bottom: 2px solid $color-overlay-clear;
+		border-width: 0;
+		transition: 0.5s ease color, 0.25s ease border-color;
+		border-color: $color-overlay-clear;
 
-		&:hover {
-			background-color: $color-overlay-lighten;
-			border-bottom: 2px solid $color-overlay-darkest;
+		&::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			box-sizing: border-box;
+			transition: 0.25s ease opacity;
+			opacity: 0;
 		}
 
-		&.selected {
-			border-bottom: 2px solid $color-accent;
+		&:hover {
+			border-bottom-color: $color-overlay-darkest;
+
+			&::before {
+				background-color: $color-overlay-lighten;
+				opacity: 1;
+			}
+		}
+
+		&.selected, &.selected:hover {
+			border-bottom-color: $color-overlay-darkest;
+
+			&::before {
+				background-color: $color-overlay-darken;
+				border-left: 2px solid $color-overlay-darkest;
+				opacity: 2;
+			}
 		}
 	}
 
 	&.larger {
 		font-size: 1em;
-		> a {
+		> .menu-item, button, .button, .label {
 			font-size: $size-label-larger;
-			margin-bottom: -1px;
+		}
+	}
+
+	%light-backgrounds &, &%medium-backgrounds {
+
+		> .menu-item {
+
+			&.selected, &.selected:hover {
+				color: $text-darker;
+				border-bottom-color: $color-aqua;
+
+				&::before {
+					border-color: $color-aqua;
+				}
+
+			}
+
+			&:hover {
+				&::before {
+					background-color: $color-overlay-lightest;
+				}
+				color: $text-darker;
+			}
+		}
+	}
+
+	%medium-backgrounds &, &%medium-backgrounds {
+		border-color: $color-overlay-lightest;
+
+		> .menu-item {
+			border-top-color: $color-overlay-lightest;
+			color: $color-transp-white;
+
+			&.selected, &.selected:hover {
+				color: $text-light;
+				border-bottom-color: $text-light;
+
+				&::before {
+					border-color: $color-overlay-lightest;
+				}
+			}
+
+			&:hover {
+				color: $text-light;
+				border-bottom-color: $color-overlay-lightest;
+
+				&::before {
+					opacity: 0.75;
+				}
+
+			}
+		}
+	}
+
+	%dark-backgrounds &, &%dark-backgrounds {
+		border-color: $color-overlay-lighten;
+
+		> .menu-item {
+			border-top-color: $color-overlay-lighten;
+
+			&.selected, &.selected:hover {
+				color: $text-light;
+				border-bottom-color: $color-aqua;
+
+				&::before {
+					border-color: $color-aqua;
+					opacity: 1;
+				}
+			}
+
+			&:hover {
+				color: $text-light;
+				border-bottom-color: $color-overlay-lightest;
+
+				&::before {
+					opacity: 0.25;
+				}
+			}
+		}	
+	}
+
+	&.menu-tabbed {
+		text-align: center;
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
+
+		> .menu-item {
+			display: inline-block;
+			border-top: none;
+			border-bottom-width: 2px;
+			border-bottom-style: solid;
+			margin-bottom: -2px;
+			background-color: transparent !important;
+
+			&::before {
+				display: none;
+			}
+
+		}
+
+		>.button {
+			margin-left: $size-down-one;
+			margin-right: $size-down-one;
+		}
+
+		&.menu-align-left {
+			text-align: left;
+		}
+
+		&.menu-align-right {
+			text-align: right;
+		}
+
+	&.larger {
+			> .menu-item, button, .button, .label {
+				margin-bottom: -1px;
+			}
 		}
 	}
 }
 
+
+// .menu {
+// 	@extend .tabs;
+// 	text-align: left;
+
+// 	> .menu-item {
+// 		display: block;
+// 		border-top: 2px solid $color-overlay-darkest;
+
+// 		&:hover {
+// 			border-color: $color-overlay-darkest;
+// 		}
+
+// 		&.selected {
+// 			border-color: $color-overlay-darkest;
+// 			background-color: $color-overlay-darken;
+// 		}
+// 	}
+// }
+
 // ----------------------------------------------------------------------
-// - Menus
+// - Color Wrappers
 // ----------------------------------------------------------------------
 
 
-.menu {
-	@extend .tabs;
-	text-align: left;
+%light-backgrounds {
+	color: $text-dark;
+}
 
-	> a {
-		display: block;
-		border-top: 2px solid $color-overlay-darkest;
+%medium-backgrounds {
+	color: $text-light;
+}
 
-		&:hover {
-			border-color: $color-overlay-darkest;
-		}
-
-		&.selected {
-			border-color: $color-overlay-darkest;
-			background-color: $color-overlay-darken;
-		}
-	}
+%dark-backgrounds {
+	color: $text-medium;
 }
 
 // ----------------------------------------------------------------------
-// - Colors
+// - Backgrounds
 // ----------------------------------------------------------------------
 
 
-.bg-light {
-
+.bg-noise {
+	background-image: $color-overlay-noise;
 }
 
 .bg-light-one {
 	background-color: $color-light-one;
+	@extend %light-backgrounds;
 }
 
 .bg-light-two {
 	background-color: $color-light-two;
+	@extend %light-backgrounds;
 }
 
 .bg-medium-one {
 	background-color: $color-medium-one;
+	@extend %medium-backgrounds;
 }
 
 .bg-medium-two {
 	background-color: $color-medium-two;
+	@extend %medium-backgrounds;
 }
 
 
 .bg-dark-one {
 	background-color: $color-dark-one;
+	@extend %medium-backgrounds;
 }
 
 .bg-dark-two {
 	background-color: $color-dark-two;
+	@extend %dark-backgrounds;
+
+	button, .button {
+		background-color: $color-dark-two;
+	}
 }
 
 .bg-dark-three {
 	background-color: $color-dark-three;
+	@extend %dark-backgrounds;
+
+	button, .button {
+		background-color: $color-dark-three;
+	}
 }
 
 .bg-aqua {
 	background-color: $color-aqua;
+	@extend %medium-backgrounds;
+
 }
 
 .bg-mint {
 	background-color: $color-mint;
+	@extend %medium-backgrounds;
+
 }
 
 .bg-salmon {
 	background-color: $color-salmon;
+	@extend %medium-backgrounds;
+
 }
 
 .bg-sunrise {
 	background-color: $color-sunrise;
+	@extend %medium-backgrounds;
+
 }
 
 .bg-gradient-light {
-	background-image: $gradient-light, $color-overlay-noise;
+	background-image: $gradient-light;
+	@extend %light-backgrounds;
+
+	&.bg-noise {
+		background-image: $color-overlay-noise, $gradient-light;
+	}
 }
 
 .bg-gradient-medium {
 	background-image: $gradient-medium;
+	@extend %medium-backgrounds;
+
+	&.bg-noise {
+		background-image: $color-overlay-noise, $gradient-medium;
+	}
 }
 
 .bg-gradient-dark {
 	background-image: $gradient-dark;
+	@extend %dark-backgrounds;
+
+	&.bg-noise {
+		background-image: $color-overlay-noise, $gradient-dark;
+	}
+
+	button, .button {
+		background-color: $color-dark-two;
+	}
 }
 
 .bg-gradient-cool {
 	background-image: $gradient-cool;
+	@extend %medium-backgrounds;
+
+	&.bg-noise {
+		background-image: $color-overlay-noise, $gradient-cool;
+	}
 }
 
 .bg-gradient-warm {
 	background-image: $gradient-warm;
+	@extend %medium-backgrounds;
+
+	&.bg-noise {
+		background-image: $color-overlay-noise, $gradient-warm;
+	}
+}
+
+.bg-light {
+	@extend .bg-light-two;
+}
+
+.bg-dark {
+	@extend .bg-dark-two;
+}
+
+.bg-medium {
+	@extend .bg-medium-two;
 }
 
 

@@ -2,65 +2,65 @@
 // - Nav
 // ----------------------------------------------------------------------
 
-.menu {
+// .menu {
 
-	@include tablet-min {
-		font-family: $alternate-stack;
-		float: right;
+// 	@include tablet-min {
+// 		font-family: $alternate-stack;
+// 		float: right;
 
-		ul { padding-top: 10px; }
+// 		ul { padding-top: 10px; }
 
-		li {
-			margin-right: 32px;
-			float: left;
-			position: relative;
+// 		li {
+// 			margin-right: 32px;
+// 			float: left;
+// 			position: relative;
 
-			&:last-child { margin-left: 20px; }
+// 			&:last-child { margin-left: 20px; }
 
-			&.support { display: none; }
-		}
+// 			&.support { display: none; }
+// 		}
 
-		a {
-			color: white;
-			font-size: 14px;
-			font-weight: 900;
-			text-transform: uppercase;
-		}
+// 		a {
+// 			color: white;
+// 			font-size: 14px;
+// 			font-weight: 900;
+// 			text-transform: uppercase;
+// 		}
 
-		.button-link {
-			margin-right: 0;
-			top: -9px;
+// 		.button-link {
+// 			margin-right: 0;
+// 			top: -9px;
 
-			a {
-				@include button;
-				line-height: 34px;
-				border: 2px solid white;
-				border-radius: 5px;
-				padding: 0;
-				width: 96px;
-				height: 37px;
-				display: block;
-			}
-		}
+// 			a {
+// 				@include button;
+// 				line-height: 34px;
+// 				border: 2px solid white;
+// 				border-radius: 5px;
+// 				padding: 0;
+// 				width: 96px;
+// 				height: 37px;
+// 				display: block;
+// 			}
+// 		}
 
-		.nav-link__support { display: none; }
-	}
+// 		.nav-link__support { display: none; }
+// 	}
 
-	ul {
-		margin: 0;
-	}
+// 	ul {
+// 		margin: 0;
+// 	}
 
-	a {
-		-webkit-font-smoothing: antialiased;
+// 	a {
+// 		-webkit-font-smoothing: antialiased;
 
-		&.notransition {
-			-webkit-transition: none !important;
-			-moz-transition: none !important;
-			-o-transition: none !important;
-			-ms-transition: none !important;
-			transition: none !important;
-		}
-	}
+// 		&.notransition {
+// 			-webkit-transition: none !important;
+// 			-moz-transition: none !important;
+// 			-o-transition: none !important;
+// 			-ms-transition: none !important;
+// 			transition: none !important;
+// 		}
+// 	}
 
-	.social-nav { display: none; }
-}
+// 	.social-nav { display: none; }
+// }

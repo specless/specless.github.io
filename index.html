@@ -5,15 +5,16 @@
 	<meta charset="utf-8">
 	<title>Specless</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link href="assets/css/branding.css" rel="stylesheet" />
 	<link href="assets/css/styles.css" rel="stylesheet" />
 	<script src="assets/js/vendor/modernizr.min.js"></script>
 </head>
 
-<body>
+<body class="bg-dark bg-noise">
 
 <main class="page" role="main">
 
-	<div id="section-hero" class="hero-section section-wrap section-wrap__light gradient--grey-blue-grey">
+	<div id="section-hero" class="hero-section bg-dark bg-noise">
 
 		<header id="header" class="header">
 			<div class="container">
@@ -27,16 +28,14 @@
 						<span class="hamburger-inner"></span>
 					</span>
 				</button>
-				<nav class="menu menu__primary">
-					<ul class="group">
-						<li class="nav-link nav-link__tour"><a href="#" title="Tour">Tour</a></li>
-						<li class="nav-link nav-link__features"><a href="#" title="Features">Features</a></li>
-						<li class="nav-link nav-link__cascade"><a href="#" title="Cascade">Cascade</a></li>
-						<li class="nav-link nav-link__support"><a href="#" title="Support">Support</a></li>
-						<li class="button-link button-link__log-in"><a href="#" title="Log in">Log in</a></li>
-						<li class="button-link button-link__sign-up"><a href="#" title="Sign up">Sign up</a></li>
-					</ul>
-					<div class="social-nav group">
+				<nav class="menu menu-tabbed menu-align-right">
+					<a class="menu-item selected" href="#" title="Tour">Tour</a>
+					<a class="menu-item" href="#" title="Features">Features</a>
+					<a class="menu-item" href="#" title="Cascade">Cascade</a>
+					<a class="menu-item" href="#" title="Support">Support</a>
+					<a class="button" href="#" title="Log in">Log in</a>
+					<a class="button" ref="#" title="Sign up">Sign up</a>
+					<!-- <div class="social-nav group">
 						<a href="https://twitter.com/gospecless/" title="Twitter" target="_blank">
 							<svg class="shape shape-svg shape-social--twitter" width="50" height="40">
 								<use xlink:href="#shape---social-twitter"></use>
@@ -57,7 +56,7 @@
 								<use xlink:href="#shape---social-linkedin"></use>
 							</svg>
 						</a>
-					</div>
+					</div> -->
 				</nav>
 			</div>
 		</header>
@@ -125,13 +124,13 @@
 
 	</div>
 
-	<div id="section-publishers" class="section-wrap section-wrap__light gradient--grey">
+	<div id="section-publishers" class="bg-light">
 
 		<section class="publishers-section">
 			<div class="container">
 
 				<div class="content-column content-column__left">
-					<h5 class="section-title">Publishers</h5>
+					<p class="label">Publishers</p>
 					<h2>Any Format</h2>
 					<p>Forget tired standard units and "off-the-shelf" formats from other vendors. Specless offers the industry's first technology developed specifically for publishers — to create, deliver and sell any format of ads imaginable.</p>
 					<h3>Unlock Valuable Inventory<span class="icon icon__grey"></span></h3>
@@ -307,13 +306,13 @@
 
 	</div>
 
-	<div id="section-advertisers" class="section-wrap section-wrap__light gradient--grey-blue">
+	<div id="section-advertisers" class="bg-light">
 
 		<section class="advertisers-section">
 
 			<div class="container">
 				<div class="content-column content-column__right">
-					<h5 class="section-title">Advertisers</h5>
+					<p class="label">Advertisers</p>
 					<h2>Any Concept</h2>
 					<p>Quit building the same ad over and over. With Specless, any creative concept can be developed and delivered at scale. So stop creating to the "lowest common denominator". Start sharing creative completely across devices, formats and contexts.</p>
 					<h3>Unlock Valuable Inventory<span class="icon icon__blue"></span></h3>
@@ -462,7 +461,7 @@
 
 	</div>
 
-	<div id="section-richmedia" class="section-wrap section-wrap__light gradient--blue-green">
+	<div id="section-richmedia" class="bg-gradient-dark bg-noise">
 
 		<section class="rich-media-section">
 
@@ -527,46 +526,57 @@
 
 	</div>
 
-	<div id="section-details" class="section-wrap section-wrap__light gradient--green-grey">
+	<div id="section-details">
 
-		<section class="everything-section">
+		<section class="everything-section bg-dark bg-noise">
 
 			<div class="container">
 				<h2 class="heading text-center">Everything You Need.</h2>
 				<p class="sub-heading text-center">This is a subheader that will help balance out this whitespace.</p>
 
 				<div class="column-group group">
-					<div class="column column--equal">
+					<div class="column column--equal bg-light">
 						<div class="column-symbol">
 							<img src="assets/images/symbol-icon-api.svg">
 						</div>
 						<h3>Specless Publisher API</h3>
 						<p>Built for publishers — so you can easily and efficiently develop and deploy your own ad formats.</p>
 						<div class="button-group">
-							<a class="button button--red" href="#">Explore the API</a>
+							<a class="button" href="#">Explore the API</a>
 						</div>
 					</div>
-					<div class="column column--equal">
+					<div class="column column--equal bg-light">
 						<div class="column-symbol">
 							<img src="assets/images/symbol-icon-cascade.svg">
 						</div>
 						<h3>Specless Cascade</h3>
 						<p>Unlock your creativity with the full power of HTML5, CSS3 and Javascript in a complete package and companion application.</p>
 						<div class="button-group">
-							<a class="button button--red" href="#">Download Now</a>
+							<a class="button" href="#">Download Now</a>
 						</div>
 					</div>
-					<div class="column column--equal">
+					<div class="column column--equal bg-light">
 						<div class="column-symbol">
 							<img src="assets/images/symbol-icon-creative.svg">
 						</div>
 						<h3>Specless Creative Services</h3>
 						<p>We offer more than top-line tech, but also great service. Always ready to help, our people set us apart.</p>
 						<div class="button-group">
-							<a class="button button--red" href="#">Contact Us Today</a>
+							<a class="button" href="#">Contact Us Today</a>
 						</div>
 					</div>
 				</div>
+
+			</div>
+
+		</section>
+
+		<section class="web-interface-section text-center">
+
+			<div class="container">
+
+				<h3 class="heading">Specless Web Interface</h3>
+				<p class="sub-heading">Where it all comes together. A unified interface to manage your creative assets, configure them for delivery and generate tags, while also viewing your analytics and reporting.</p>
 
 			</div>
 
@@ -589,24 +599,18 @@
 				</div>
 			</div>
 
+			<section class="text-center">
+
+				<h4>Are you ready to go Specless?</h4>
+				<a class="button button--red button--demo" data-modal="#contact-modal">Request a Demo</a>
+
+			</section>
+
 		</section>
 
 	</div>
 
-	<div id="section-team" class="section-wrap section-wrap__light bg--grey">
-
-		<section class="web-interface-section text-center">
-
-			<div class="container">
-
-				<h3 class="heading">Specless Web Interface</h3>
-				<p class="sub-heading">Where it all comes together. A unified interface to manage your creative assets, configure them for delivery and generate tags, while also viewing your analytics and reporting.</p>
-				<h4>Are you ready to go Specless?</h4>
-				<a class="button button--red button--demo" data-modal="#contact-modal">Request a Demo</a>
-
-			</div>
-
-		</section>
+	<div id="section-team" class="bg-dark bg-noise">
 
 		<section class="team-section">
 
@@ -673,12 +677,12 @@
 
 	</div>
 
-	<footer id="section-footer">
+	<footer id="section-footer" class="bg-medium">
 
 		<div class="container">
 			<div class="footer-wrap group">
 				<nav class="footer-links">
-					<h3>Specless</h3>
+					<p class="label">Specless</p>
 					<ul>
 						<li><a href="#" title="Tour">Tour</a></li>
 						<li><a href="http://metamn.io/specless/features" title="Features">Features</a></li>
@@ -689,7 +693,7 @@
 					</ul>
 				</nav>
 				<nav class="footer-social">
-					<h3>Social</h3>
+					<p class="label">Social</p>
 					<ul class="ul">
 						<li class="li"><a class="link" href="https://twitter.com/gospecless/" title="Twitter" target="_blank">Twitter</a></li>
 						<li class="li"><a class="link" href="https://www.facebook.com/specless/" title="Facebook" target="_blank">Facebook</a></li>
@@ -698,7 +702,7 @@
 					</ul>
 				</nav>
 				<div class="footer-connect">
-					<h3>Contact Us</h3>
+					<p class="label">Contact Us</p>
 					<div class="contact-block">
 						<a class="email" href="mailto:hello@gospecless.com" title="hello@gospecless.com">hello@gospecless.com</a>
 						<a class="phone" href="tel:312-212-8491">(312) 212-8491</a>

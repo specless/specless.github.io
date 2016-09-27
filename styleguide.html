@@ -21,31 +21,63 @@
 		<h2>Color Palette & Textures</h2>
 
 		<section data-name="Neutrals">
-			<div class="styleguide-swatch bg-light-one"></div>
-			<div class="styleguide-swatch bg-light-two"></div>
-			<div class="styleguide-swatch bg-medium-one"></div>
-			<div class="styleguide-swatch bg-medium-two"></div>
-			<div class="styleguide-swatch bg-dark-one"></div>
-			<div class="styleguide-swatch bg-dark-two"></div>
-			<div class="styleguide-swatch bg-dark-three"></div>
+			<div class="styleguide-swatch bg-light-one">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
+			<div class="styleguide-swatch bg-light-two">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
+			<div class="styleguide-swatch bg-medium-one">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
+			<div class="styleguide-swatch bg-medium-two">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
+			<div class="styleguide-swatch bg-dark-one">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
+			<div class="styleguide-swatch bg-dark-two">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
+			<div class="styleguide-swatch bg-dark-three">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
 		</section>
 
 		<section data-name="Accent Colors">
-			<div class="styleguide-swatch bg-aqua"></div>
-			<div class="styleguide-swatch bg-mint"></div>
-			<div class="styleguide-swatch bg-salmon"></div>
-			<div class="styleguide-swatch bg-sunrise"></div>
+			<div class="styleguide-swatch bg-aqua">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
+			<div class="styleguide-swatch bg-mint">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
+			<div class="styleguide-swatch bg-salmon">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
+			<div class="styleguide-swatch bg-sunrise">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
 		</section>
 
 		<section data-name="Neutral Gradients">
-			<div class="styleguide-swatch bg-gradient-light"></div>
-			<div class="styleguide-swatch bg-gradient-medium"></div>
-			<div class="styleguide-swatch bg-gradient-dark"></div>
+			<div class="styleguide-swatch bg-gradient-light">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
+			<div class="styleguide-swatch bg-gradient-medium">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
+			<div class="styleguide-swatch bg-gradient-dark">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
 		</section>
 
 		<section data-name="Accent Gradients">
-			<div class="styleguide-swatch bg-gradient-warm"></div>
-			<div class="styleguide-swatch bg-gradient-cool"></div>
+			<div class="styleguide-swatch bg-gradient-warm">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
+			<div class="styleguide-swatch bg-gradient-cool">
+				<div class="styleguide-swatch-overlay bg-noise"></div>
+			</div>
 		</section>
 
 	</article>
@@ -142,39 +174,57 @@
 	<article id="userinterface">
 		<h2>User Interface</h2>
 		<section data-name="Standard Sized Buttons">
-			<button>Primary Button</button>
-			<button class="alt">Alternative Button</button>
+			<p>
+				<button>Primary Button</button>
+				<button class="button-cool">Primary Button</button>
+				<button class="button-warm">Primary Button</button>
+			</p>
+			<p>
+				<button class="alt">Alternative Button</button>
+				<button class="alt button-cool">Alternative Button</button>
+				<button class="alt button-warm">Alternative Button</button>
+			</p>
 		</section>
 		<section data-name="Larger Sized Buttons">
-			<button class="larger">Primary Button</button>
-			<button class="larger alt">Alternative Button</button>
+			<p>
+				<button class="larger">Primary Button</button>
+				<button class="larger button-cool">Primary Button</button>
+				<button class="larger button-warm">Primary Button</button><br>
+			</p>
+			<p>
+				<button class="larger alt">Alternative Button</button>
+				<button class="larger alt button-cool">Alternative Button</button>
+				<button class="larger alt button-warm">Alternative Button</button>
+			</p>
 		</section>
 		<section data-name="Standard Sized Tabbed Navigation">
-			<nav class="tabs">
-				<a class="selected">Item One</a>
-				<a>Item Two</a>
-				<a>Item Three</a>
+			<nav class="menu menu-tabbed">
+				<a class="menu-item selected">Item One</a>
+				<a class="menu-item">Item Two</a>
+				<a class="menu-item">Item Three</a>
 			</nav>
 		</section>
 		<section data-name="Larger Sized Tabbed Navigation">
-			<nav class="tabs larger">
-				<a class="selected">Item One</a>
-				<a>Item Two</a>
-				<a>Item Three</a>
+			<nav class="menu menu-tabbed larger">
+				<a class="menu-item selected">Item One</a>
+				<a class="menu-item">Item Two</a>
+				<a class="menu-item">Item Three</a>
+				<a class="menu-item">Item Four</a>
+				<a class="button button-cool">Button Item</a>
 			</nav>
 		</section>
 		<section data-name="Standard Sized Menu">
-			<nav class="menu">
-				<a class="selected">Item One</a>
-				<a>Item Two</a>
-				<a>Item Three</a>
+			<nav class="menu menu-navigation">
+				<a class="menu-item selected">Item One</a>
+				<a class="menu-item">Item Two</a>
+				<a class="menu-item">Item Three</a>
 			</nav>
 		</section>
 		<section data-name="Larger Sized Menu">
-			<nav class="menu larger">
-				<a class="selected">Item One</a>
-				<a>Item Two</a>
-				<a>Item Three</a>
+			<nav class="menu menu-navigation larger">
+				<a class="menu-item selected">Item One</a>
+				<a class="menu-item">Item Two</a>
+				<a class="menu-item">Item Three</a>
 			</nav>
 		</section>
 
