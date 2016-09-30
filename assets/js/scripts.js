@@ -37,6 +37,9 @@ jQuery( function( $ ) {
 		$team: $('#section-team'),
 		$footer: $('#section-footer'),
 		$demo: $('#demo-container'),
+		$demoGlow: $('#demo-glow'),
+		$demoGreenGlow: $('#demo-green-glow'),
+		$demoFlare: $('#demo-flare'),
 		$demoGraffiti: $('#graffiti'),
 		$demoControls: $('#demo-controls'),
 		$device: $('#device-demo'),
@@ -170,6 +173,29 @@ jQuery( function( $ ) {
 						ease: Back.easeOut.config(1.7),
 						y: '-24%'
 					}, 0)
+					.to(self.$demoGlow, 7, {
+						opacity: 0.25
+					}, 0)
+					// .to(self.$demoFlare, 7, {
+					// 	opacity: 0.25
+					// }, 0)
+					.to(self.$demoGlow, 5, {
+						height: '1000%',
+						width: '65%'
+					}, 0)
+					.to(self.$demoFlare, 5, {
+						height: '10%',
+						//width: '250%',
+						ease: Circ.easeInOut,
+						rotation: 180,
+						transformOrigin: 'bottom 50%',
+						opacity: 0
+					}, 0)
+					.to(self.$demoGreenGlow, 5, {
+						width: '30%',
+						height: '150%',
+						opacity: 0
+					}, 0)
 					.from(self.$subhead, 5, {
 						css: {
 							top: '300px'}
@@ -221,8 +247,7 @@ jQuery( function( $ ) {
 						opacity: 0
 					}, 5)
 					.to(self.$demo, 1, {
-						ease: Power0.easeNone,
-						y: '-' + self.$win.height() + 'px',
+						// y: '-' + self.$win.height() + 'px',
 						opacity: 0
 					}, 5)
 
@@ -295,7 +320,13 @@ jQuery( function( $ ) {
 						width: '80%',
 						height: '60%'
 					}}, 0)
-					.to(self.$subhead, 0.6, {opacity: 0}, 0);
+					.to(self.$subhead, 0.6, {opacity: 0}, 0)
+					.to(self.$demoGlow, 1, {
+						opacity: 0
+					}, 0)
+					.to(self.$demoFlare, 1, {
+						opacity: 0
+					}, 0);
 
 			function resizeDevice(percent) {
 				var newDuration = duration / 2;

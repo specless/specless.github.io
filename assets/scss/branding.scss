@@ -54,7 +54,6 @@
 // - Base Styles
 // ----------------------------------------------------------------------
 
-
 html {
 	font-size: 16px;
 }
@@ -197,6 +196,82 @@ a {
 	color: $color-aqua;
 }
 
+// ----------------------------------------------------------------------
+// - Logo
+// ----------------------------------------------------------------------
+
+
+.logo {
+	background-image: url(../images/vectors/logo.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: inline-block;
+	min-width: 168px;
+
+	&:before {
+		content: "";
+		display: block;
+		width: 100%;
+		padding-top: 22.6%;
+	}
+
+	&.logo-mark {
+		background-image: url(../images/vectors/logo-mark.svg);
+		min-width: 20px;
+		&:before {
+			padding-top: 100%;
+		}
+	}
+
+	%light-backgrounds & {
+		background-image: url(../images/vectors/logo-dark.svg);
+
+		&.logo-alt {
+			background-image: url(../images/vectors/logo-dark-alt.svg);
+
+			&.logo-mark {
+				background-image: url(../images/vectors/logo-mark-dark.svg);
+			}
+		}
+
+		&.logo-mark {
+			background-image: url(../images/vectors/logo-mark-dark.svg);
+		}
+	}
+
+	%medium-backgrounds & {
+		background-image: url(../images/vectors/logo-light.svg);
+		
+		&.logo-alt {
+			background-image: url(../images/vectors/logo-light.svg);
+
+			&.logo-mark {
+				background-image: url(../images/vectors/logo-mark-light.svg);
+			}
+		}
+
+		&.logo-mark {
+			background-image: url(../images/vectors/logo-mark-light.svg);
+		}
+	}
+
+	%dark-backgrounds & {
+		background-image: url(../images/vectors/logo-light.svg);
+
+		&.logo-alt {
+			background-image: url(../images/vectors/logo-light-alt.svg);
+
+			&.logo-mark {
+				background-image: url(../images/vectors/logo-mark-light.svg);
+			}
+		}
+
+		&.logo-mark {
+			background-image: url(../images/vectors/logo-mark-light.svg);
+		}
+	}
+}
+
 
 // ----------------------------------------------------------------------
 // - Labels
@@ -211,7 +286,7 @@ a {
     text-transform: uppercase;
     padding: $size-down-one 0;
 
-    &.larger {
+    &.label-large {
     	font-size: $size-label-larger;
     }
 
@@ -245,8 +320,9 @@ button, .button {
 	box-sizing: border-box;
 	border: $border-thickness solid $color-overlay-darkest;
 	color: black;
+	text-align: center;
 
-	&.larger {
+	&.button-large, .button-group.button-group-large & {
 		font-size: $size-label-larger;
 	}
 
@@ -277,7 +353,7 @@ button, .button {
 	}
 
 	&:active {
-		box-shadow: $shadow-low;
+		box-shadow: $shadow-none;
 		
 		&::before {
 			background-color: $color-overlay-darken;
@@ -295,21 +371,49 @@ button, .button {
 		&:active {
 			box-shadow: $shadow-low;
 		}
+
+		%dark-backgrounds & {
+			&::before {
+				opacity: 0.5;
+			}
+			&:active::before {
+				background-color: $color-overlay-darker;
+			}
+		}
 	}
 
 	%dark-backgrounds &, %medium-backgrounds & {
 		color: $text-light;
 
-		&:hover {
-			box-shadow: $shadow-dark-high;
-		}
 
 		&:active {
-			box-shadow: $shadow-dark-low;
+			box-shadow: $shadow-none;
 		}
 
 		&.alt {
 			border-color: $color-overlay-clear;
+
+			&:active {
+				box-shadow: $shadow-low;
+			}
+		}
+	}
+
+	%dark-backgrounds & {
+		border-color: $color-medium-one;
+		&::before {
+			opacity: 0.25;
+		}
+		&:active::before {
+			opacity: 0.75;
+			background-color: $color-overlay-darker;
+		}
+
+		&:hover {
+			box-shadow: $shadow-dark-high;
+		}
+
+		&.alt {
 			box-shadow: $shadow-dark-medium;
 
 			&:hover {
@@ -320,14 +424,14 @@ button, .button {
 				box-shadow: $shadow-dark-low;
 			}
 		}
-	}
 
-	%dark-backgrounds & {
-		border-color: $color-medium-one;
 	}
 
 	%medium-backgrounds & {
 		border-color: $color-overlay-lightest;
+		&::before {
+			opacity: 0.75;
+		}
 	}
 
 	&.button-cool {
@@ -336,6 +440,16 @@ button, .button {
 			border-color: $color-overlay-clear;
 			color: $text-light;
 			padding: calc(#{$size-down-one} - 2px) calc(#{$size-up-two} - 2px);
+			box-shadow: none;
+
+			&:not(.alt):hover, &:not(.alt):active {
+				box-shadow: none;
+			}
+
+			&::before {
+				margin-top: -2px;
+				margin-bottom: -2px;
+			}
 
 			&::after {
 				content: "";
@@ -347,6 +461,15 @@ button, .button {
 				border-radius: 2em;
 				background-image: $gradient-cool;
 				z-index: -1;
+				transition: 0.5s ease box-shadow;
+			}
+
+			&:hover::after {
+				box-shadow: $shadow-dark-high;
+			}
+
+			&:active::after {
+				box-shadow: $shadow-dark-low;
 			}
 
 			&.alt {
@@ -354,9 +477,23 @@ button, .button {
 				border: none;
 				background-color: transparent;
 				background-image: $gradient-cool;
+				box-shadow: $shadow-dark-medium;
+
+				&:hover {
+					box-shadow: $shadow-dark-high;
+				}
+
+				&:active {
+					box-shadow: $shadow-dark-low;
+				}
 
 				&::after {
 					display: none;
+				}
+
+				&::before {
+					margin-top: 2px;
+					margin-bottom: 2px;
 				}
 			}
 		}
@@ -378,6 +515,10 @@ button, .button {
 			border-color: $color-overlay-clear;
 			color: $text-light;
 			padding: calc(#{$size-down-one} - 2px) calc(#{$size-up-two} - 2px);
+			box-shadow: none;
+			&:not(.alt):hover, &:not(.alt):active {
+				box-shadow: none;
+			}
 
 			&::after {
 				content: "";
@@ -389,6 +530,20 @@ button, .button {
 				border-radius: 2em;
 				background-image: $gradient-warm;
 				z-index: -1;
+				transition: 0.5s ease box-shadow;
+			}
+
+			&::before {
+				margin-top: -2px;
+				margin-bottom: -2px;
+			}
+
+			&:hover::after {
+				box-shadow: $shadow-dark-high;
+			}
+
+			&:active::after {
+				box-shadow: $shadow-dark-low;
 			}
 
 			&.alt {
@@ -396,6 +551,20 @@ button, .button {
 				border: none;
 				background-color: transparent;
 				background-image: $gradient-warm;
+				box-shadow: $shadow-medium;
+
+				&:hover {
+					box-shadow: $shadow-dark-high;
+				}
+
+				&:active {
+					box-shadow: $shadow-dark-low;
+				}
+
+				&::before {
+					margin-top: 2px;
+					margin-bottom: 2px;
+				}
 
 				&::after {
 					display: none;
@@ -410,7 +579,201 @@ button, .button {
 			&.alt {
 				color: $text-light;
 				background-color: $color-sunrise;
-			}	
+			}
+		}
+	}
+
+	.button-group & {
+		flex: 1;
+		text-align: center;
+
+
+		::before {
+			transition: 0.5s ease border;
+		}
+
+		&:first-child {
+			border-right: none;
+			border-top-right-radius: 0 !important;
+			border-bottom-right-radius: 0 !important;
+
+			&::before, &::after {
+				border-top-right-radius: 0 !important;
+				border-bottom-right-radius: 0 !important;
+			}
+		}
+
+		&:last-child {
+			border-top-left-radius: 0 !important;
+			border-bottom-left-radius: 0 !important;
+
+			&::before, &::after {
+				border-top-left-radius: 0 !important;
+				border-bottom-left-radius: 0 !important;
+			}
+		}
+
+		&:not(:first-child):not(:last-child) {
+			border-right: none;
+			border-top-right-radius: 0 !important;
+			border-bottom-right-radius: 0 !important;
+			border-top-left-radius: 0 !important;
+			border-bottom-left-radius: 0 !important;
+
+			&::before, &::after {
+				border-top-right-radius: 0 !important;
+				border-bottom-right-radius: 0 !important;
+				border-top-left-radius: 0 !important;
+				border-bottom-left-radius: 0 !important;
+			}
+		}
+
+		&:hover, &:active, &:focus {
+			&::before {
+				border-right: 2px solid rgba(0,0,0,0.015);
+				border-left: 2px solid rgba(0,0,0,0.1);
+			}
+			&:last-child::before {
+				border-right: none;
+			}
+			&:first-child::before {
+				border-left: none;
+			}
+		}
+
+		&:focus::before {
+			border-left: 2px solid rgba(0,0,0,0.015);
+		}
+	}
+
+	%medium-backgrounds & {
+		&:active {
+			&::before {
+				border-left: 2px solid rgba(0,0,0,0.015);
+			}
+		}
+	}
+
+	.button-group.button-group-warm & {
+		@extend .button-warm;
+		&:active {
+			&::before {
+				border-left: 2px solid rgba(0,0,0,0.015);
+			}
+		}
+		%dark-backgrounds & {
+			&:not(:first-child) {
+				margin-left: 2px;
+			}
+		}
+	}
+
+	.button-group.button-group-cool & {
+		@extend .button-cool;
+		&:active {
+			&::before {
+				border-left: 2px solid rgba(0,0,0,0.015);
+			}
+		}
+		%dark-backgrounds & {
+			&:not(:first-child) {
+				margin-left: 2px;
+			}
+		}
+	}
+
+	.button-group.alt & {
+		@extend .alt;
+		box-shadow: none !important;
+		// &::before {
+		// 	transition: 0.5s ease box-shadow;
+		// 	z-index: 5;
+		// 	margin-left: 2px;
+		// 	margin-right: 2px;
+		// }
+		&:not(:last-child) {
+			border-right: 2px solid $color-overlay-darken;
+		}
+
+		&::before {
+			//margin-left: 2px;
+			//margin-right: 2px;
+			left: -2px;
+		}
+
+		&:hover {
+			box-shadow: $shadow-high !important;
+		}
+
+		&:hover, &:active, &:focus {
+			z-index: 5;
+			&::before {
+				border-right: 2px solid rgba(0,0,0,0.1);
+				border-left: 2px solid rgba(0,0,0,0.025);
+				left: -4px;
+
+				%dark-backgrounds & {
+					border-right: 2px solid rgba(0,0,0,0.5);
+					border-left: 2px solid rgba(0,0,0,0.4);
+				}
+			}
+			&:last-child::before {
+				border-right: none;
+			}
+		}
+
+		&:active {
+			box-shadow: $shadow-none !important;
+			&::before {
+				border-right-color: rgba(0,0,0,0.025);
+			}
+		}
+
+		%dark-backgrounds & {
+			&:not(:last-child) {
+				border-right: 2px solid $color-overlay-darkest;
+			}
+		}
+
+	}
+
+
+	.button-group.button-group-warm.alt &, .button-group.button-group-cool.alt & {
+		@extend .alt;
+
+		%dark-backgrounds & {
+			&:not(:first-child) {
+				margin-left: 0;
+			}
+			&:not(:last-child) {
+				border-right: 2px solid $color-overlay-darken;
+			}
+
+			&::before {
+				border-right: 2px solid rgba(0,0,0,0.015);
+				border-left: 2px solid rgba(0,0,0,0.1);
+			}
+
+			&:hover, &:active, &:focus {
+				&::before {
+					border-right: 2px solid rgba(0,0,0,0.2);
+					border-left: 2px solid rgba(0,0,0,0.1);
+					left: -2px;
+				}
+			}
+		}
+	}
+}
+
+.button-group {
+	display: flex;
+
+	&.alt {
+		box-shadow: $shadow-medium;
+		border-radius: 2em;
+
+		%dark-backgrounds & {
+			box-shadow: $shadow-dark-medium;
 		}
 	}
 }
@@ -418,6 +781,7 @@ button, .button {
 // ----------------------------------------------------------------------
 // - Menu
 // ----------------------------------------------------------------------
+
 .menu {
 	display: block;
 	border-color: $color-overlay-darkest;
@@ -452,11 +816,12 @@ button, .button {
 
 			&::before {
 				background-color: $color-overlay-lighten;
+				border-left: 2px solid $color-overlay-darken;
 				opacity: 1;
 			}
 		}
 
-		&.selected, &.selected:hover {
+		&.menu-item-selected, &.menu-item-selected:hover {
 			border-bottom-color: $color-overlay-darkest;
 
 			&::before {
@@ -467,10 +832,11 @@ button, .button {
 		}
 	}
 
-	&.larger {
+	&.menu-large {
 		font-size: 1em;
 		> .menu-item, button, .button, .label {
 			font-size: $size-label-larger;
+			//margin-bottom: -2px;
 		}
 	}
 
@@ -478,7 +844,7 @@ button, .button {
 
 		> .menu-item {
 
-			&.selected, &.selected:hover {
+			&.menu-item-selected, &.menu-item-selected:hover {
 				color: $text-darker;
 				border-bottom-color: $color-aqua;
 
@@ -504,7 +870,7 @@ button, .button {
 			border-top-color: $color-overlay-lightest;
 			color: $color-transp-white;
 
-			&.selected, &.selected:hover {
+			&.menu-item-selected, &.menu-item-selected:hover {
 				color: $text-light;
 				border-bottom-color: $text-light;
 
@@ -531,7 +897,7 @@ button, .button {
 		> .menu-item {
 			border-top-color: $color-overlay-lighten;
 
-			&.selected, &.selected:hover {
+			&.menu-item-selected, &.menu-item-selected:hover {
 				color: $text-light;
 				border-bottom-color: $color-aqua;
 
@@ -547,6 +913,7 @@ button, .button {
 
 				&::before {
 					opacity: 0.25;
+					border-left: 2px solid $color-overlay-lightest;
 				}
 			}
 		}	
@@ -584,7 +951,7 @@ button, .button {
 			text-align: right;
 		}
 
-	&.larger {
+		&.menu-large {
 			> .menu-item, button, .button, .label {
 				margin-bottom: -1px;
 			}
@@ -605,7 +972,7 @@ button, .button {
 // 			border-color: $color-overlay-darkest;
 // 		}
 
-// 		&.selected {
+// 		&.menu-item-selected {
 // 			border-color: $color-overlay-darkest;
 // 			background-color: $color-overlay-darken;
 // 		}

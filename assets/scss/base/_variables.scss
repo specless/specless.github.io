@@ -92,6 +92,7 @@ $color-overlay-lighten: rgba(255,255,255,0.13);
 $color-overlay-lightest:rgba(255,255,255,0.25);
 $color-overlay-darken: 	rgba(0,0,0,0.05);
 $color-overlay-darkest: rgba(0,0,0,0.15);
+$color-overlay-darker: rgba(0,0,0,0.35);
 $color-overlay-noise: 	url(../images/noise.png);
 
 $bg-light: 				$color-light-two !default;
@@ -112,8 +113,10 @@ $background:            $color-light-one !default;
 $shadow-none: 			0px 0px 0px 0px rgba(0,0,0,0);
 $shadow-medium: 		0px 0px 10px 0px rgba(0,0,0,0.25);
 $shadow-high: 			0px 0px 20px 0px rgba(0,0,0,0.25);
-$shadow-low: 			0px 0px 5px 0px rgba(0,0,0,0.75);
-$shadow-dark-medium: 	0px 0px 20px 0px rgba(0,0,0,0.46);
-$shadow-dark-high: 		0px 0px 40px 0px rgba(0,0,0,0.46);
+$shadow-low: 			0px 0px 5px 0px rgba(0,0,0,0.55);
+$shadow-dark-medium: 	0px 0px 20px 0px rgba(0,0,0,0.6);
+$shadow-dark-high: 		0px 0px 40px 0px rgba(0,0,0,0.75);
 $shadow-dark-low: 		0px 0px 10px 0px rgba(0,0,0,0.75);
+$shadow-inner: 			inset 0px 0px 8px 0px rgba(0,0,0,0.45);
+$shadow-inner-dark: 	inset 0px 0px 8px 0px rgba(0,0,0,0.75);
 

@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<title>Specless</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 	<link href="assets/css/branding.css" rel="stylesheet" />
 	<link href="assets/css/styles.css" rel="stylesheet" />
 	<script src="assets/js/vendor/modernizr.min.js"></script>
@@ -18,10 +19,10 @@
 
 		<header id="header" class="header">
 			<div class="container">
-				<div class="site-logo">
-					<a href="#" title="Specless">
+				<div class="site-logo logo">
+					<!-- <a href="#" title="Specless">
 						<img src="assets/images/logo.svg">
-					</a>
+					</a> -->
 				</div>
 				<button class="mobile--icon hamburger" type="button">
 					<span class="hamburger-box">
@@ -29,7 +30,7 @@
 					</span>
 				</button>
 				<nav class="menu menu-tabbed menu-align-right">
-					<a class="menu-item selected" href="#" title="Tour">Tour</a>
+					<a class="menu-item menu-item-selected" href="#" title="Tour">Tour</a>
 					<a class="menu-item" href="#" title="Features">Features</a>
 					<a class="menu-item" href="#" title="Cascade">Cascade</a>
 					<a class="menu-item" href="#" title="Support">Support</a>
@@ -72,7 +73,9 @@
 			<div id="graffiti" class="graffiti"></div>
 
 			<div id="demo-container" class="demo-container">
-				
+				<div id="demo-glow" class="demo-glow"></div>
+				<div id="demo-green-glow" class="demo-green-glow"></div>
+				<div id="demo-flare" class="demo-flare"></div>
 				<div id="subhead" class="subhead">
 					<h2>One Ad. Infinite Possibilities.</h2>
 					<h4>Go ahead. Pick a size. Any Size.</h4>
@@ -541,9 +544,9 @@
 						</div>
 						<h3>Specless Publisher API</h3>
 						<p>Built for publishers — so you can easily and efficiently develop and deploy your own ad formats.</p>
-						<div class="button-group">
-							<a class="button" href="#">Explore the API</a>
-						</div>
+						<p>
+							<a class="button button-large button-warm alt" href="#">Explore the API</a>
+						</p>
 					</div>
 					<div class="column column--equal bg-light">
 						<div class="column-symbol">
@@ -551,9 +554,9 @@
 						</div>
 						<h3>Specless Cascade</h3>
 						<p>Unlock your creativity with the full power of HTML5, CSS3 and Javascript in a complete package and companion application.</p>
-						<div class="button-group">
-							<a class="button" href="#">Download Now</a>
-						</div>
+						<p>
+							<a class="button button-large button-warm alt" href="#">Download Now</a>
+						</p>
 					</div>
 					<div class="column column--equal bg-light">
 						<div class="column-symbol">
@@ -561,9 +564,9 @@
 						</div>
 						<h3>Specless Creative Services</h3>
 						<p>We offer more than top-line tech, but also great service. Always ready to help, our people set us apart.</p>
-						<div class="button-group">
-							<a class="button" href="#">Contact Us Today</a>
-						</div>
+						<p>
+							<a class="button button-large button-warm alt" href="#">Contact Us Today</a>
+						</p>
 					</div>
 				</div>
 
@@ -602,7 +605,7 @@
 			<section class="text-center">
 
 				<h4>Are you ready to go Specless?</h4>
-				<a class="button button--red button--demo" data-modal="#contact-modal">Request a Demo</a>
+				<a class="button button-large button-warm alt" data-modal="#contact-modal">Request a Demo</a>
 
 			</section>
 
@@ -677,7 +680,7 @@
 
 	</div>
 
-	<footer id="section-footer" class="bg-medium">
+	<footer id="section-footer" class="bg-light">
 
 		<div class="container">
 			<div class="footer-wrap group">
@@ -704,19 +707,21 @@
 				<div class="footer-connect">
 					<p class="label">Contact Us</p>
 					<div class="contact-block">
-						<a class="email" href="mailto:hello@gospecless.com" title="hello@gospecless.com">hello@gospecless.com</a>
-						<a class="phone" href="tel:312-212-8491">(312) 212-8491</a>
+						<ul class="ul">
+							<li class="li"><a class="email" href="mailto:hello@gospecless.com" title="hello@gospecless.com">hello@gospecless.com</a></li>
+							<li class="li"><a class="phone" href="tel:312-212-8491">(312) 212-8491</a></li>
+						</ul>
 					</div>
 					<div class="map-group group">
 						<div class="map-block">
-							<h5 class="map-block__title">Chicago</h5>
+							<div class="label">Chicago</div>
 							<div class="map-inner">
 								<a class="map-link" href="https://goo.gl/maps/tQqQFqmgTCx" target="_blank"></a>
 								<div id="chicago-office-map"" class="map-container" data-address="116 West Illinois Street, Suite 6E Chicago Il 60657"></div>
 							</div>
 						</div>
 						<div class="map-block">
-							<h5 class="map-block__title">Atlanta</h5>
+							<div class="label">Atlanta</div>
 							<div class="map-inner">
 								<a class="map-link" href="https://goo.gl/maps/BDN3iTAMpKt" target="_blank"></a>
 								<div id="atlanta-office-map"" class="map-container" data-address="1040 West Marietta St NW, Atlanta, GA 30318"></div>
@@ -761,46 +766,61 @@
 	</button>
 	<div class="form-container">
 		<img src="assets/images/logo-icon.svg">
-		<h2>Schedule a product demo</h2>
-		<form>
+		<h2>Schedule a Demo</h2>
+		<form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+			<input type="hidden" name="oid" value="00D41000000c1xu">
+			<input type="hidden" name="retURL" value="http://gospecless.com/index.html?submitted=true">
+			<!-- Uncomment Below for debugging. -->
+			<!-- <input type="hidden" name="debug" value="1">
+			<input type="hidden" name="debugEmail" value="steve@gospecless.com"> -->
+			<input type=hidden name="lead_source" id="lead_source" value="Website: Schedule a Demo Form"/>
 			<div class="field-group group">
 				<div class="field">
-					<input type="text" name="first-name" id="first-name" class="input required" value="" placeholder="First Name *"/>
+					<input type="text" name="first_name" id="first_name" class="input required" value="" maxlength="40" placeholder="First Name *"/>
 				</div>
 				<div class="field">
-					<input type="text" name="last-name" id="last-name" class="input required" value="" placeholder="Last Name *"/>
+					<input type="text" name="last_name" id="last_name" class="input required" value="" maxlength="80" placeholder="Last Name *"/>
 				</div>
 			</div>
 			<div class="field">
-				<input type="email" name="email-address" id="email-address" class="input email required" value="" placeholder="Email address *"/>
+				<input type="email" name="email" id="email" class="input email required" value="" maxlength="80" placeholder="Email address *"/>
 			</div>
 			<div class="field">
-				<input type="text" name="job-title" id="job-title" class="input required" value="" placeholder="Job Title *"/>
+				<input type="text" name="title" id="title" class="input required" value="" maxlength="40" placeholder="Job Title *"/>
 			</div>
 			<div class="field">
-				<input type="text" name="company-name" id="company-name" class="input required" value="" placeholder="Company Name *"/>
+				<input type="text" name="company" id="company" class="input required" value="" maxlength="40" placeholder="Company Name *"/>
 			</div>
 			<div class="field field__select">
-				<select name="company-type" id="company-type" class="required">
-					<option>Company Type *</option>
-					<option value="option-1">Option 1</option>
-					<option value="option-2">Option 2</option>
-					<option value="option-3">Option 3</option>
+				<select name="00N41000008saIk" id="00N41000008saIk" class="required" title="Company Type">
+					<option value="">Company Type</option>
+					<option value="Publisher">Publisher</option>
+					<option value="Advertiser">Advertiser</option>
+					<option value="Agency">Agency</option>
+					<option value="Platform">Platform</option>
+					<option value="Ad Network/Exchange">Ad Network/Exchange</option>
+					<option value="Other">Other</option>
 				</select>
 			</div>
 			<div class="field field__select">
-				<select name="company-type" id="company-type">
-					<option>Moat Pro</option>
-					<option value="option-1">Option 1</option>
-					<option value="option-2">Option 2</option>
-					<option value="option-3">Option 3</option>
+				<select name="00N41000008saSX" id="00N41000008saSX" placeholder="Test">
+					<option value="">I'm Most Interested in learning about...</option>
+					<option value="...the Specless platform in general">...the Specless platform in general</option>
+					<option value="...deploying totally custom high-impact ad formats">...deploying totally custom high-impact ad formats</option>
+					<option value="...intergrating and selling responsive ad formats on your site/properties">...intergrating and selling responsive ad formats on your site/properties</option>
+					<option value="...how to design responsive ads that can run anywhere">...how to design responsive ads that can run anywhere</option>
+					<option value="...developing rich media ads in HTML5 with Specless">...developing rich media ads in HTML5 with Specless</option>
+					<option value="...Specless's reporting, data and analytics capabilities">...Specless's reporting, data and analytics capabilities</option>
+					<option value="...Specless's compatibility with other platforms and services">...Specless's compatibility with other platforms and services</option>
+					<option value="...how Specless fits into your ad operations and trafficking process">...how Specless fits into your ad operations and trafficking process</option>
+					<option value="...Specless's creative services offerings">...Specless's creative services offerings</option>
 				</select>
 			</div>
 			<div class="field field__textarea">
-				<textarea name="general-comments" id="general-comments" class="input" placeholder="General comments? (optional)"></textarea>
+				<textarea name="00N41000008saUT" id="00N41000008saUT" class="input" placeholder="General comments? (optional)"></textarea>
 			</div>
 			<p class="disclaimer">By submitting, you agree to Specless’ Privacy and Cookies Policy and Terms of Service.</p>
-			<button type="submit" class="button button--red">Request a Demo</button>
+			<button type="submit" class="button button-warm">Request a Demo</button>
 		</form>
 	</div>
 </div>

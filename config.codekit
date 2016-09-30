@@ -172,6 +172,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/images\/green-glow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.629e+06,
+		"inputAbbreviatedPath": "\/assets\/images\/green-glow.png",
+		"outputAbbreviatedPath": "\/assets\/images\/green-glow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/images\/hero-device-laptop@2x.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -256,6 +267,17 @@
 		"initialSize": 69408,
 		"inputAbbreviatedPath": "\/assets\/images\/ipad-perspective.png",
 		"outputAbbreviatedPath": "\/assets\/images\/ipad-perspective.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/lensflare.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 250795,
+		"inputAbbreviatedPath": "\/assets\/images\/lensflare.png",
+		"outputAbbreviatedPath": "\/assets\/images\/lensflare.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

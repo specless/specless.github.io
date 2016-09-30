@@ -6,6 +6,7 @@
 	text-align: center;
 	height: 100vh;
 	padding-top: 170px;
+	background-image: url(../images/noise.png), linear-gradient(to bottom, $color-aqua 0%, $color-dark-two 100%);
 
 	h1 {
 		font-weight: 300;
@@ -70,6 +71,20 @@
 // - Publishers Section
 // ----------------------------------------------------------------------
 
+#section-publishers {
+	position: relative;
+	box-shadow: 0px -8px 34px 0px rgba(0,0,0,0.75);
+	// &::before {
+	// 	content: "";
+	// 	display: block;
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	height: 200px;
+	// 	background: blue;
+	// 	top: -200px;
+	// 	box-shadow: 0px -8px 34px 0px rgba(0,0,0,0.75);
+	// }
+}
 .publishers-section {
 	padding-top: 100px;
 	padding-bottom: 100px;
@@ -105,10 +120,16 @@
 // - Advertisers Section
 // ----------------------------------------------------------------------
 
+
+#section-advertisers {
+	position: relative;
+	box-shadow: 0px 35px 39px 6px rgba(0,0,0,0.2);
+}
 .advertisers-section {
 	padding-top: 150px;
 	overflow: hidden;
 	position: relative;
+	padding-bottom: 100px;
 
 	.container {
 		padding-bottom: 60px;
