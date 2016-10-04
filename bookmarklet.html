@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<div class="bookmarklet bg-light">
+	<div id="bookmarklet" class="bookmarklet bg-light">
 		<nav class="menu menu-tabbed">
 			<a id="menu_custom" class="menu-item menu-item-selected">Custom</a>
 			<a id="menu_tag" class="menu-item">Insert Tag</a>
@@ -97,7 +97,11 @@
 		menuTag = $('#menu_tag'),
 		submitTag = $('#submit_tag'),
 		tagInPage = $('#tag_inpage'),
-		tagOutPage = $('#tag_outpage');
+		tagOutPage = $('#tag_outpage'),
+		bookmarklet = $('#bookmarklet');
+
+	var customData = {};
+	var tagData = {};
 
 	creativeDemo.click(function() {
 		if (!creativeDemo.attr('checked')) {
@@ -183,6 +187,42 @@
 			tagInPage.removeAttr('checked');
 			submitTag.html('Inject Ad On Page');
 		}
+	});
+
+	function checkIfChecked(element) {
+		var checked = element.attr('checked');
+
+		if (checked) {
+			return true
+		} else {
+			return false
+		}
+	}
+
+	submit.click(function() {
+		customData.creativeIsDemo = checkIfChecked(creativeDemo);
+		customData.creativeIsCustom = checkIfChecked(creativeCustom);
+		customData.creativeId = creativeId.val();
+		customData.sizeIsFill = checkIfChecked(sizeFill);
+		customData.sizeIsIab = checkIfChecked(sizeIab);
+		customData.sizeIab = sizeIabSize.val();
+		customData.format = format.val();
+		bookmarklet.trigger('customSubmit', customData);
+	});
+
+	submitTag.click(function() {
+		tagData.tag = $('#adtag').html();
+		tagData.isInPage = checkIfChecked(tagInPage);
+		tagData.isOutPage = checkIfChecked(tagOutPage);
+		bookmarklet.trigger('tagSubmit', tagData);
+	});
+
+	bookmarklet.on('customSubmit', function(e, data) {
+		console.log(data);
+	});
+
+	bookmarklet.on('tagSubmit', function(e, data) {
+		console.log(data);
 	});
 
 
