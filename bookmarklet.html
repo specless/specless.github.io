@@ -126,6 +126,8 @@
 		if (!sizeFill.attr('checked')) {
 			sizeFill.attr('checked', 'checked');
 			sizeIab.removeAttr('checked');
+			$('#format > option').removeAttr('selected');
+			$('#format > option').prop('selected', false);
 			inpage.attr('selected', true);
 			format.attr('disabled', true);
 			sizeIabSize.attr('disabled', true);
