@@ -211,7 +211,7 @@
 	});
 
 	submitTag.click(function() {
-		tagData.tag = $('#adtag').html();
+		tagData.tag = $('#adtag').val();
 		tagData.isInPage = checkIfChecked(tagInPage);
 		tagData.isOutPage = checkIfChecked(tagOutPage);
 		bookmarklet.trigger('tagSubmit', tagData);
