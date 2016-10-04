@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Specless</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link href="assets/css/branding.css" rel="stylesheet" />
+	<link href="assets/css/bookmarklet.css" rel="stylesheet" />
+	<script src="assets/js/vendor/modernizr.min.js"></script>
+</head>
+
+<body>
+	<div class="bookmarklet bg-light">
+		<nav class="menu menu-tabbed">
+			<a id="menu_custom" class="menu-item menu-item-selected">Custom</a>
+			<a id="menu_tag" class="menu-item">Insert Tag</a>
+		</nav>
+		<div id="custom">
+			<section>
+				<p class="label">Creative</p>
+				<p><input id="creative_demo" type="radio" name="creative" value="demo" checked/> Demo Ad</p>
+				<p><input id="creative_custom" type="radio" name="creative" value="custom"/> Creative ID</p>
+				<p><input id="creative_id" type="text" name="creativeid" placeholder="Enter Creative Id" disabled/></p>
+			</section>
+			<section>
+				<p class="label">Size</p>
+				<p><input id="size_fill" type="radio" name="size" value="match" checked/> Fill Existing Slot</p>
+				<p><input id="size_iab" type="radio" name="size" value="iab"/> IAB New Ad Portfolio Sizes</p>
+				<p>
+					<select id="size_iab_size" name="iab-size" disabled>
+						<option value="1:1">1:1</option>
+						<option value="1:2">1:2</option>
+						<option value="1:3">1:3</option>
+						<option value="1:4">1:4</option>
+						<option value="2:1">2:1</option>
+						<option value="3:1">3:1</option>
+						<option value="4:1">4:1</option>
+						<option value="5:1">5:1</option>
+						<option value="6:1">6:1</option>
+						<option value="7:1">7:1</option>
+						<option value="8:1">8:1</option>
+						<option value="10:1">10:1</option>
+					</select>
+				</p>
+			</section>
+			<section>
+				<p class="label">Format</p>
+				<p>
+					<select id="format" name="format" disabled>
+						<option id="inpage" value="inpage" selected>In-Page</option>
+						<option value="inpagefull">In-Page (Fill Container Width)</option>
+						<option value="masthead">Masthead</option>
+						<option value="overlay">Overlay</option>
+						<option value="stickytop">Sticky Top</option>
+						<option value="stickybottom">Sticky Bottom</option>
+					</select>
+				</p>
+			</section>
+			<section>
+				<button id="submit" class="submit button-cool">Select Ad on Page</button>
+			</section>
+		</div>
+		<div id="tag" class="hidden">
+			<section>
+				<p class="label">Paste Tag Below</p>
+				<textarea id="adtag"></textarea>
+			</section>
+			<section>
+				<p class="label">Placement</p>
+				<p><input id="tag_inpage" type="radio" name="size" value="inpage" checked/> Existing Ad Slot</p>
+				<p><input id="tag_outpage" type="radio" name="size" value="outpage"/> Out of page</p>
+			</section>
+			<section>
+				<button id="submit_tag" class="submit button-cool">Select Ad on Page</button>
+			</section>
+
+		</div>
+	</div>
+	<script src="assets/js/vendor/jquery.min.js"></script>
+	<script>
+	var creativeDemo = $('#creative_demo'),
+		creativeCustom = $('#creative_custom'),
+		creativeId = $('#creative_id'),
+		sizeFill = $('#size_fill'),
+		sizeIab = $('#size_iab'),
+		sizeIabSize = $('#size_iab_size'),
+		format = $('#format'),
+		submit = $('#submit'),
+		inpage = $('#inpage'),
+		custom = $('#custom'),
+		tag = $('#tag'),
+		menuCustom = $('#menu_custom'),
+		menuTag = $('#menu_tag'),
+		submitTag = $('#submit_tag'),
+		tagInPage = $('#tag_inpage'),
+		tagOutPage = $('#tag_outpage');
+
+	creativeDemo.click(function() {
+		if (!creativeDemo.attr('checked')) {
+			creativeDemo.attr('checked', 'checked');
+			creativeCustom.removeAttr('checked');
+			creativeId.attr('disabled', true);
+		}
+		checkChanged();
+	});
+
+	creativeCustom.click(function() {
+		if (!creativeCustom.attr('checked')) {
+			creativeCustom.attr('checked', 'checked');
+			creativeDemo.removeAttr('checked');
+			creativeId.removeAttr('disabled');
+
+		}
+		checkChanged();
+	});
+
+	sizeFill.click(function() {
+		if (!sizeFill.attr('checked')) {
+			sizeFill.attr('checked', 'checked');
+			sizeIab.removeAttr('checked');
+			inpage.attr('selected', true);
+			format.attr('disabled', true);
+			sizeIabSize.attr('disabled', true);
+		}
+		checkChanged();
+	});
+
+	sizeIab.click(function() {
+		if (!sizeIab.attr('checked')) {
+			sizeIab.attr('checked', 'checked');
+			sizeFill.removeAttr('checked');
+			format.removeAttr('disabled');
+			sizeIabSize.removeAttr('disabled');
+		}
+		checkChanged();
+	});
+
+	format.change(function() {
+		checkChanged();
+	});
+
+	function checkChanged() {
+		if (format.val() === 'inpage' || format.val() === 'inpagefull') {
+			submit.html('Select Ad On Page');
+		} else {
+			submit.html('Inject Ad On Page');
+		}
+	}
+
+	menuCustom.click(function() {
+		if(!menuCustom.hasClass('menu-item-selected')) {
+			menuCustom.addClass('menu-item-selected');
+			menuTag.removeClass('menu-item-selected');
+			tag.addClass('hidden');
+			custom.removeClass('hidden');
+		}
+	});
+
+	menuTag.click(function() {
+		if(!menuTag.hasClass('menu-item-selected')) {
+			menuTag.addClass('menu-item-selected');
+			menuCustom.removeClass('menu-item-selected');
+			custom.addClass('hidden');
+			tag.removeClass('hidden');
+		}
+	});
+
+	tagInPage.click(function() {
+		if (!tagInPage.attr('checked')) {
+			tagInPage.attr('checked', 'checked');
+			tagOutPage.removeAttr('checked');
+			submitTag.html('Select Ad On Page');
+		}
+	});
+
+	tagOutPage.click(function() {
+		if (!tagOutPage.attr('checked')) {
+			tagOutPage.attr('checked', 'checked');
+			tagInPage.removeAttr('checked');
+			submitTag.html('Inject Ad On Page');
+		}
+	});
+
+
+	</script>
+</body>
+</html>

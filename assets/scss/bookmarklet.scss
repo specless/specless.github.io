@@ -1,0 +1,73 @@
+@import 'base/variables';
+@import 'endex/endex';
+@import 'base/helpers';
+
+.bookmarklet {
+	width: 100%;
+	max-width: 320px;
+	max-height: calc(100% - 20px);
+	margin: 10px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: fixed;
+	top: 0;
+	right: 0;
+	box-shadow: $shadow-high;
+
+	.hidden {
+		display: none;
+	}
+
+	section {
+		margin: $size-up-one $size-up-one $size-up-two $size-up-one;
+	}
+
+	.submit {
+		display: block;
+		width: 100%;
+	}
+
+	select, input[type='text'] {
+		width: 100%;
+		border: none;
+		border-radius: 0;
+		border-bottom: 2px solid $color-aqua;
+		padding: $size-down-two;
+		background-color: transparent;
+
+		&[disabled] {
+			opacity: 0.5;
+			border-bottom-color: $color-overlay-darkest;
+		}
+	}
+
+	input[type='radio'] {
+		width: $size-base;
+		height: $size-base;
+		border-radius: 50%;
+		border: 2px solid $color-medium-one;
+		margin: 0 $size-base 0.25em 0;
+
+		&[checked] {
+			&::before {
+				content: "";
+				width: $size-down-two;
+				height: $size-down-two;
+				border-radius: 50%;
+				background-color: $color-aqua;
+				display: inline-block;
+				margin: 0 0 0.35em 0.15em;
+			}
+		}
+	}
+
+	textarea {
+		width: 100%;
+		border: 2px solid $color-overlay-darkest;
+		resize: none;
+		height: 304px;
+		font-family: monospace;
+		font-size: 12px;
+		padding: $size-down-one;
+	}
+}
