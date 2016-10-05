@@ -77,7 +77,7 @@
 
 		</div>
 		<section>
-			<button class="submit button-warm">Cancel</button>
+			<button id="cancelButton" class="submit button-warm">Cancel</button>
 		</section>
 	</div>
 	<script src="assets/js/vendor/jquery.min.js"></script>
@@ -98,7 +98,8 @@
 		submitTag = $('#submit_tag'),
 		tagInPage = $('#tag_inpage'),
 		tagOutPage = $('#tag_outpage'),
-		bookmarklet = $('#bookmarklet');
+		bookmarklet = $('#bookmarklet'),
+		cancelButton = $("#cancelButton");
 
 	var customData = {};
 	var tagData = {};
@@ -201,6 +202,10 @@
 		}
 	}
 
+	cancelButton.click(function(){
+		parent.postMessage('close', '*');
+	});
+
 	submit.click(function() {
 		customData.creativeIsDemo = checkIfChecked(creativeDemo);
 		customData.creativeIsCustom = checkIfChecked(creativeCustom);
@@ -227,6 +232,7 @@
 	bookmarklet.on('tagSubmit', function(e, data) {
 		parent.postMessage(data, "*");
 	});
+
 
 
 	</script>
