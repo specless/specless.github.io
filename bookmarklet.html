@@ -220,11 +220,12 @@
 	});
 
 	bookmarklet.on('customSubmit', function(e, data) {
-		console.log(data);
+		// console.log(data);
+		parent.postMessage(data);
 	});
 
 	bookmarklet.on('tagSubmit', function(e, data) {
-		console.log(data);
+		parent.postMessage(data);
 	});
 
 
