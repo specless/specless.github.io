@@ -221,6 +221,10 @@ a {
 		&:before {
 			padding-top: 100%;
 		}
+
+		&.logo-alt {
+			background-image: url(../images/vectors/logo-mark-alt.svg) !important;
+		}
 	}
 
 	%light-backgrounds & {
@@ -978,6 +982,86 @@ button, .button {
 // 		}
 // 	}
 // }
+
+
+// ----------------------------------------------------------------------
+// - Bread Crumbs
+// ----------------------------------------------------------------------
+
+
+.bread-crumbs {
+	padding-top: $size-up-one;
+	padding-bottom: $size-up-one;
+
+	> .bread-crumbs-item {
+		@extend .label;
+		display: inline-block;
+		padding-right: $size-up-one;
+		margin-left: $size-up-one;
+		position: relative;
+
+		&::after, &::before {
+			// content: "\276D";
+			// display: inline-block;
+			// margin-left: $size-down-one;
+			// color: $color-overlay-darkest;
+			// font-family: 'Arial';
+			// font-size: 1.5em;
+			// position: absolute;
+			// top: -0.08em;
+			content: "";
+			height: 50%;
+			position: absolute;
+			background-color: $color-overlay-darkest;
+			width: 2px;
+			display: inline-block;
+			right: 0;
+		}
+
+		&::before {
+			top: 0.08em;
+			transform: rotate(-30deg);
+		}
+		&::after {
+			bottom: 0.08em;
+			transform: rotate(30deg);
+		}
+		&:not(:last-child) {
+			color: $color-medium-one;
+
+			&:hover {
+				color: $color-dark-one;
+			}
+		}
+
+		&:last-child {
+			color: $color-dark-one;
+			&::after, &::before {
+				display: none;
+			}
+		}
+	}
+}
+
+%dark-backgrounds .bread-crumbs > .bread-crumbs-item, %medium-backgrounds .bread-crumbs > .bread-crumbs-item {
+
+	&:not(:last-child) {
+		color: $color-overlay-lightest !important;
+
+		&:hover {
+			color: $color-light-one !important;
+		}
+	}
+
+	&:last-child {
+		color: $color-light-one !important;
+	}
+
+	&::after, &::before {
+		background-color: $color-overlay-lighten;
+	}
+
+}
 
 // ----------------------------------------------------------------------
 // - Color Wrappers
