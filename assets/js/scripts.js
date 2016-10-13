@@ -33,6 +33,7 @@ jQuery( function( $ ) {
 		$publishers: $('#section-publishers'),
 		$advertisers: $('#section-advertisers'),
 		$richmedia: $('#section-richmedia'),
+		$richmediaSpace: $('#rich-media-space'),
 		$details: $('#section-details'),
 		$team: $('#section-team'),
 		$footer: $('#section-footer'),
@@ -70,7 +71,8 @@ jQuery( function( $ ) {
 
 			//$(document).foundation();
 			//specless.setupAdDemo();
-			specless.setupHeroSection();
+			//specless.setupHeroSection();
+			specless.controlAnimation();
 			specless.setupPubSection();
 			specless.setupAdvSection();
 			specless.swiper_carousel();
@@ -129,6 +131,51 @@ jQuery( function( $ ) {
 			}
 
 			return percent;
+		},
+
+		controlAnimation: function() {
+			var self = this;
+
+			function updateTime() {
+				var percent = self.scrollPercent(self.$heroTop),
+					nextPercent = self.scrollPercent(self.$richmediaSpace) * 1.15,
+					duration = 5,
+					nextDuration = 19,
+					time = (duration * percent) + 3,
+					nextTime = (nextDuration * nextPercent) + 10;
+					animation = HYPE.documents["hero"];
+
+				console.log(nextPercent);
+
+				if (nextPercent === 0) {
+					if (time <= duration + 3) {
+						animation.goToTimeInTimelineNamed(time, 'Main Timeline');
+					}
+					if (self.scrollPercent(self.$advertisers) > 0) {
+						animation.goToTimeInTimelineNamed(10, 'Main Timeline');
+					}
+				} else {
+					if (nextTime <= nextDuration + 10) {
+						animation.goToTimeInTimelineNamed(nextTime, 'Main Timeline');
+					}
+				}
+			}
+
+			function hypeReady(hypeDocument, element, event) {
+				console.log('ready');
+				self.$doc.scroll(updateTime);
+			}
+
+
+			function init() {
+				if ("HYPE_eventListeners" in window === false) {
+					window.HYPE_eventListeners = Array();
+				}
+				window.HYPE_eventListeners.push({"type":"HypeDocumentLoad", "callback":hypeReady});
+			}
+
+			init();
+
 		},
 
 		setupHeroSection: function() {
@@ -275,7 +322,6 @@ jQuery( function( $ ) {
 				});
 
 				newOffset = ((self.$win.height() - self.$demo.height()) /2) - offsetHeadline;
-				console.log(newOffset);
 				createNewTimeline();
 				
 			}
@@ -433,7 +479,6 @@ jQuery( function( $ ) {
 
 				if (time <= duration/2) {
 					timeline.time(time);
-
 				}
 
 				var scrollPoint = self.$heroBottom.offset().top + self.$heroBottom.height();
@@ -586,7 +631,6 @@ jQuery( function( $ ) {
 					}
 					timeline.time(percent);
 				}
-				console.log(percent);
 			});
 		},
 

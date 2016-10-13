@@ -923,6 +923,30 @@ td {
     -ms-touch-action: manipulation;
     touch-action: manipulation; }
 
+.hero-animation {
+  width: 100%;
+  position: fixed;
+  min-width: 800px;
+  max-width: 1060px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: visible; }
+  .hero-animation:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 75%; }
+  .hero-animation .hero-animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible; }
+    .hero-animation .hero-animation-container .HYPE_scene {
+      overflow: visible !important; }
+
 .swiper-container {
   margin: 0 auto;
   position: relative;
@@ -1495,11 +1519,13 @@ td {
   left: auto; }
 
 .rich-media {
-  padding-top: 10em;
   width: 100%;
   position: relative;
   z-index: 1;
   overflow: hidden; }
+  .rich-media .rich-media-space {
+    width: 100%;
+    height: 600vh; }
 
 .rich-media-headline {
   text-align: center; }

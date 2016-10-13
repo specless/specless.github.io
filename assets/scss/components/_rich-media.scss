@@ -3,11 +3,16 @@
 // ----------------------------------------------------------------------
 
 .rich-media {
-	padding-top: 10em;
+	//padding-top: 10em;
 	width: 100%;
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
+
+	.rich-media-space {
+		width: 100%;
+		height: 600vh;
+	}
 }
 
 .rich-media-headline {
