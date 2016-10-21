@@ -69,7 +69,7 @@
 	<key>hasManuallyChangedCSSPositioning</key>
 	<false/>
 	<key>lastCheckDate</key>
-	<date>2016-10-20T23:20:21Z</date>
+	<date>2016-10-21T00:28:35Z</date>
 	<key>layout</key>
 	<dict>
 		<key>currentInspectorPane</key>
@@ -215,7 +215,7 @@
 		<key>keyframeTimelineHeight</key>
 		<real>78</real>
 		<key>mainWindowFrame</key>
-		<string>446 259 2284 1158 0 0 3440 1417 </string>
+		<string>561 198 2284 1158 0 0 3440 1417 </string>
 		<key>openTabs</key>
 		<array>
 			<dict>
@@ -809,9 +809,7 @@
 					<key>animationController</key>
 					<dict>
 						<key>expandedItems</key>
-						<array>
-							<string>116</string>
-						</array>
+						<array/>
 						<key>timeCursors</key>
 						<dict>
 							<key>kTimelineDefaultIdentifier</key>
@@ -821,7 +819,7 @@
 						<integer>60</integer>
 					</dict>
 					<key>canvasSize</key>
-					<string>{2930, 2105}</string>
+					<string>{2064, 1930}</string>
 					<key>hypeScene</key>
 					<dict>
 						<key>backgroundColor</key>
@@ -846,7 +844,7 @@
 					<key>rootSymbolControllerOid</key>
 					<string>2</string>
 					<key>scrollViewOffset</key>
-					<string>{1039, 819}</string>
+					<string>{173, 819}</string>
 					<key>userGuides</key>
 					<array>
 						<dict>
@@ -905,13 +903,11 @@
 	<key>symbols</key>
 	<array>
 		<dict>
-			<key>currentGroupElement</key>
-			<string>116</string>
 			<key>documentIdentifier</key>
 			<string>AAB48573-39AE-4741-B848-5138464E8628-3807-00004AABDFE69655</string>
 			<key>selectedObjects</key>
 			<array>
-				<string>117</string>
+				<string>10</string>
 			</array>
 			<key>symbol</key>
 			<dict>
@@ -1424,7 +1420,7 @@
 							<key>identifier</key>
 							<string>InnerHTML</string>
 							<key>objectValue</key>
-							<string>&lt;iframe class="rich-media-ad-slot-iframe" src="http://specless.io/view_623?ad=WlDqgk" style="border:none;width:100%;height:100%;"&gt;&lt;/iframe&gt;</string>
+							<string>&lt;iframe class="rich-media-ad-slot-iframe" src="https://specless.io/view_623?ad=WlDqgk" style="border:none;width:100%;height:100%;"&gt;&lt;/iframe&gt;</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
