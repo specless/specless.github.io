@@ -22,18 +22,29 @@ body {
 
 	> header {
 		height: $header-height;
-		padding: 0 calc((100% - #{$content-width} )/2);
+		//padding: 0 calc((100% - #{$content-width} )/2);
 		background-color: $color-light-one;
 		position: relative;
+
+		&.persistent {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			width: 100vw;
+		}
 
 		> .content {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			height: 100%;
+			padding: 0 $size-up-one;
+			max-width: $content-width;
+			margin: 0 auto;
 		}
 
-		 .menu.menu-tabbed {
+		.menu.menu-tabbed {
 			border: none;
 
 			> .menu-item {
@@ -78,9 +89,9 @@ body {
 			}
 		}
 
-		@include breakpoint-one {
-			padding: 0 $size-up-one;
-		}
+		// @include breakpoint-one {
+		// 	padding: 0 $size-up-one;
+		// }
 
 		.logo-mark {
 			display: none;
@@ -343,7 +354,7 @@ body {
 		}
 	}
 
-	> main {
+	> main, .wrapper {
 		width: 100%;
 		//min-height: calc(100% - #{$header-height});
 		height: auto;
@@ -428,8 +439,10 @@ body {
 
 		> article {
 			flex: 1;
-			padding: 0 $size-up-four;
 			height: auto;
+			padding: 0 $size-up-two;
+			max-width: $content-width;
+			margin: 0 auto;
 
 
 			@include breakpoint-one {
@@ -560,15 +573,41 @@ body {
 }
 
 .row {
+	width: 100%;
 	display: flex;
 	
 	.column {
 		flex: 1;
 		margin-right: $size-up-one;
+		order: 1;
 
 		&:last-child {
 			margin-right: 0;
 		}
+	}
+
+	.column-order-one {
+		order: 1;
+	}
+
+	.column-order-two {
+		order: 2;
+	}
+
+	.column-order-three {
+		order: 3;
+	}
+
+	.column-order-four {
+		order: 4;
+	}
+
+	.column-order-five {
+		order: 5;
+	}
+
+	.column-order-six {
+		order: 6;
 	}
 }
 

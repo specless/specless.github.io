@@ -61,6 +61,7 @@ jQuery( function( $ ) {
 		$sliderHeightKnob: $('#demo-controls-height .slider-knob'),
 		$pubMockupPhone: $('#pub-mockup-phone'),
 		$pubMockupBrowser: $('#pub-mockup-browser'),
+		$heroAnimation: $('#hero-animation'),
 
 
 
@@ -134,36 +135,57 @@ jQuery( function( $ ) {
 		},
 
 		controlAnimation: function() {
-			var self = this;
+			var self = this,
+				lastScroll;
 
 			function updateTime() {
 				var percent = self.scrollPercent(self.$heroTop),
 					nextPercent = self.scrollPercent(self.$richmediaSpace) * 1.15,
 					duration = 5,
-					nextDuration = 19,
+					nextDuration = 18.5,
 					time = (duration * percent) + 3,
 					nextTime = (nextDuration * nextPercent) + 10;
 					animation = HYPE.documents["hero"];
 
-				console.log(nextPercent);
 
 				if (nextPercent === 0) {
 					if (time <= duration + 3) {
+						animation.pauseTimelineNamed('Main Timeline');
 						animation.goToTimeInTimelineNamed(time, 'Main Timeline');
 					}
 					if (self.scrollPercent(self.$advertisers) > 0) {
+						animation.pauseTimelineNamed('Main Timeline');
 						animation.goToTimeInTimelineNamed(10, 'Main Timeline');
 					}
+					self.$heroAnimation.css('margin-top', 0);
 				} else {
 					if (nextTime <= nextDuration + 10) {
+						animation.pauseTimelineNamed('Main Timeline');
 						animation.goToTimeInTimelineNamed(nextTime, 'Main Timeline');
+						self.$heroAnimation.css('margin-top', 0);
+					} else {
+						if (lastScroll) {
+							var distance = (self.$doc.scrollTop() - lastScroll);
+							if (distance >= 0) {
+								self.$heroAnimation.css('margin-top', '-' + distance + 'px');
+							} else {
+								self.$heroAnimation.css('margin-top', 0);
+							}
+						} else {
+							lastScroll = self.$doc.scrollTop();
+						}
 					}
 				}
 			}
 
 			function hypeReady(hypeDocument, element, event) {
-				console.log('ready');
+				hypeDocument.startTimelineNamed('Main Timeline');
 				self.$doc.scroll(updateTime);
+				document.addEventListener('touchmove', updateTime);
+				self.$win.resize(function() {
+					lastScroll = undefined;
+					updateTime();
+				});
 			}
 
 
@@ -582,7 +604,7 @@ jQuery( function( $ ) {
 					.from(self.$pubMockupBrowser, 0.5, {opacity: 0}, 0.5);
 
 
-			self.$doc.scroll(function() {
+			function animate() {
 				var height = self.$publishers.height();
 				var offset = self.$publishers.offset().top;
 				var winHeight = self.$win.height();
@@ -599,7 +621,9 @@ jQuery( function( $ ) {
 					}
 					timeline.time(percent);
 				}
-			});
+			};
+			self.$doc.scroll(animate);
+			document.addEventListener('touchmove', animate);
 		},
 
 		setupAdvSection : function() {
@@ -614,7 +638,7 @@ jQuery( function( $ ) {
 					.fromTo($(".browser.browser-3"), 1, {y: '-50', ease: Power0.easeNone}, {y: '10', ease: Power0.easeNone}, 0);
 
 
-			self.$doc.scroll(function() {
+			function animate() {
 				var height = self.$advertisers.height();
 				var offset = self.$advertisers.offset().top;
 				var winHeight = self.$win.height();
@@ -631,7 +655,10 @@ jQuery( function( $ ) {
 					}
 					timeline.time(percent);
 				}
-			});
+			};
+
+			self.$doc.scroll(animate);
+			document.addEventListener('touchmove', animate);
 		},
 
 		swiper_carousel: function() {
