@@ -15,37 +15,67 @@
 
 @font-face {
     font-family:"DIN Next";
-    src:url("../fonts/din_next_ultralight.woff2") format("woff2");
+    src: url('../fonts/din_next_ultralight.eot');
+	src: url('../fonts/din_next_ultralight.woff') format('woff'),
+	     url('../fonts/din_next_ultralight.ttf') format('truetype'),
+	     url('../fonts/din_next_ultralight.woff2') format('woff2'),
+	     url('../fonts/din_next_ultralight.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/din_next_ultralight.svg') format('svg');
     font-weight: 200;
 }
 
 @font-face {
     font-family:"DIN Next";
-    src:url("../fonts/din_next_light.woff2") format("woff2");
+    src: url('../fonts/din_next_light.eot');
+	src: url('../fonts/din_next_light.woff') format('woff'),
+	     url('../fonts/din_next_light.ttf') format('truetype'),
+	     url('../fonts/din_next_light.woff2') format('woff2'),
+	     url('../fonts/din_next_light.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/din_next_light.svg') format('svg');
     font-weight: 300;
 }
 
 @font-face {
     font-family:"DIN Next";
-    src:url("../fonts/din_next_medium.woff2") format("woff2");
+    src: url('../fonts/din_next_medium.eot');
+	src: url('../fonts/din_next_medium.woff') format('woff'),
+	     url('../fonts/din_next_medium.ttf') format('truetype'),
+	     url('../fonts/din_next_medium.woff2') format('woff2'),
+	     url('../fonts/din_next_medium.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/din_next_medium.svg') format('svg');
     font-weight: 600;
 }
 
 @font-face {
     font-family:"Source Sans Pro";
-    src:url("../fonts/source_sans_pro_light.woff2") format("woff2");
+    src: url('../fonts/source_sans_pro_light.eot');
+	src: url('../fonts/source_sans_pro_light.woff') format('woff'),
+	     url('../fonts/source_sans_pro_light.ttf') format('truetype'),
+	     url('../fonts/source_sans_pro_light.woff2') format('woff2'),
+	     url('../fonts/source_sans_pro_light.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/source_sans_pro_light.svg') format('svg');
     font-weight: 300;
 }
 
 @font-face {
     font-family:"Source Sans Pro";
-    src:url("../fonts/source_sans_pro_regular.woff2") format("woff2");
+    src: url('../fonts/source_sans_pro_regular.eot');
+	src: url('../fonts/source_sans_pro_regular.woff') format('woff'),
+	     url('../fonts/source_sans_pro_regular.ttf') format('truetype'),
+	     url('../fonts/source_sans_pro_regular.woff2') format('woff2'),
+	     url('../fonts/source_sans_pro_regular.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/source_sans_pro_regular.svg') format('svg');
     font-weight: 400;
 }
 
 @font-face {
     font-family:"Source Sans Pro";
-    src:url("../fonts/source_sans_pro_bold.woff2") format("woff2");
+    src: url('../fonts/source_sans_pro_bold.eot');
+	src: url('../fonts/source_sans_pro_bold.woff') format('woff'),
+	     url('../fonts/source_sans_pro_bold.ttf') format('truetype'),
+	     url('../fonts/source_sans_pro_bold.woff2') format('woff2'),
+	     url('../fonts/source_sans_pro_bold.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/source_sans_pro_bold.svg') format('svg');
     font-weight: 700;
 }
 
@@ -56,6 +86,7 @@
 
 html {
 	font-size: 16px;
+	overflow-x: hidden;
 }
 
 body {
@@ -64,6 +95,7 @@ body {
 	font-family: $default-stack;
 	font-weight: 400;
   	line-height: 1.45;
+  	overflow-x: hidden;
 }
 
 
@@ -314,6 +346,7 @@ a {
 button, .button {
 	$border-thickness: 2px;
 	@extend .label;
+	white-space: nowrap;
 	padding-right: $size-up-two;
 	padding-left: $size-up-two;
 	border-radius: 2em;

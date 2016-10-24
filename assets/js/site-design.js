@@ -14,7 +14,8 @@ var Site = function() {
 			$richmediaSpacer : $('#richmedia-spacer'),
 			$details : $('#section-details'),
 			$interface : $('#section-interface'),
-			$about : $('#section-about')
+			$about : $('#section-about'),
+			$icon : $('#details-icon')
 		},
 		scrollPercent = function($element) {
 			var scrollTop = el.$doc.scrollTop(),
@@ -39,6 +40,15 @@ var Site = function() {
 
 			return percent;
 		},
+		isPhone = function() {  
+		    var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+
+		    if (isMobile.matches) {
+		        return true;
+		    } else {
+		    	return false;
+		    }
+		}
 		setupHero = function() {
 			
 			var lastScroll,
@@ -51,43 +61,61 @@ var Site = function() {
 						nextTime = (nextDuration * nextPercent) + 10;
 						animation = HYPE.documents["hero"];
 
-					if (nextPercent === 0) {
-						if (time <= duration + 3) {
-							animation.pauseTimelineNamed('Main Timeline');
-							animation.goToTimeInTimelineNamed(time, 'Main Timeline');
-						}
-						if (scrollPercent(el.$advertisers) > 0) {
-							animation.pauseTimelineNamed('Main Timeline');
-							animation.goToTimeInTimelineNamed(10, 'Main Timeline');
-						}
-						el.$heroAnimation.css('margin-top', 0);
-					} else {
-						if (nextTime <= nextDuration + 10) {
-							animation.pauseTimelineNamed('Main Timeline');
-							animation.goToTimeInTimelineNamed(nextTime, 'Main Timeline');
+					if (!isPhone()) {
+
+						if (nextPercent === 0) {
+							if (time <= duration + 3) {
+								animation.pauseTimelineNamed('Main Timeline');
+								animation.goToTimeInTimelineNamed(time, 'Main Timeline');
+							}
+							if (scrollPercent(el.$advertisers) > 0) {
+								animation.pauseTimelineNamed('Main Timeline');
+								animation.goToTimeInTimelineNamed(10, 'Main Timeline');
+							}
 							el.$heroAnimation.css('margin-top', 0);
 						} else {
-							if (lastScroll) {
-								var distance = (el.$doc.scrollTop() - lastScroll);
-								if (distance >= 0) {
-									el.$heroAnimation.css('margin-top', '-' + distance + 'px');
+							
+							if (nextTime <= nextDuration + 10) {
+								animation.pauseTimelineNamed('Main Timeline');
+								animation.goToTimeInTimelineNamed(nextTime, 'Main Timeline');
+
+								if (nextTime > 28) {
+									$('.scc-icon').addClass("scc-icon-visible");
 								} else {
-									el.$heroAnimation.css('margin-top', 0);
+									$('.scc-icon').removeClass("scc-icon-visible");
 								}
-							} else {
-								lastScroll = el.$doc.scrollTop();
 							}
+							
+							var $adSlot = $('.rich-media-ad-slot'),
+								slotTop = $adSlot.offset().top - el.$doc.scrollTop() + $adSlot.height(),
+								detailsTop = el.$details.offset().top - el.$doc.scrollTop();
+							if ((detailsTop - slotTop) <= 0) {
+								el.$icon.addClass('details-icon-visible');
+								el.$icon.width($adSlot.width());
+								el.$icon.height($adSlot.height());
+								var scrollHeight = (detailsTop - ($adSlot.offset().top - el.$doc.scrollTop()));
+								if (scrollHeight <= ($adSlot.height()/2)) {
+									scrollHeight = $adSlot.height()/2;
+								}
+								el.$icon.css('margin-top', -1 * scrollHeight);
+
+							} else {
+								el.$icon.removeClass('details-icon-visible');
+							}
+
 						}
+					} else {
+						animation.pauseTimelineNamed('Main Timeline');
+						animation.goToTimeInTimelineNamed(3, 'Main Timeline');
 					}
 				},
 				hypeReady = function(hypeDocument, element, event) {
-					hypeDocument.startTimelineNamed('Main Timeline');
-					el.$doc.scroll(updateTime);
-					document.addEventListener('touchmove', updateTime);
-					el.$win.resize(function() {
-						lastScroll = undefined;
-						updateTime();
-					});
+					if (hypeDocument.documentName() === "hero") {
+						hypeDocument.startTimelineNamed('Main Timeline');
+						el.$doc.scroll(updateTime);
+						el.$win.resize(updateTime);
+						document.addEventListener('touchmove', updateTime);
+					}
 				},
 				init = function() {
 					if ("HYPE_eventListeners" in window === false) {
@@ -132,8 +160,24 @@ var Site = function() {
 
 			$pubSlides.click(function() {
 				$pubSlides.removeClass('swiper-slide-selected');
-				$(this).addClass('swiper-slide-selected');;
+				$(this).addClass('swiper-slide-selected');
 			});
+
+			var hypeReady = function(hypeDocument, element, event) {
+				if (hypeDocument.documentName() === "formats") {
+					$pubSlides.click(function() {
+						$pubSlides.removeClass('swiper-slide-selected');
+						$(this).addClass('swiper-slide-selected');
+						var time = $(this).attr('data-slide-click');
+						hypeDocument.goToTimeInTimelineNamed(+time, 'Main Timeline');
+						console.log(time);
+					});
+				}
+			}
+			if ("HYPE_eventListeners" in window === false) {
+				window.HYPE_eventListeners = Array();
+			}
+			window.HYPE_eventListeners.push({"type":"HypeDocumentLoad", "callback":hypeReady});
 		},
 		setupAdvertisers = function() {
 			var advSlider = new Swiper('#adv-slider', {
@@ -156,7 +200,7 @@ var Site = function() {
 
 			$advSlides.click(function() {
 				$advSlides.removeClass('swiper-slide-selected');
-				$(this).addClass('swiper-slide-selected');;
+				$(this).addClass('swiper-slide-selected');
 			});
 		},
 		start = function() {

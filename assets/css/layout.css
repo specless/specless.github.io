@@ -37,7 +37,8 @@ body {
       max-width: 1060px;
       margin: 0 auto; }
     body > header .menu.menu-tabbed {
-      border: none; }
+      border: none;
+      width: 100%; }
       body > header .menu.menu-tabbed > .menu-item {
         border: none; }
       body > header .menu.menu-tabbed > .button {
