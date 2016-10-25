@@ -67,12 +67,22 @@ var Site = function() {
 							if (time <= duration + 3) {
 								animation.pauseTimelineNamed('Main Timeline');
 								animation.goToTimeInTimelineNamed(time, 'Main Timeline');
+
+								if (time === duration + 3) {
+									$('html').addClass('scroll-completed');
+								} else {
+									$('html').removeClass('scroll-completed');
+								}
 							}
 							if (scrollPercent(el.$advertisers) > 0) {
 								animation.pauseTimelineNamed('Main Timeline');
 								animation.goToTimeInTimelineNamed(10, 'Main Timeline');
+								$('html').addClass('hide-controls');
+							} else {
+								$('html').removeClass('hide-controls');
 							}
-							el.$heroAnimation.css('margin-top', 0);
+							//el.$heroAnimation.css('margin-top', 0);
+
 						} else {
 							
 							if (nextTime <= nextDuration + 10) {
@@ -122,6 +132,59 @@ var Site = function() {
 						window.HYPE_eventListeners = Array();
 					}
 					window.HYPE_eventListeners.push({"type":"HypeDocumentLoad", "callback":hypeReady});
+
+					var sliderOptions = {
+						polyfill: false,
+						rangeClass: 'slider',
+					    disabledClass: 'slider-disabled',
+					    horizontalClass: 'slider-horizontal',
+					    verticalClass: 'slider-vertical',
+					    fillClass: 'slider-fill',
+					    handleClass: 'slider-knob',
+					    onSlide: function(position, value) {
+					    	var direction = 'horizontal';
+					    	var width = 1000;
+
+					    	if (this.$element.attr('data-orientation') === "vertical") {
+					    		var percent = 100 - value + "%";
+					    		$('#device-ad-slot').css('height', percent);
+					    	} else {
+					    		var percent = value/100,
+					    		$device = $('#device-demo'),
+								portrait = 14,
+								landscape = 31,
+								laptop = 60;
+
+								if (value <= portrait) {
+									$device.addClass('device__phone');
+									$device.removeClass('device__tablet-portrait');
+									$device.removeClass('device__tablet-landscape');
+									$device.removeClass('device__laptop');
+								} else if (value > portrait && value <= landscape) {
+									$device.addClass('device__tablet-portrait');
+									$device.removeClass('device__phone');
+									$device.removeClass('device__tablet-landscape');
+									$device.removeClass('device__laptop');
+								} else if (value > landscape && value <= laptop) {
+									$device.addClass('device__tablet-landscape');
+									$device.removeClass('device__tablet-portrait');
+									$device.removeClass('device__phone');
+									$device.removeClass('device__laptop');
+								} else if (value > laptop) {
+									$device.addClass('device__laptop');
+									$device.removeClass('device__tablet-portrait');
+									$device.removeClass('device__phone');
+									$device.removeClass('device__tablet-landscape');
+								}
+					    		
+					    		$device.css('width', (100 + value/100 * 400) + '%');
+					    	}
+					    }
+					};
+
+					$('input[type="range"]').rangeslider(sliderOptions);
+
+
 				};
 
 			init();
