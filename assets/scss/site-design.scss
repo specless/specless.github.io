@@ -161,17 +161,34 @@ $content-width: 1060px;
 							font-size: $size-up-five;
 							margin: 0;
 							margin-bottom: $size-down-three;
+
+							@include breakpoint(760px) {
+								font-size: $size-up-six;
+							}
+
+							@include breakpoint(375px) {
+								font-size: $size-up-five;
+							}
 						}
 
 						h2 {
 							margin: 0;
 							margin-bottom: $size-down-three;
+							transition: 1s ease opacity;
 						}
 
 						h3 {
 							margin: 0;
 							font-size: $size-up-three;
 							position: relative;
+
+							@include breakpoint(760px) {
+								font-size: $size-up-four;
+							}
+
+							@include breakpoint(375px) {
+								font-size: $size-up-three;
+							}
 
 							// &::before {
 							// 	content: "";
@@ -188,10 +205,27 @@ $content-width: 1060px;
 						h4 {
 							margin: 0;
 							font-size: $size-up-two;
+							transition: 1s ease opacity;
+
+							@include breakpoint(760px) {
+								font-size: $size-up-three;
+							}
+
+							@include breakpoint(375px) {
+								font-size: $size-up-two;
+							}
 						}
 
 						@include breakpoint(880px) {
 							margin-top: -$size-up-six;
+						}
+					}
+
+					.rich-media-animation {
+						display: none !important;
+
+						.hide-controls & {
+							display: block !important;
 						}
 					}
 
@@ -259,12 +293,13 @@ $content-width: 1060px;
 		.demo-controls-wrapper {
 
 			.demo-controls-message {
-				opacity: 0;
+				opacity: 1;
 				transition: 1s ease opacity;
 				background-size: 100% 100%;
 				background-repeat: no-repeat;
 				pointer-events: none;
 				text-align: left;
+				color: $color-light-one;
 
 				&::before {
 					content: "";
@@ -539,13 +574,19 @@ $content-width: 1060px;
 
 				@include breakpoint(880px) {
 					margin: 0 auto;
-					left: -$size-up-six;
+					left: -$size-up-four;
 					top: 0;
 				}
 
-				// @include breakpoint(760px) {
-				// 	display: none;
-				// }
+				@include breakpoint(760px) {
+					left: -$size-up-five;
+				}
+
+				@include breakpoint(660px) {
+					transform: scale(0.6);
+					left: -$size-up-seven;
+					margin-bottom: -$size-up-five;
+				}
 			}
 		}
 	}
@@ -830,6 +871,7 @@ $content-width: 1060px;
 		justify-content: center;
 		align-items: center;
 		background-color: transparent;
+		position: relative;
 		
 		.cta {
 			height: 200px;
@@ -841,22 +883,42 @@ $content-width: 1060px;
 
 	.interface {
 		position: relative;
-		padding: $header-height 0;
+		padding: $header-height 0 0 0;
 		text-align: center;
 		margin-top: -1px;
+		background-color: transparent;
+		background-image: linear-gradient(to bottom, $color-dark-two 0%, rgba(0,0,0,0) 100%);
+
+		.interface-green-glow {
+			position: absolute;
+			width: 160%;
+			max-width: 1600px;
+			height: 160%;
+			top: -100px;
+			left: 50%;
+			transform: translateX(-50%);
+			opacity: 0.6;
+			z-index: 1;
+			filter: blur(2px);
+		}
 
 		.interface-header {
 			color: $color-light-one;
 			text-align: center;
 			margin-bottom: $size-up-five;
+			position: relative;
 
 			h2 {
 				line-height: 1em;
 				margin: 0;
+				position: relative;
+				z-index: 2;
 			}
 
 			p:not(.label) {
 				font-size: 1.1em;
+				position: relative;
+				z-index: 2;
 			}
 
 			@include breakpoint(880px) {
@@ -868,6 +930,8 @@ $content-width: 1060px;
 			align-items: center;
 			max-width: 1600px;
 			margin: 0 auto;
+			position: relative;
+			z-index: 1;
 
 			.button {
 				position: absolute;
@@ -876,6 +940,11 @@ $content-width: 1060px;
 				right: 0;
 				margin: 0 auto;
 				width: 200px;
+			}
+
+			img {
+				box-shadow: $shadow-dark-high;
+				border-radius: 4px;
 			}
 
 			@include breakpoint(880px) {
@@ -978,6 +1047,10 @@ $content-width: 1060px;
 			@include breakpoint(660px) {
 				display: block;
 				text-align: center;
+
+				> * {
+					margin-top: $size-up-three;
+				}
 			}
 		}
 
@@ -994,6 +1067,27 @@ $content-width: 1060px;
 
 			> div {
 				flex: 1;
+				margin-right: $size-base;
+
+				.map-inner {
+					padding-top: $size-base;
+					margin-bottom: $size-up-one;
+
+					p {
+						text-align: center;
+					}
+				}
+
+				img {
+					width: 100%;
+					max-width: 300px;
+					height: auto;
+					border: 2px solid $color-light-one;
+				}
+
+				@include breakpoint(660px) {
+					margin-right: 0;
+				}
 			}
 
 			@include breakpoint(760px) {
@@ -1039,11 +1133,6 @@ $content-width: 1060px;
 					height: 33px;
 					margin: $size-base;
 				}
-
-				> p {
-					position: absolute;
-					margin-top: $size-up-five;
-				}
 			}
 
 			@include breakpoint(660px) {
@@ -1055,6 +1144,12 @@ $content-width: 1060px;
 				}
 			}
 
+		}
+
+		> p {
+			padding: 0 0 $size-up-one 0;
+			margin: 0;
+			text-align: center;
 		}
 	}
 }
@@ -1149,7 +1244,7 @@ $content-width: 1060px;
 		position: absolute;
 		top: -10%;
 		left: -25%;
-		opacity: 0.75;
+		opacity: 1;
 		background-image: url(https://storage.googleapis.com/sp_clients/SPECLESS/assets/shadow.png);
 		background-size: 100% 100%;
 		background-repeat: no-repeat;

@@ -11,8 +11,10 @@ var Site = function() {
 			$publishers : $('#section-publishers'),
 			$advertisers : $('#section-advertisers'),
 			$richmedia : $('#section-richmedia'),
+			$richmediaAnimation : $('#rich-media-animation'),
 			$richmediaSpacer : $('#richmedia-spacer'),
 			$details : $('#section-details'),
+			$products : $('#section-products'),
 			$interface : $('#section-interface'),
 			$about : $('#section-about'),
 			$icon : $('#details-icon')
@@ -62,29 +64,49 @@ var Site = function() {
 						animation = HYPE.documents["hero"];
 
 					if (!isPhone()) {
-
 						if (nextPercent === 0) {
 							if (time <= duration + 3) {
 								animation.pauseTimelineNamed('Main Timeline');
 								animation.goToTimeInTimelineNamed(time, 'Main Timeline');
-
 								if (time === duration + 3) {
 									$('html').addClass('scroll-completed');
 								} else {
 									$('html').removeClass('scroll-completed');
 								}
 							}
-							if (scrollPercent(el.$advertisers) > 0) {
+							if (scrollPercent(el.$publishers) > 0) {
 								animation.pauseTimelineNamed('Main Timeline');
 								animation.goToTimeInTimelineNamed(10, 'Main Timeline');
 								$('html').addClass('hide-controls');
 							} else {
 								$('html').removeClass('hide-controls');
 							}
-							//el.$heroAnimation.css('margin-top', 0);
+							
+							if (time < 5.5) {
+								var $device = $('#device-demo');
+								$device.css('width', '100%');
+								$('#hero-headline-two > h2, #hero-headline-two > h4').css('opacity', 1);
+								$('#device-ad-slot').css('height', '100%');
+								$('#demo-slider-horizontal').val(0);
+								$('#demo-slider-vertical').val(0);
+								$('#demo-slider-horizontal').rangeslider('update', true);
+								$('#demo-slider-vertical').rangeslider('update', true);
+								if (!$device.hasClass('device__phone')) {
+									$device.addClass('device__phone');
+									$device.removeClass('device__laptop');
+									$device.removeClass('device__tablet-portrait');
+									$device.removeClass('device__tablet-landscape');
+								}
+							}
 
 						} else {
-							
+
+							if (scrollPercent(el.$products) > 0) {
+								animation.goToTimeInTimelineNamed(31, 'Main Timeline');
+							} else {
+								animation.goToTimeInTimelineNamed(28.5, 'Main Timeline');
+							}
+
 							if (nextTime <= nextDuration + 10) {
 								animation.pauseTimelineNamed('Main Timeline');
 								animation.goToTimeInTimelineNamed(nextTime, 'Main Timeline');
@@ -112,7 +134,6 @@ var Site = function() {
 							} else {
 								el.$icon.removeClass('details-icon-visible');
 							}
-
 						}
 					} else {
 						animation.pauseTimelineNamed('Main Timeline');
@@ -178,13 +199,24 @@ var Site = function() {
 								}
 					    		
 					    		$device.css('width', (100 + value/100 * 400) + '%');
+
+					    		if ($('#demo-slider-horizontal').val() > 4) {
+					    			$('#hero-headline-two > h2, #hero-headline-two > h4').css('opacity', 0);
+					    		} else {
+					    			$('#hero-headline-two > h2, #hero-headline-two > h4').css('opacity', 1);
+					    		}
 					    	}
 					    }
 					};
 
 					$('input[type="range"]').rangeslider(sliderOptions);
-
-
+					$('.slider-knob').click(function() {
+						if ($(this).parent().hasClass('slider-horizontal')) {
+							$('#demo-message-width').css('opacity', 0);
+						} else if ($(this).parent().hasClass('slider-vertical')) {
+							$('#demo-message-height').css('opacity', 0);
+						}
+					});
 				};
 
 			init();
