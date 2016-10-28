@@ -312,6 +312,7 @@ var Site = function() {
 			ga(function(tracker) {
 				clientId = tracker.get('clientId');
 				FS.identify(clientId, {
+					displayName: 'Site Visitor',
 					siteVisitor : true
 				});
 			});
