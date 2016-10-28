@@ -1,6 +1,7 @@
 var Site = function() {
 
 	var clientId,
+		fullStoryLink,
 		el = {
 			$win : $(window),
 			$doc : $(document),
@@ -315,6 +316,8 @@ var Site = function() {
 					displayName: 'Site Visitor',
 					siteVisitor : true
 				});
+				fullStoryLink = FS.getCurrentSessionURL();
+				console.log(fullStoryLink);
 			});
 
 			var hero = false,
