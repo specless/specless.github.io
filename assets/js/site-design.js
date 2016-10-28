@@ -1,6 +1,7 @@
 var Site = function() {
-	
-	var el = {
+
+	var clientId,
+		el = {
 			$win : $(window),
 			$doc : $(document),
 			$header : $('#header'),
@@ -298,11 +299,109 @@ var Site = function() {
 				$(this).addClass('swiper-slide-selected');
 			});
 		},
+		setupTracking = function() {
+
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-41230543-4', 'auto');
+			ga('send', 'pageview');
+
+			ga(function(tracker) {
+				clientId = tracker.get('clientId');
+				FS.identify(clientId);
+			});
+
+			var hero = false,
+				publishers = false,
+				advertisers = false,
+				richmedia = false,
+				details = false,
+				products = false, 
+				interface = false;
+
+			el.$doc.scroll(function() {
+
+				if (scrollPercent(el.$hero) > 0 && hero === false) {
+					ga('send', {
+					  hitType: 'event',
+					  eventCategory: 'Sections',
+					  eventAction: 'hero',
+					  eventLabel: 'Scrolled To Hero Section'
+					});
+					hero = true;
+				}
+
+				if (scrollPercent(el.$publishers) > 0 && publishers === false) {
+					ga('send', {
+					  hitType: 'event',
+					  eventCategory: 'Sections',
+					  eventAction: 'publishers',
+					  eventLabel: 'Scrolled To Publishers Section'
+					});
+					publishers = true;
+				}
+
+				if (scrollPercent(el.$advertisers) > 0 && advertisers === false) {
+					ga('send', {
+					  hitType: 'event',
+					  eventCategory: 'Sections',
+					  eventAction: 'advertisers',
+					  eventLabel: 'Scrolled To Advertisers Section'
+					});
+					advertisers = true;
+				}
+
+				if (scrollPercent(el.$richmedia) > 0 && richmedia === false) {
+					ga('send', {
+					  hitType: 'event',
+					  eventCategory: 'Sections',
+					  eventAction: 'richmedia',
+					  eventLabel: 'Scrolled To Rich Media Section'
+					});
+					richmedia = true;
+				}
+
+				if (scrollPercent(el.$details) > 0 && details === false) {
+					ga('send', {
+					  hitType: 'event',
+					  eventCategory: 'Sections',
+					  eventAction: 'details',
+					  eventLabel: 'Scrolled To Details Section'
+					});
+					details = true;
+				}
+
+				if (scrollPercent(el.$products) > 0 && products === false) {
+					ga('send', {
+					  hitType: 'event',
+					  eventCategory: 'Sections',
+					  eventAction: 'products',
+					  eventLabel: 'Scrolled To Products Section'
+					});
+					products = true;
+				}
+
+				if (scrollPercent(el.$interface) > 0 && interface === false) {
+					ga('send', {
+					  hitType: 'event',
+					  eventCategory: 'Sections',
+					  eventAction: 'interface',
+					  eventLabel: 'Scrolled To Interface Section'
+					});
+					interface = true;
+				}
+
+			});
+		},
 		start = function() {
 			setupHero();
 			setupHeader();
 			setupPublishers();
 			setupAdvertisers();
+			setupTracking();
 		};
 
 	start();
