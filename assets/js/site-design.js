@@ -311,8 +311,9 @@ var Site = function() {
 
 			ga(function(tracker) {
 				clientId = tracker.get('clientId');
-				console.log(clientId);
-				FS.identify(clientId);
+				FS.identify(clientId, {
+					siteVisitor : true
+				});
 			});
 
 			var hero = false,
