@@ -212,7 +212,7 @@ var Site = function() {
 					};
 
 					$('input[type="range"]').rangeslider(sliderOptions);
-					$('.slider-knob').click(function() {
+					$('.slider-knob').mousedown(function() {
 						if ($(this).parent().hasClass('slider-horizontal')) {
 							$('#demo-message-width').css('opacity', 0);
 						} else if ($(this).parent().hasClass('slider-vertical')) {

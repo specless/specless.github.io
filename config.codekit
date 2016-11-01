@@ -167,7 +167,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 213809,
+		"initialSize": 170322,
 		"inputAbbreviatedPath": "\/assets\/animation\/hero.hyperesources\/glow.png",
 		"outputAbbreviatedPath": "\/assets\/animation\/hero.hyperesources\/glow.png",
 		"outputPathIsOutsideProject": 0,
@@ -178,7 +178,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1.629e+06,
+		"initialSize": 1.62759e+06,
 		"inputAbbreviatedPath": "\/assets\/animation\/hero.hyperesources\/green-glow.png",
 		"outputAbbreviatedPath": "\/assets\/animation\/hero.hyperesources\/green-glow.png",
 		"outputPathIsOutsideProject": 0,
@@ -314,7 +314,7 @@
 		"outputAbbreviatedPath": "\/assets\/images\/avatar.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/assets\/images\/browser-1.png": {
 		"fileType": 32768,
@@ -501,7 +501,7 @@
 		"outputAbbreviatedPath": "\/assets\/images\/glow.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/assets\/images\/green-glow.png": {
 		"fileType": 32768,
@@ -512,7 +512,7 @@
 		"outputAbbreviatedPath": "\/assets\/images\/green-glow.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/assets\/images\/hero-device-laptop@2x.png": {
 		"fileType": 32768,
@@ -545,7 +545,7 @@
 		"outputAbbreviatedPath": "\/assets\/images\/hero-device-tablet@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/assets\/images\/hero.html": {
 		"fileType": 8192,
@@ -565,7 +565,7 @@
 		"outputAbbreviatedPath": "\/assets\/images\/icon-10x-blue.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/assets\/images\/icon-10x-grey.png": {
 		"fileType": 32768,
@@ -598,7 +598,7 @@
 		"outputAbbreviatedPath": "\/assets\/images\/icon-slider-dots.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/assets\/images\/interface-analytics.png": {
 		"fileType": 32768,
@@ -609,7 +609,7 @@
 		"outputAbbreviatedPath": "\/assets\/images\/interface-analytics.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/assets\/images\/interface-main.png": {
 		"fileType": 32768,
@@ -620,7 +620,7 @@
 		"outputAbbreviatedPath": "\/assets\/images\/interface-main.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/assets\/images\/interface-preview.png": {
 		"fileType": 32768,
@@ -631,7 +631,7 @@
 		"outputAbbreviatedPath": "\/assets\/images\/interface-preview.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/assets\/images\/ipad-perspective.png": {
 		"fileType": 32768,
@@ -642,7 +642,7 @@
 		"outputAbbreviatedPath": "\/assets\/images\/ipad-perspective.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/assets\/images\/ipad-perspective_old.png": {
 		"fileType": 32768,
@@ -653,7 +653,7 @@
 		"outputAbbreviatedPath": "\/assets\/images\/ipad-perspective_old.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/assets\/images\/lensflare.png": {
 		"fileType": 32768,

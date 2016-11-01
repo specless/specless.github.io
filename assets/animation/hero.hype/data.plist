@@ -69,7 +69,7 @@
 	<key>hasManuallyChangedCSSPositioning</key>
 	<false/>
 	<key>lastCheckDate</key>
-	<date>2016-10-27T17:40:49Z</date>
+	<date>2016-10-31T23:00:38Z</date>
 	<key>layout</key>
 	<dict>
 		<key>currentInspectorPane</key>
@@ -139,7 +139,7 @@
 							<array>
 								<dict>
 									<key>frame</key>
-									<string>{{271, 0}, {2898, 585}}</string>
+									<string>{{271, 0}, {2898, 718}}</string>
 									<key>identifier</key>
 									<string>container 4</string>
 									<key>isCustomizableViewContainer</key>
@@ -152,7 +152,7 @@
 									<array>
 										<dict>
 											<key>frame</key>
-											<string>{{271, 0}, {2898, 585}}</string>
+											<string>{{271, 0}, {2898, 718}}</string>
 											<key>identifier</key>
 											<string>timelineCustomizableContainer</string>
 											<key>isCustomizableViewContainer</key>
@@ -162,7 +162,7 @@
 								</dict>
 								<dict>
 									<key>frame</key>
-									<string>{{271, 586}, {2898, 773}}</string>
+									<string>{{271, 719}, {2898, 640}}</string>
 									<key>identifier</key>
 									<string>container 3</string>
 									<key>isCustomizableViewContainer</key>
@@ -175,7 +175,7 @@
 									<array>
 										<dict>
 											<key>frame</key>
-											<string>{{271, 586}, {2898, 773}}</string>
+											<string>{{271, 719}, {2898, 640}}</string>
 											<key>identifier</key>
 											<string>sceneEditorCustomizableContainer</string>
 											<key>isCustomizableViewContainer</key>
@@ -215,7 +215,7 @@
 		<key>keyframeTimelineHeight</key>
 		<real>402</real>
 		<key>mainWindowFrame</key>
-		<string>439 192 2284 1159 0 0 3440 1417 </string>
+		<string>1156 54 2284 1160 0 0 3440 1417 </string>
 		<key>openTabs</key>
 		<array>
 			<dict>
@@ -409,112 +409,6 @@
 				ABMgAADYAQAAAAAAACAgAAAUAgAAAAAAADAgAABAAgAA
 				AAAAAAHAAACIAQAAAAAAABHAAAAgAAAAAAAAABLAAACY
 				AQAAAAAAABDQAAAEAAAAAAAAAA==
-				</data>
-				<key>shouldAutoResize</key>
-				<true/>
-				<key>shouldIncludeInDocumentHeadHTML</key>
-				<false/>
-				<key>shouldPreload</key>
-				<true/>
-				<key>shouldRemoveWhenNoLongerReferenced</key>
-				<true/>
-				<key>type</key>
-				<string>FileResource</string>
-			</dict>
-			<dict>
-				<key>fileModificationDate</key>
-				<date>2016-09-29T22:48:30Z</date>
-				<key>fileSize</key>
-				<integer>1628996</integer>
-				<key>md5</key>
-				<string>59F6C5D83B449F51BCC609C0BA85444A</string>
-				<key>notifyOnBookmarkChange</key>
-				<true/>
-				<key>originalPath</key>
-				<string>/Users/scorby/Development Projects/specless.github.io/assets/images/green-glow.png</string>
-				<key>resourceName</key>
-				<string>green-glow.png</string>
-				<key>securityScopedBookmark</key>
-				<data>
-				Ym9va0wDAAAAAAQQMAAAAA3pcjJXyCqEMHvSojEZziBL
-				suQZPH4mU4KCljpuPU89SAIAAAQAAAADAwAAAAkAKAUA
-				AAABAQAAVXNlcnMAAAAGAAAAAQEAAHNjb3JieQAAFAAA
-				AAEBAABEZXZlbG9wbWVudCBQcm9qZWN0cxIAAAABAQAA
-				c3BlY2xlc3MuZ2l0aHViLmlvAAAGAAAAAQEAAGFzc2V0
-				cwAABgAAAAEBAABpbWFnZXMAAA4AAAABAQAAZ3JlZW4t
-				Z2xvdy5wbmcAABwAAAABBgAAEAAAACAAAAAwAAAATAAA
-				AGgAAAB4AAAAiAAAAAgAAAAEAwAA+WYCAAAAAAAIAAAA
-				BAMAABM2CQAAAAAACAAAAAQDAADNttAFAAAAAAgAAAAE
-				AwAAsLbQBQAAAAAIAAAABAMAAPe20AUAAAAACAAAAAQD
-				AAAFt9AFAAAAAAgAAAAEAwAA3jndBQAAAAAcAAAAAQYA
-				AMQAAADUAAAA5AAAAPQAAAAEAQAAFAEAACQBAAAIAAAA
-				AAQAAEG9ndG9AAAAGAAAAAECAAABAAAAAAAAAA8AAAAA
-				AAAAAAAAAAAAAAAIAAAABAMAAAUAAAAAAAAABAAAAAMD
-				AAD1AQAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFj
-				aW50b3NoIEhECAAAAAQDAAAAAKAydAAAAAgAAAAABAAA
-				QblescYAAAAkAAAAAQEAADQyRTQwQzU0LUIwRjAtMzY0
-				Ny04QTdBLTY4NTkwMjdBNTRFNRgAAAABAgAAgQAAAAEA
-				AADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAA
-				AAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAACgAAAA
-				AAAAAAUQAAA0AQAAAAAAABAQAABoAQAAAAAAAEAQAABY
-				AQAAAAAAAAIgAAA0AgAAAAAAAAUgAACkAQAAAAAAABAg
-				AAC0AQAAAAAAABEgAADoAQAAAAAAABIgAADIAQAAAAAA
-				ABMgAADYAQAAAAAAACAgAAAUAgAAAAAAADAgAABAAgAA
-				AAAAAAHAAACIAQAAAAAAABHAAAAgAAAAAAAAABLAAACY
-				AQAAAAAAABDQAAAEAAAAAAAAAA==
-				</data>
-				<key>shouldAutoResize</key>
-				<true/>
-				<key>shouldIncludeInDocumentHeadHTML</key>
-				<false/>
-				<key>shouldPreload</key>
-				<true/>
-				<key>shouldRemoveWhenNoLongerReferenced</key>
-				<true/>
-				<key>type</key>
-				<string>FileResource</string>
-			</dict>
-			<dict>
-				<key>fileModificationDate</key>
-				<date>2016-09-28T22:36:53Z</date>
-				<key>fileSize</key>
-				<integer>213809</integer>
-				<key>md5</key>
-				<string>15872E6DAC9D14663D03511305F6164B</string>
-				<key>notifyOnBookmarkChange</key>
-				<true/>
-				<key>originalPath</key>
-				<string>/Users/scorby/Development Projects/specless.github.io/assets/images/glow.png</string>
-				<key>resourceName</key>
-				<string>glow.png</string>
-				<key>securityScopedBookmark</key>
-				<data>
-				Ym9va0QDAAAAAAQQMAAAAPUgh4NwbfeOWJVoRGtIcBHe
-				F7xkM4nzeAS8Y/8PLVUcQAIAAAQAAAADAwAAAAkAKAUA
-				AAABAQAAVXNlcnMAAAAGAAAAAQEAAHNjb3JieQAAFAAA
-				AAEBAABEZXZlbG9wbWVudCBQcm9qZWN0cxIAAAABAQAA
-				c3BlY2xlc3MuZ2l0aHViLmlvAAAGAAAAAQEAAGFzc2V0
-				cwAABgAAAAEBAABpbWFnZXMAAAgAAAABAQAAZ2xvdy5w
-				bmccAAAAAQYAABAAAAAgAAAAMAAAAEwAAABoAAAAeAAA
-				AIgAAAAIAAAABAMAAPlmAgAAAAAACAAAAAQDAAATNgkA
-				AAAAAAgAAAAEAwAAzbbQBQAAAAAIAAAABAMAALC20AUA
-				AAAACAAAAAQDAAD3ttAFAAAAAAgAAAAEAwAABbfQBQAA
-				AAAIAAAABAMAAPeU0wUAAAAAHAAAAAEGAAC8AAAAzAAA
-				ANwAAADsAAAA/AAAAAwBAAAcAQAACAAAAAAEAABBvZx9
-				hAAAABgAAAABAgAAAQAAAAAAAAAPAAAAAAAAAAAAAAAA
-				AAAACAAAAAQDAAAFAAAAAAAAAAQAAAADAwAA9QEAAAgA
-				AAABCQAAZmlsZTovLy8MAAAAAQEAAE1hY2ludG9zaCBI
-				RAgAAAAEAwAAAACgMnQAAAAIAAAAAAQAAEG5XrHGAAAA
-				JAAAAAEBAAA0MkU0MEM1NC1CMEYwLTM2NDctOEE3QS02
-				ODU5MDI3QTU0RTUYAAAAAQIAAIEAAAABAAAA7xMAAAEA
-				AAAAAAAAAAAAAAEAAAABAQAALwAAAAAAAAABBQAAzAAA
-				AP7///8BAAAAAAAAABAAAAAEEAAAmAAAAAAAAAAFEAAA
-				LAEAAAAAAAAQEAAAYAEAAAAAAABAEAAAUAEAAAAAAAAC
-				IAAALAIAAAAAAAAFIAAAnAEAAAAAAAAQIAAArAEAAAAA
-				AAARIAAA4AEAAAAAAAASIAAAwAEAAAAAAAATIAAA0AEA
-				AAAAAAAgIAAADAIAAAAAAAAwIAAAOAIAAAAAAAABwAAA
-				gAEAAAAAAAARwAAAIAAAAAAAAAASwAAAkAEAAAAAAAAQ
-				0AAABAAAAAAAAAA=
 				</data>
 				<key>shouldAutoResize</key>
 				<true/>
@@ -741,11 +635,117 @@
 			</dict>
 			<dict>
 				<key>fileModificationDate</key>
-				<date>2016-10-21T23:06:13Z</date>
+				<date>2016-10-28T23:20:16Z</date>
 				<key>fileSize</key>
-				<integer>164949</integer>
+				<integer>1627593</integer>
 				<key>md5</key>
-				<string>5CB431DF2C9AF0BA276D641C153C6D10</string>
+				<string>3CD4111A241AC60428813AB701249232</string>
+				<key>notifyOnBookmarkChange</key>
+				<true/>
+				<key>originalPath</key>
+				<string>/Users/scorby/Development Projects/specless.github.io/assets/images/green-glow.png</string>
+				<key>resourceName</key>
+				<string>green-glow.png</string>
+				<key>securityScopedBookmark</key>
+				<data>
+				Ym9va0wDAAAAAAQQMAAAAH4YLCvWn4epYbKmW7nezxI9
+				gEA/+7vocurApSbHWOsJSAIAAAQAAAADAwAAAAkAKAUA
+				AAABAQAAVXNlcnMAAAAGAAAAAQEAAHNjb3JieQAAFAAA
+				AAEBAABEZXZlbG9wbWVudCBQcm9qZWN0cxIAAAABAQAA
+				c3BlY2xlc3MuZ2l0aHViLmlvAAAGAAAAAQEAAGFzc2V0
+				cwAABgAAAAEBAABpbWFnZXMAAA4AAAABAQAAZ3JlZW4t
+				Z2xvdy5wbmcAABwAAAABBgAAEAAAACAAAAAwAAAATAAA
+				AGgAAAB4AAAAiAAAAAgAAAAEAwAA+WYCAAAAAAAIAAAA
+				BAMAABM2CQAAAAAACAAAAAQDAADNttAFAAAAAAgAAAAE
+				AwAAsLbQBQAAAAAIAAAABAMAAPe20AUAAAAACAAAAAQD
+				AAAFt9AFAAAAAAgAAAAEAwAAWUj2BQAAAAAcAAAAAQYA
+				AMQAAADUAAAA5AAAAPQAAAAEAQAAFAEAACQBAAAIAAAA
+				AAQAAEG9xBSvAAAAGAAAAAECAAABAAAAAAAAAA8AAAAA
+				AAAAAAAAAAAAAAAIAAAABAMAAAUAAAAAAAAABAAAAAMD
+				AAD1AQAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFj
+				aW50b3NoIEhECAAAAAQDAAAAAKAydAAAAAgAAAAABAAA
+				QblescYAAAAkAAAAAQEAADQyRTQwQzU0LUIwRjAtMzY0
+				Ny04QTdBLTY4NTkwMjdBNTRFNRgAAAABAgAAgQAAAAEA
+				AADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAA
+				AAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAACgAAAA
+				AAAAAAUQAAA0AQAAAAAAABAQAABoAQAAAAAAAEAQAABY
+				AQAAAAAAAAIgAAA0AgAAAAAAAAUgAACkAQAAAAAAABAg
+				AAC0AQAAAAAAABEgAADoAQAAAAAAABIgAADIAQAAAAAA
+				ABMgAADYAQAAAAAAACAgAAAUAgAAAAAAADAgAABAAgAA
+				AAAAAAHAAACIAQAAAAAAABHAAAAgAAAAAAAAABLAAACY
+				AQAAAAAAABDQAAAEAAAAAAAAAA==
+				</data>
+				<key>shouldAutoResize</key>
+				<true/>
+				<key>shouldIncludeInDocumentHeadHTML</key>
+				<false/>
+				<key>shouldPreload</key>
+				<true/>
+				<key>shouldRemoveWhenNoLongerReferenced</key>
+				<true/>
+				<key>type</key>
+				<string>FileResource</string>
+			</dict>
+			<dict>
+				<key>fileModificationDate</key>
+				<date>2016-10-28T23:20:24Z</date>
+				<key>fileSize</key>
+				<integer>170322</integer>
+				<key>md5</key>
+				<string>5CE8E1645C6B01367A13F9FCF8344A7B</string>
+				<key>notifyOnBookmarkChange</key>
+				<true/>
+				<key>originalPath</key>
+				<string>/Users/scorby/Development Projects/specless.github.io/assets/images/glow.png</string>
+				<key>resourceName</key>
+				<string>glow.png</string>
+				<key>securityScopedBookmark</key>
+				<data>
+				Ym9va0QDAAAAAAQQMAAAAJRVOavUcnuFoHJH1/aDCgHg
+				++GejD4eH2TqDkyHXJtlQAIAAAQAAAADAwAAAAkAKAUA
+				AAABAQAAVXNlcnMAAAAGAAAAAQEAAHNjb3JieQAAFAAA
+				AAEBAABEZXZlbG9wbWVudCBQcm9qZWN0cxIAAAABAQAA
+				c3BlY2xlc3MuZ2l0aHViLmlvAAAGAAAAAQEAAGFzc2V0
+				cwAABgAAAAEBAABpbWFnZXMAAAgAAAABAQAAZ2xvdy5w
+				bmccAAAAAQYAABAAAAAgAAAAMAAAAEwAAABoAAAAeAAA
+				AIgAAAAIAAAABAMAAPlmAgAAAAAACAAAAAQDAAATNgkA
+				AAAAAAgAAAAEAwAAzbbQBQAAAAAIAAAABAMAALC20AUA
+				AAAACAAAAAQDAAD3ttAFAAAAAAgAAAAEAwAABbfQBQAA
+				AAAIAAAABAMAAFxI9gUAAAAAHAAAAAEGAAC8AAAAzAAA
+				ANwAAADsAAAA/AAAAAwBAAAcAQAACAAAAAAEAABBvcQU
+				twAAABgAAAABAgAAAQAAAAAAAAAPAAAAAAAAAAAAAAAA
+				AAAACAAAAAQDAAAFAAAAAAAAAAQAAAADAwAA9QEAAAgA
+				AAABCQAAZmlsZTovLy8MAAAAAQEAAE1hY2ludG9zaCBI
+				RAgAAAAEAwAAAACgMnQAAAAIAAAAAAQAAEG5XrHGAAAA
+				JAAAAAEBAAA0MkU0MEM1NC1CMEYwLTM2NDctOEE3QS02
+				ODU5MDI3QTU0RTUYAAAAAQIAAIEAAAABAAAA7xMAAAEA
+				AAAAAAAAAAAAAAEAAAABAQAALwAAAAAAAAABBQAAzAAA
+				AP7///8BAAAAAAAAABAAAAAEEAAAmAAAAAAAAAAFEAAA
+				LAEAAAAAAAAQEAAAYAEAAAAAAABAEAAAUAEAAAAAAAAC
+				IAAALAIAAAAAAAAFIAAAnAEAAAAAAAAQIAAArAEAAAAA
+				AAARIAAA4AEAAAAAAAASIAAAwAEAAAAAAAATIAAA0AEA
+				AAAAAAAgIAAADAIAAAAAAAAwIAAAOAIAAAAAAAABwAAA
+				gAEAAAAAAAARwAAAIAAAAAAAAAASwAAAkAEAAAAAAAAQ
+				0AAABAAAAAAAAAA=
+				</data>
+				<key>shouldAutoResize</key>
+				<true/>
+				<key>shouldIncludeInDocumentHeadHTML</key>
+				<false/>
+				<key>shouldPreload</key>
+				<true/>
+				<key>shouldRemoveWhenNoLongerReferenced</key>
+				<true/>
+				<key>type</key>
+				<string>FileResource</string>
+			</dict>
+			<dict>
+				<key>fileModificationDate</key>
+				<date>2016-10-28T23:22:21Z</date>
+				<key>fileSize</key>
+				<integer>127480</integer>
+				<key>md5</key>
+				<string>89EFD8D541CD57C7CDC4C1A99BCA3D00</string>
 				<key>notifyOnBookmarkChange</key>
 				<true/>
 				<key>originalPath</key>
@@ -754,8 +754,8 @@
 				<string>ipad-perspective.png</string>
 				<key>securityScopedBookmark</key>
 				<data>
-				Ym9va1ADAAAAAAQQMAAAALB3PUCNBuP8kY4V9m+QPs9J
-				HXIMpUyMW2hvq9AbgSygTAIAAAQAAAADAwAAAAkAKAUA
+				Ym9va1ADAAAAAAQQMAAAAP1LoPX8oTLVqS3/HYhylqP/
+				8JDSa6AMC6gIY5Iktj/KTAIAAAQAAAADAwAAAAkAKAUA
 				AAABAQAAVXNlcnMAAAAGAAAAAQEAAHNjb3JieQAAFAAA
 				AAEBAABEZXZlbG9wbWVudCBQcm9qZWN0cxIAAAABAQAA
 				c3BlY2xlc3MuZ2l0aHViLmlvAAAGAAAAAQEAAGFzc2V0
@@ -764,9 +764,9 @@
 				AEwAAABoAAAAeAAAAIgAAAAIAAAABAMAAPlmAgAAAAAA
 				CAAAAAQDAAATNgkAAAAAAAgAAAAEAwAAzbbQBQAAAAAI
 				AAAABAMAALC20AUAAAAACAAAAAQDAAD3ttAFAAAAAAgA
-				AAAEAwAABbfQBQAAAAAIAAAABAMAAMCw5gUAAAAAHAAA
+				AAAEAwAABbfQBQAAAAAIAAAABAMAAJ1I9gUAAAAAHAAA
 				AAEGAADIAAAA2AAAAOgAAAD4AAAACAEAABgBAAAoAQAA
-				CAAAAAAEAABBvbrW5AAAABgAAAABAgAAAQAAAAAAAAAP
+				CAAAAAAEAABBvcQVLAAAABgAAAABAgAAAQAAAAAAAAAP
 				AAAAAAAAAAAAAAAAAAAACAAAAAQDAAAFAAAAAAAAAAQA
 				AAADAwAA9QEAAAgAAAABCQAAZmlsZTovLy8MAAAAAQEA
 				AE1hY2ludG9zaCBIRAgAAAAEAwAAAACgMnQAAAAIAAAA
@@ -846,7 +846,7 @@
 					<key>rootSymbolControllerOid</key>
 					<string>2</string>
 					<key>scrollViewOffset</key>
-					<string>{1934, 977}</string>
+					<string>{1928, 321}</string>
 					<key>userGuides</key>
 					<array>
 						<dict>
@@ -4855,7 +4855,7 @@
 					&lt;div class="device-image"&gt;&lt;/div&gt;
 					&lt;div class="device-content"&gt;
 						&lt;div id="device-ad-slot" class="device-content-ad"&gt;
-							&lt;iframe class="device-content-ad-tag" src="https://specless.io/view_623?ad=WlDqgk"&gt;&lt;/iframe&gt;
+							&lt;iframe class="device-content-ad-tag" src="https://specless.io/view_623?ad=cvqSTL"&gt;&lt;/iframe&gt;
 						&lt;/div&gt;
 						&lt;div class="device-content-site"&gt;&lt;/div&gt;
 					&lt;/div&gt;
