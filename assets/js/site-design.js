@@ -314,7 +314,7 @@ var Site = function() {
 
 			$('[data-ad]').click(function() {
 				var ad = $(this).attr('data-ad');
-				var url = 'http://specless.io/view_623?ad=' + ad;
+				var url = 'https://specless.io/view_623?ad=' + ad;
 				el.$advModal.children('iframe').attr('src', url);
 				el.$advModal.addClass('active');
 			})
