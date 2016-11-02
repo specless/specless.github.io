@@ -421,12 +421,21 @@
         display: block;
         padding-top: 100%;
         background-color: #FFFFFF;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
         border: 4px solid transparent;
-        pointer-events: none; }
+        pointer-events: none;
+        filter: grayscale(100%);
+        opacity: 0.5; }
+      .site-design .swiper-container .swiper-slide:hover::before {
+        filter: grayscale(0);
+        opacity: 1; }
       .site-design .swiper-container .swiper-slide.swiper-slide-selected {
         color: #00c0d8; }
         .site-design .swiper-container .swiper-slide.swiper-slide-selected::before {
-          border-color: #00c0d8; }
+          border-color: #00c0d8;
+          filter: grayscale(0);
+          opacity: 1; }
       .site-design .swiper-container .swiper-slide .swiper-slide-content {
         position: absolute;
         width: 100%;

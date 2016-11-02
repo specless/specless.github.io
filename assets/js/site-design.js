@@ -299,6 +299,11 @@ var Site = function() {
 				$advSlides.removeClass('swiper-slide-selected');
 				$(this).addClass('swiper-slide-selected');
 			});
+
+			$('[data-ad]').each(function() {
+				var ad = $(this).attr('data-ad');
+				document.styleSheets[1].insertRule('[data-ad="' + ad + '"]::before { background-image: url(../images/ads/' + ad + '.png) }', 0);
+			});
 		},
 		setupTracking = function() {
 
