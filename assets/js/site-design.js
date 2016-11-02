@@ -19,7 +19,9 @@ var Site = function() {
 			$products : $('#section-products'),
 			$interface : $('#section-interface'),
 			$about : $('#section-about'),
-			$icon : $('#details-icon')
+			$icon : $('#details-icon'),
+			$advModal : $('#advModal'),
+			$modalCloser : $('.modal .modal-close')
 		},
 		scrollPercent = function($element) {
 			var scrollTop = el.$doc.scrollTop(),
@@ -52,7 +54,12 @@ var Site = function() {
 		    } else {
 		    	return false;
 		    }
-		}
+		},
+		setupModals = function() {
+			el.$modalCloser.click(function() {
+				$(this).parent('.modal').removeClass('active');
+			});
+		},
 		setupHero = function() {
 			
 			var lastScroll,
@@ -70,7 +77,7 @@ var Site = function() {
 							if (time <= duration + 3) {
 								animation.pauseTimelineNamed('Main Timeline');
 								animation.goToTimeInTimelineNamed(time, 'Main Timeline');
-								if (time === duration + 3) {
+								if (percent > 0.75) {
 									$('html').addClass('scroll-completed');
 								} else {
 									$('html').removeClass('scroll-completed');
@@ -304,6 +311,13 @@ var Site = function() {
 				var ad = $(this).attr('data-ad');
 				document.styleSheets[1].insertRule('[data-ad="' + ad + '"]::before { background-image: url(../images/ads/' + ad + '.png) }', 0);
 			});
+
+			$('[data-ad]').click(function() {
+				var ad = $(this).attr('data-ad');
+				var url = 'http://specless.io/view_623?ad=' + ad;
+				el.$advModal.children('iframe').attr('src', url);
+				el.$advModal.addClass('active');
+			})
 		},
 		setupTracking = function() {
 
@@ -410,6 +424,7 @@ var Site = function() {
 		start = function() {
 			setupHero();
 			setupHeader();
+			setupModals();
 			setupPublishers();
 			setupAdvertisers();
 			setupTracking();
