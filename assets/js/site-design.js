@@ -152,9 +152,10 @@ var Site = function() {
 				hypeReady = function(hypeDocument, element, event) {
 					if (hypeDocument.documentName() === "hero") {
 						hypeDocument.startTimelineNamed('Main Timeline');
-						el.$doc.scroll(updateTime);
+						//el.$doc.scroll(updateTime);
 						el.$win.resize(updateTime);
-						document.addEventListener('touchmove', updateTime);
+						document.addEventListener('scroll', updateTime, {passive: true});
+						document.addEventListener('touchmove', updateTime, {passive: true});
 					}
 				},
 				init = function() {
