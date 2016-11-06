@@ -38,6 +38,8 @@ body {
 }
 .wufoo .focused, .wufoo li.focused {
 	background: transparent;
+	color: $color-light-one;
+	
 	label.desc, .wufoo legend.desc {
 		color: $color-light-one;
 	}
