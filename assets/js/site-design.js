@@ -21,7 +21,9 @@ var Site = function() {
 			$about : $('#section-about'),
 			$icon : $('#details-icon'),
 			$advModal : $('#advModal'),
-			$modalCloser : $('.modal .modal-close')
+			$leadForm : $('#leadForm'),
+			$modalCloser : $('.modal .modal-close'),
+			$leadTrigger : $('.lead-trigger')
 		},
 		scrollPercent = function($element) {
 			var scrollTop = el.$doc.scrollTop(),
@@ -59,6 +61,10 @@ var Site = function() {
 			el.$modalCloser.click(function() {
 				$(this).parent('.modal').removeClass('active');
 			});
+			el.$leadTrigger.click(showLeadForm);
+		},
+		showLeadForm = function() {
+			el.$leadForm.addClass('active');
 		},
 		setupHero = function() {
 			
