@@ -933,11 +933,15 @@ html {
   border-bottom: 1px solid #383B3F; }
 
 /* Typography */
+.wufoo .info h2 {
+  color: #FFFFFF; }
+
 .wufoo .info div {
   color: #8C939B;
   font-size: 1em; }
 
 .wufoo .section h3 {
+  color: #FFFFFF;
   border-top: 1px solid #383B3F; }
 
 .wufoo .section div {
