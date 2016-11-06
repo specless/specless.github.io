@@ -47,11 +47,11 @@ body {
 }
 
 .wufoo .error, .wufoo li.error {
-	background: transparent !important;
+	background: $color-overlay-lighten !important;
 	color: $color-light-one !important;
 
 	label.desc, .wufoo legend.desc {
-		color: $color-sunrise !important;
+		color: $color-light-one !important;
 	}
 
 	.error {
@@ -73,7 +73,7 @@ body {
 		color: $color-light-one !important;
 
 		b {
-			padding: 0 !important;
+			background-color: $color-overlay-lighten !important;
 			color: $color-sunrise !important;
 		}
 	} 

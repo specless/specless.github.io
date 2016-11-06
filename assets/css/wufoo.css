@@ -923,10 +923,10 @@ html {
     color: #FFFFFF; }
 
 .wufoo .error, .wufoo li.error {
-  background: transparent !important;
+  background: rgba(255, 255, 255, 0.13) !important;
   color: #FFFFFF !important; }
   .wufoo .error label.desc, .wufoo .error .wufoo legend.desc, .wufoo li.error label.desc, .wufoo li.error .wufoo legend.desc {
-    color: #f7425a !important; }
+    color: #FFFFFF !important; }
   .wufoo .error .error, .wufoo li.error .error {
     color: #f7425a !important; }
 
@@ -939,7 +939,7 @@ html {
   .wufoo #errorLi #errorMsg, .wufoo .error-container #errorMsg {
     color: #FFFFFF !important; }
     .wufoo #errorLi #errorMsg b, .wufoo .error-container #errorMsg b {
-      padding: 0 !important;
+      background-color: rgba(255, 255, 255, 0.13) !important;
       color: #f7425a !important; }
 
 .wufoo .instruct {
