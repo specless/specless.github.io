@@ -47,7 +47,6 @@ body {
 }
 
 .wufoo .error, .wufoo li.error {
-	background: $color-overlay-lighten !important;
 	color: $color-light-one !important;
 
 	label.desc, .wufoo legend.desc {
@@ -58,6 +57,10 @@ body {
 		color: $color-sunrise !important;
 	}
 
+}
+
+.wufoo li.error {
+	background: $color-overlay-lighten !important;
 }
 
 .wufoo #errorLi, .wufoo .error-container {
@@ -74,6 +77,7 @@ body {
 
 		b {
 			background-color: $color-overlay-lighten !important;
+			border-radius: 0;
 			color: $color-sunrise !important;
 		}
 	} 
