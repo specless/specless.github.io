@@ -37,7 +37,11 @@ body {
 	//background:#FFFFFF url(/images/fieldbg.gif) repeat-x top;
 }
 .wufoo .focused {
-	background: rgba($color-medium-one, 0.15);
+	background: transparent;
+	label.desc, .wufoo legend.desc {
+		color: $color-light-one;
+	}
+
 }
 
 .wufoo .instruct {
@@ -129,5 +133,5 @@ body {
 }
 .wufoo .instruct small {
 	font-size: $size-down-one;
-	color: $color-medium-one;
+	color: $color-light-one;
 }

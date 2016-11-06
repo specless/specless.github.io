@@ -917,7 +917,9 @@ html {
   font-family: inherit; }
 
 .wufoo .focused {
-  background: rgba(140, 147, 155, 0.15); }
+  background: transparent; }
+  .wufoo .focused label.desc, .wufoo .focused .wufoo legend.desc {
+    color: #FFFFFF; }
 
 .wufoo .instruct {
   background-color: rgba(140, 147, 155, 0.15);
@@ -985,4 +987,4 @@ html {
 
 .wufoo .instruct small {
   font-size: 0.707em;
-  color: #8C939B; }
+  color: #FFFFFF; }
