@@ -39,11 +39,40 @@ body {
 .wufoo .focused, .wufoo li.focused {
 	background: transparent;
 	color: $color-light-one;
-	
+
 	label.desc, .wufoo legend.desc {
 		color: $color-light-one;
 	}
 
+}
+
+.wufoo .error, .wufoo li.error {
+	background: transparent;
+	color: $color-light-one !important;
+
+	.error {
+		color: $color-sunrise !important;
+	}
+
+}
+
+.wufoo #errorLi, .wufoo .error-container {
+	background-color: transparent !important;
+	border: none !important;
+	border-radius: 0 !important;
+
+	#errorMsgLbl {
+		color: $color-sunrise !important;
+	}
+
+	#errorMsg {
+		color: $color-light-one !important;
+
+		b {
+			background-color: transparent !important;
+			color: $color-sunrise !important;
+		}
+	} 
 }
 
 .wufoo .instruct {

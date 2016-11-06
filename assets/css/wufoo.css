@@ -917,9 +917,28 @@ html {
   font-family: inherit; }
 
 .wufoo .focused, .wufoo li.focused {
-  background: transparent; }
+  background: transparent;
+  color: #FFFFFF; }
   .wufoo .focused label.desc, .wufoo .focused .wufoo legend.desc, .wufoo li.focused label.desc, .wufoo li.focused .wufoo legend.desc {
     color: #FFFFFF; }
+
+.wufoo .error, .wufoo li.error {
+  background: transparent;
+  color: #FFFFFF !important; }
+  .wufoo .error .error, .wufoo li.error .error {
+    color: #f7425a !important; }
+
+.wufoo #errorLi, .wufoo .error-container {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important; }
+  .wufoo #errorLi #errorMsgLbl, .wufoo .error-container #errorMsgLbl {
+    color: #f7425a !important; }
+  .wufoo #errorLi #errorMsg, .wufoo .error-container #errorMsg {
+    color: #FFFFFF !important; }
+    .wufoo #errorLi #errorMsg b, .wufoo .error-container #errorMsg b {
+      background-color: transparent !important;
+      color: #f7425a !important; }
 
 .wufoo .instruct {
   background-color: rgba(140, 147, 155, 0.15);
