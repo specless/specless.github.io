@@ -47,8 +47,12 @@ body {
 }
 
 .wufoo .error, .wufoo li.error {
-	background: transparent;
+	background: transparent !important;
 	color: $color-light-one !important;
+
+	label.desc, .wufoo legend.desc {
+		color: $color-sunrise !important;
+	}
 
 	.error {
 		color: $color-sunrise !important;
@@ -69,7 +73,7 @@ body {
 		color: $color-light-one !important;
 
 		b {
-			background-color: transparent !important;
+			padding: 0 !important;
 			color: $color-sunrise !important;
 		}
 	} 
@@ -91,6 +95,7 @@ body {
 /* Typography */
 .wufoo .info h2{
 	color: $color-light-one;
+	text-align: center;
 	@extend .h3;
 }
 .wufoo .info div{
