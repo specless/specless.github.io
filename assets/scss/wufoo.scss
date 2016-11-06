@@ -36,7 +36,7 @@ body {
 .wufoo input.text, .wufoo textarea.textarea {
 	//background:#FFFFFF url(/images/fieldbg.gif) repeat-x top;
 }
-.wufoo .focused {
+.wufoo .focused, .wufoo li.focused {
 	background: transparent;
 	label.desc, .wufoo legend.desc {
 		color: $color-light-one;
@@ -97,7 +97,7 @@ body {
 }
 .wufoo input.text, .wufoo textarea.textarea, .wufoo select.select, .wufoo label.choice {
 	color: $color-medium-one;
-	font-size: $size-base;
+	font-size: $size-base !important;
 	font-family: inherit;
 }
 
@@ -119,9 +119,43 @@ body {
 	padding: $size-down-two;
 }
 
-.wufoo .buttons {
-	@extend .label;
-	color: $color-light-one;
+.wufoo input.field.file {
+	color: $color-medium-one;
+	font-size: $size-base !important;
+	font-family: inherit;
+}
+
+.wufoo li.buttons {
+	input {
+		@extend .label;
+		color: $color-light-one !important;
+		text-transform: uppercase !important;
+		-webkit-appearance: none;
+		$border-thickness: 2px;
+		white-space: nowrap;
+		padding-right: $size-up-two;
+		padding-left: $size-up-two;
+		border-radius: 2em;
+		box-shadow: $shadow-none;
+		transition: 0.5s ease box-shadow;
+		position: relative;
+		background-color: transparent;
+		box-sizing: border-box;
+		border: $border-thickness solid $color-overlay-darkest;
+		color: black;
+		text-align: center;
+		border-color: $color-overlay-clear;
+		box-shadow: $shadow-medium;
+		background-image: $gradient-warm;
+
+		&:hover {
+			box-shadow: $shadow-high;
+		}
+
+		&:active {
+			box-shadow: $shadow-low;
+		}
+	}
 }
 
 .wufoo textarea.textarea {
