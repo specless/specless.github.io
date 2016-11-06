@@ -33,6 +33,12 @@ body {
 .wufoo {
 	font-family: inherit;
 }
+
+.wufoo > h2 {
+	color: $color-light-one;
+	@extend .h4;
+}
+
 .wufoo input.text, .wufoo textarea.textarea {
 	//background:#FFFFFF url(/images/fieldbg.gif) repeat-x top;
 }
