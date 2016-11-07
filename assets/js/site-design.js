@@ -342,7 +342,7 @@ var Site = function() {
 					displayName: 'Site Visitor',
 					siteVisitor : true
 				});
-				fullStoryLink = FS.getCurrentSessionURL();
+				fullStoryLink = FS.getCurrentSessionURL().replace('https://', '');
 				$('#leadForm > iframe').attr('src', 'https://specless.wufoo.com/forms/schedule-a-demo/def/field111=' + clientId + '&field112=' + fullStoryLink);
 			});
 
