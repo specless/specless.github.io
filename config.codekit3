@@ -150,14 +150,6 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/assets\/animation\/hero.hype\/Resources\/lensflare.png": {
-		"ft": 32768,
-		"iS": 250795,
-		"oA": 0,
-		"oAP": "\/assets\/animation\/hero.hype\/Resources\/lensflare.png",
-		"oF": 0,
-		"opt": 0
-		},
 	"\/assets\/animation\/hero.hype\/Resources\/mockup-ipad.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -195,6 +187,131 @@
 		"oAP": "\/assets\/animation\/hero.hype\/Thumbnails\/3.jpg",
 		"oF": 0,
 		"opt": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/4E32F5-restorable.plist": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/4E32F5-restorable.plist",
+		"oF": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/ad-wireframes.png": {
+		"ft": 32768,
+		"iS": 19081,
+		"oA": 0,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/ad-wireframes.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/blank.gif": {
+		"ft": 4194304,
+		"iS": 42,
+		"oA": 0,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/blank.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/ditchspecs.png": {
+		"ft": 32768,
+		"iS": 19292,
+		"oA": 0,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/ditchspecs.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/glow.png": {
+		"ft": 32768,
+		"iS": 25169,
+		"oA": 0,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/glow.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/green-glow.png": {
+		"ft": 32768,
+		"iS": 71115,
+		"oA": 0,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/green-glow.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/hero_hype_generated_script.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/min\/hero_hype_generated_script-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/HYPE-538.full.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/min\/HYPE-538.full.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/HYPE-538.thin.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/min\/HYPE-538.thin.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/ipad-perspective.png": {
+		"ft": 32768,
+		"iS": 42551,
+		"oA": 0,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/ipad-perspective.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/ipad-perspective_2x.png": {
+		"ft": 32768,
+		"iS": 123075,
+		"oA": 0,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/ipad-perspective_2x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/mockup-ipad.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/mockup-ipad.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/mockup-iphone.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/mockup-iphone.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/mockup-macbook.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/mockup-macbook.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/animation\/hero.hyperesources\/PIE.htc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/animation\/hero.hyperesources\/PIE.htc",
+		"oF": 0
 		},
 	"\/assets\/css\/bookmarklet.css": {
 		"aP": 0,
@@ -484,7 +601,7 @@
 		},
 	"\/assets\/images\/ad-wireframes.png": {
 		"ft": 32768,
-		"iS": 19081,
+		"iS": 6955,
 		"oA": 0,
 		"oAP": "\/assets\/images\/ad-wireframes.png",
 		"oF": 0,
@@ -540,7 +657,7 @@
 		},
 	"\/assets\/images\/ads\/M4junI.png": {
 		"ft": 32768,
-		"iS": 20086,
+		"iS": 11369,
 		"oA": 0,
 		"oAP": "\/assets\/images\/ads\/M4junI.png",
 		"oF": 0,
@@ -700,7 +817,7 @@
 		},
 	"\/assets\/images\/ditchspecs.png": {
 		"ft": 32768,
-		"iS": 19292,
+		"iS": 10646,
 		"oA": 0,
 		"oAP": "\/assets\/images\/ditchspecs.png",
 		"oF": 0,
@@ -740,7 +857,7 @@
 		},
 	"\/assets\/images\/glow.png": {
 		"ft": 32768,
-		"iS": 78365,
+		"iS": 17442,
 		"oA": 0,
 		"oAP": "\/assets\/images\/glow.png",
 		"oF": 0,
@@ -860,7 +977,7 @@
 		},
 	"\/assets\/images\/interface-analytics.png": {
 		"ft": 32768,
-		"iS": 839366,
+		"iS": 42326,
 		"oA": 0,
 		"oAP": "\/assets\/images\/interface-analytics.png",
 		"oF": 0,
@@ -868,7 +985,7 @@
 		},
 	"\/assets\/images\/interface-main.png": {
 		"ft": 32768,
-		"iS": 348225,
+		"iS": 62649,
 		"oA": 0,
 		"oAP": "\/assets\/images\/interface-main.png",
 		"oF": 0,
@@ -876,7 +993,7 @@
 		},
 	"\/assets\/images\/interface-preview.png": {
 		"ft": 32768,
-		"iS": 617993,
+		"iS": 124125,
 		"oA": 0,
 		"oAP": "\/assets\/images\/interface-preview.png",
 		"oF": 0,
@@ -890,7 +1007,7 @@
 		},
 	"\/assets\/images\/ipad-perspective.png": {
 		"ft": 32768,
-		"iS": 164949,
+		"iS": 30436,
 		"oA": 0,
 		"oAP": "\/assets\/images\/ipad-perspective.png",
 		"oF": 0,
@@ -948,7 +1065,7 @@
 		},
 	"\/assets\/images\/map-atlanta.png": {
 		"ft": 32768,
-		"iS": 4339,
+		"iS": 25318,
 		"oA": 0,
 		"oAP": "\/assets\/images\/map-atlanta.png",
 		"oF": 0,
@@ -964,7 +1081,7 @@
 		},
 	"\/assets\/images\/map-chicago.png": {
 		"ft": 32768,
-		"iS": 4609,
+		"iS": 31171,
 		"oA": 0,
 		"oAP": "\/assets\/images\/map-chicago.png",
 		"oF": 0,
@@ -1034,7 +1151,7 @@
 		},
 	"\/assets\/images\/noise.png": {
 		"ft": 32768,
-		"iS": 38550,
+		"iS": 19063,
 		"oA": 0,
 		"oAP": "\/assets\/images\/noise.png",
 		"oF": 0,
@@ -1248,6 +1365,14 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/assets\/images\/shadow.png": {
+		"ft": 32768,
+		"iS": 63435,
+		"oA": 0,
+		"oAP": "\/assets\/images\/shadow.png",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/assets\/images\/shapes-global.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1257,6 +1382,14 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/assets\/images\/site-mobile.png": {
+		"ft": 32768,
+		"iS": 2436,
+		"oA": 0,
+		"oAP": "\/assets\/images\/site-mobile.png",
+		"oF": 0,
+		"opt": 0
 		},
 	"\/assets\/images\/symbol-icon-api.svg": {
 		"ft": 2097152,
@@ -1347,14 +1480,6 @@
 		"iS": 32290,
 		"oA": 0,
 		"oAP": "\/assets\/images\/tip-arrow-vertical.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/assets\/images\/tip-arrow.png": {
-		"ft": 32768,
-		"iS": 9296,
-		"oA": 0,
-		"oAP": "\/assets\/images\/tip-arrow.png",
 		"oF": 0,
 		"opt": 0
 		},

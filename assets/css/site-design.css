@@ -1066,7 +1066,7 @@
     top: -10%;
     left: -25%;
     opacity: 1;
-    background-image: url(https://storage.googleapis.com/sp_clients/SPECLESS/assets/shadow.png);
+    background-image: url(../images/shadow.png);
     background-size: 100% 100%;
     background-repeat: no-repeat; }
   .device .device-image {
