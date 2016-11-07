@@ -152,6 +152,10 @@
     .site-design .hero .hero-top {
       height: 100vh;
       background-image: url(../images/noise.png), linear-gradient(to bottom, #00c0d8 0%, #292B2D 100%); }
+    .site-design .hero .hero-video {
+      position: fixed;
+      top: 0;
+      left: 0; }
     .site-design .hero .hero-animation {
       width: 100%;
       position: fixed;
@@ -243,6 +247,11 @@
             display: none !important; }
             .hide-controls .site-design .hero .hero-animation .hero-animation-container .HYPE_scene .rich-media-animation {
               display: block !important; }
+          .site-design .hero .hero-animation .hero-animation-container .HYPE_scene .rich-media-iphone-screen {
+            background-image: url(../images/rich-media-site.jpg) !important;
+            background-size: 100% auto;
+            border: 2px solid #000000 !important;
+            box-sizing: border-box; }
           .site-design .hero .hero-animation .hero-animation-container .HYPE_scene .rich-media-ipad-screen {
             background-image: url(../images/rich-media-ipad-screen.png) !important;
             background-size: 100% auto; }
@@ -273,6 +282,18 @@
               background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
               top: -20px;
               left: 0; }
+          .site-design .hero .hero-animation .hero-animation-container .HYPE_scene .device-content, .site-design .hero .hero-animation .hero-animation-container .HYPE_scene .device-content-ad-tag {
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center center; }
+          .site-design .hero .hero-animation .hero-animation-container .HYPE_scene #hero-mockup-macbook .device-content {
+            background-image: url(../images/adshot-desktop.jpg); }
+          .site-design .hero .hero-animation .hero-animation-container .HYPE_scene #hero-mockup-ipad .device-content {
+            background-image: url(../images/adshot-tablet.jpg); }
+          .site-design .hero .hero-animation .hero-animation-container .HYPE_scene #hero-mockup-iphone .device-content .device-content-ad-tag {
+            background-image: url(../images/adshot-phone.jpg); }
+          .site-design .hero .hero-animation .hero-animation-container .HYPE_scene #hero-mockup-iphone .device-content .device-content-ad-tag.no-bg {
+            background-image: none; }
     .site-design .hero .demo-controls {
       bottom: 0;
       position: fixed;
@@ -624,31 +645,8 @@
         transform: translate(-50%, -50%) rotate(45deg); }
       .site-design .modal .modal-close::after {
         transform: translate(-50%, -50%) rotate(-45deg); }
-    .site-design .modal.modal-form.form-page .modal-content {
-      padding: 1.999em 0 0 0;
-      position: relative;
-      top: 0;
-      left: 0;
-      right: auto;
-      bottom: 0;
-      border: none;
-      border-radius: 0;
-      margin: 0;
-      max-width: 100%;
-      width: 100%;
-      height: 100%; }
-    .site-design .modal.modal-form .modal-content {
-      padding-top: 1.414em;
-      border: 1px solid #676B71;
-      background-color: #292B2D;
-      max-width: 700px;
-      margin: 0 auto;
-      left: 0;
-      right: 0; }
     .site-design .modal.modal-form iframe.modal-content {
       padding: 0; }
-    .site-design .modal.modal-form .modal-close {
-      background-color: transparent; }
     .site-design .modal.modal-form form {
       width: 100%;
       max-width: 500px;

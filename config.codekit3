@@ -482,6 +482,14 @@
 		"oAP": "\/assets\/Icon\r",
 		"oF": 0
 		},
+	"\/assets\/images\/ad-wireframes.png": {
+		"ft": 32768,
+		"iS": 19081,
+		"oA": 0,
+		"oAP": "\/assets\/images\/ad-wireframes.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/assets\/images\/ad-wireframes.sketch": {
 		"ft": 8192,
 		"oA": 2,
@@ -553,6 +561,30 @@
 		"oAP": "\/assets\/images\/ads\/UdfMw3.png",
 		"oF": 0,
 		"opt": 0
+		},
+	"\/assets\/images\/adshot-desktop.jpg": {
+		"ft": 16384,
+		"iS": 47412,
+		"oA": 0,
+		"oAP": "\/assets\/images\/adshot-desktop.jpg",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/assets\/images\/adshot-phone.jpg": {
+		"ft": 16384,
+		"iS": 22610,
+		"oA": 0,
+		"oAP": "\/assets\/images\/adshot-phone.jpg",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/assets\/images\/adshot-tablet.jpg": {
+		"ft": 16384,
+		"iS": 44094,
+		"oA": 0,
+		"oAP": "\/assets\/images\/adshot-tablet.jpg",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/assets\/images\/avatar.png": {
 		"ft": 32768,
@@ -1183,6 +1215,14 @@
 		"oAP": "\/assets\/images\/rich-media-scroll-top.png",
 		"oF": 0,
 		"opt": 0
+		},
+	"\/assets\/images\/rich-media-site.jpg": {
+		"ft": 16384,
+		"iS": 15802,
+		"oA": 0,
+		"oAP": "\/assets\/images\/rich-media-site.jpg",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/assets\/images\/screen-cascade.png": {
 		"ft": 32768,

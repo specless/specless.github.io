@@ -9,6 +9,7 @@ var Site = function() {
 			$footer : $('#footer'),
 			$hero : $('#section-hero'),
 			$heroTop : $('#hero-top'),
+			$heroVideo : $('#hero-video'),
 			$heroAnimation : $('#hero-animation'),
 			$publishers : $('#section-publishers'),
 			$advertisers : $('#section-advertisers'),
@@ -67,9 +68,7 @@ var Site = function() {
 			el.$leadForm.addClass('active');
 		},
 		setupHero = function() {
-			
-			var lastScroll,
-				updateTime = function() {
+			var updateTime = function() {
 					var percent = scrollPercent(el.$heroTop),
 						nextPercent = scrollPercent(el.$richmediaSpacer) * 1.15,
 						duration = 5,
@@ -85,16 +84,37 @@ var Site = function() {
 								animation.goToTimeInTimelineNamed(time, 'Main Timeline');
 								if (percent > 0.75) {
 									$('html').addClass('scroll-completed');
+									if (!$('#demo-ad-iframe').hasClass('no-bg')) {
+										$('#demo-ad-iframe').attr('src', 'https://specless.io/view_623?ad=cvqSTL');
+										$('#rich-media-iframe').attr('src', 'https://specless.io/view_623?ad=cvqSTL');
+										$('#demo-ad-iframe').addClass('no-bg');
+									}
 								} else {
 									$('html').removeClass('scroll-completed');
+									if ($('#demo-ad-iframe').hasClass('no-bg')) {
+										$('#demo-ad-iframe').attr('src', '');
+										$('#rich-media-iframe').attr('src', '');
+										$('#demo-ad-iframe').removeClass('no-bg');
+									}
+
 								}
 							}
 							if (scrollPercent(el.$publishers) > 0) {
 								animation.pauseTimelineNamed('Main Timeline');
 								animation.goToTimeInTimelineNamed(10, 'Main Timeline');
 								$('html').addClass('hide-controls');
+
+								// if (!$('#rich-media-iframe').hasClass('populated')) {
+								// 	$('#rich-media-iframe').attr('src', 'https://specless.io/view_623?ad=cvqSTL');
+								// 	$('#rich-media-iframe').addClass('populated');
+								// }
 							} else {
 								$('html').removeClass('hide-controls');
+								// if ($('#rich-media-iframe').hasClass('populated')) {
+								// 	$('html').removeClass('hide-controls');
+								// 	$('#rich-media-iframe').attr('src', undefined);
+								// 	$('#rich-media-iframe').removeClass('populated');
+								// }
 							}
 							
 							if (time < 5.5) {
@@ -126,6 +146,7 @@ var Site = function() {
 								animation.pauseTimelineNamed('Main Timeline');
 								animation.goToTimeInTimelineNamed(nextTime, 'Main Timeline');
 
+
 								if (nextTime > 28) {
 									$('.scc-icon').addClass("scc-icon-visible");
 								} else {
@@ -154,6 +175,7 @@ var Site = function() {
 						animation.pauseTimelineNamed('Main Timeline');
 						animation.goToTimeInTimelineNamed(3, 'Main Timeline');
 					}
+					//window.requestAnimationFrame(updateTime);
 				},
 				hypeReady = function(hypeDocument, element, event) {
 					if (hypeDocument.documentName() === "hero") {
@@ -161,7 +183,8 @@ var Site = function() {
 						//el.$doc.scroll(updateTime);
 						el.$win.resize(updateTime);
 						document.addEventListener('scroll', updateTime, {passive: true});
-						document.addEventListener('touchmove', updateTime, {passive: true});
+						// document.addEventListener('touchmove', updateTime, {passive: true});
+						//window.requestAnimationFrame(updateTime);
 					}
 				},
 				init = function() {
@@ -429,6 +452,7 @@ var Site = function() {
 			});
 		},
 		start = function() {
+			//setupVideoResize();
 			setupHero();
 			setupHeader();
 			setupModals();
