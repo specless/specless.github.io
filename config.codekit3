@@ -110,15 +110,13 @@
 		"oAP": "\/assets\/animation\/hero.hype\/data.plist",
 		"oF": 0
 		},
-	"\/assets\/animation\/hero.hype\/Resources\/ad-wireframes.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/assets\/animation\/hero.hype\/Resources\/ad-wireframes.svg",
+	"\/assets\/animation\/hero.hype\/Resources\/ad-wireframes.png": {
+		"ft": 32768,
+		"iS": 19081,
+		"oA": 0,
+		"oAP": "\/assets\/animation\/hero.hype\/Resources\/ad-wireframes.png",
 		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
+		"opt": 0
 		},
 	"\/assets\/animation\/hero.hype\/Resources\/ditchspecs.png": {
 		"ft": 32768,
@@ -484,6 +482,12 @@
 		"oAP": "\/assets\/Icon\r",
 		"oF": 0
 		},
+	"\/assets\/images\/ad-wireframes.sketch": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/images\/ad-wireframes.sketch",
+		"oF": 0
+		},
 	"\/assets\/images\/ad-wireframes.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -710,11 +714,27 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/assets\/images\/glow_large.png": {
+		"ft": 32768,
+		"iS": 170322,
+		"oA": 0,
+		"oAP": "\/assets\/images\/glow_large.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/assets\/images\/green-glow.png": {
 		"ft": 32768,
 		"iS": 1629000,
 		"oA": 0,
 		"oAP": "\/assets\/images\/green-glow.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/images\/green-glow_large.png": {
+		"ft": 32768,
+		"iS": 1627593,
+		"oA": 0,
+		"oAP": "\/assets\/images\/green-glow_large.png",
 		"oF": 0,
 		"opt": 0
 		},
