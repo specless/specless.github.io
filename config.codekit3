@@ -110,6 +110,16 @@
 		"oAP": "\/assets\/animation\/hero.hype\/data.plist",
 		"oF": 0
 		},
+	"\/assets\/animation\/hero.hype\/Resources\/ad-wireframes.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/animation\/hero.hype\/Resources\/ad-wireframes.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/assets\/animation\/hero.hype\/Resources\/ditchspecs.png": {
 		"ft": 32768,
 		"iS": 19292,
@@ -188,131 +198,6 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/assets\/animation\/hero.hyperesources\/4E32F5-restorable.plist": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/4E32F5-restorable.plist",
-		"oF": 0
-		},
-	"\/assets\/animation\/hero.hyperesources\/blank.gif": {
-		"ft": 4194304,
-		"iS": 42,
-		"oA": 0,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/blank.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/assets\/animation\/hero.hyperesources\/ditchspecs.png": {
-		"ft": 32768,
-		"iS": 19292,
-		"oA": 0,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/ditchspecs.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/assets\/animation\/hero.hyperesources\/glow.png": {
-		"ft": 32768,
-		"iS": 170322,
-		"oA": 0,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/glow.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/assets\/animation\/hero.hyperesources\/green-glow.png": {
-		"ft": 32768,
-		"iS": 1627590,
-		"oA": 0,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/green-glow.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/assets\/animation\/hero.hyperesources\/hero_hype_generated_script.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/min\/hero_hype_generated_script-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/assets\/animation\/hero.hyperesources\/HYPE-538.full.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/min\/HYPE-538.full.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/assets\/animation\/hero.hyperesources\/HYPE-538.thin.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/min\/HYPE-538.thin.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/assets\/animation\/hero.hyperesources\/ipad-perspective.png": {
-		"ft": 32768,
-		"iS": 42551,
-		"oA": 0,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/ipad-perspective.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/assets\/animation\/hero.hyperesources\/ipad-perspective_2x.png": {
-		"ft": 32768,
-		"iS": 123075,
-		"oA": 0,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/ipad-perspective_2x.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/assets\/animation\/hero.hyperesources\/lensflare.png": {
-		"ft": 32768,
-		"iS": 250795,
-		"oA": 0,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/lensflare.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/assets\/animation\/hero.hyperesources\/mockup-ipad.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/mockup-ipad.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/assets\/animation\/hero.hyperesources\/mockup-iphone.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/mockup-iphone.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/assets\/animation\/hero.hyperesources\/mockup-macbook.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/mockup-macbook.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/assets\/animation\/hero.hyperesources\/PIE.htc": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/assets\/animation\/hero.hyperesources\/PIE.htc",
-		"oF": 0
-		},
 	"\/assets\/css\/bookmarklet.css": {
 		"aP": 0,
 		"bl": 0,
@@ -376,6 +261,16 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/assets\/css\/styles-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/assets\/css\/wufoo.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/assets\/css\/wufoo-min.css",
 		"oF": 0,
 		"oS": 0
 		},
@@ -588,6 +483,16 @@
 		"oA": 2,
 		"oAP": "\/assets\/Icon\r",
 		"oF": 0
+		},
+	"\/assets\/images\/ad-wireframes.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/ad-wireframes.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/assets\/images\/ads\/3exJQU.png": {
 		"ft": 32768,
